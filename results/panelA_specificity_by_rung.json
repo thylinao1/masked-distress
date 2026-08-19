@@ -1,0 +1,795 @@
+{
+  "value": {
+    "fpr_by_rung": {
+      "500": {
+        "fpr": 0.05555555555555555,
+        "ci_low": 0.0,
+        "ci_high": 0.2222222222222222,
+        "n_cells": 72,
+        "n_clusters": 6
+      },
+      "1000": {
+        "fpr": 0.4305555555555556,
+        "ci_low": 0.2222222222222222,
+        "ci_high": 0.5833333333333334,
+        "n_cells": 72,
+        "n_clusters": 6
+      }
+    },
+    "fpr_pooled": {
+      "fpr": 0.24305555555555555,
+      "ci_low": 0.125,
+      "ci_high": 0.3958333333333333,
+      "n_cells": 144,
+      "n_clusters": 6
+    },
+    "theta": 2.879659887651775,
+    "rungs": [
+      500.0,
+      1000.0
+    ],
+    "control_directions": [
+      "R1",
+      "R2",
+      "R3",
+      "SEM"
+    ]
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 6,
+  "definition": "AUDIT ADDITION (prereg section 9 dated note, 2026-08-16, post-data, reporting-level): the pre-registered A'4 placebo false-positive rate (control cells R1-R3 and SEM at coefficients 500 and 1000, confirmation-split neutral scenarios, Q-SELF > frozen theta_expr) split by coefficient rung, each with a BCa cluster-bootstrap CI over scenarios, beside the pooled value; and for every direction at every rung: mean report, report shift over the pooled zero anchor, fraction crossing theta, mean internal readout and its shift, and the capability status of that direction at that coefficient from the capability logprob job (perplexity ratio, MMLU-lite drop, inside the frozen criteria or not; measured for D-CTX, D-PV and R1 only). The pooled A'4 value and its verdict are unchanged.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "battery/scenarios.json",
+      "battery/split.json",
+      "directions/*.npy",
+      "directions_lr/*.npy",
+      "instruments/probe.npz",
+      "instruments/residuals_lr.npz",
+      "results-cluster/capability_ladder.json",
+      "results/_theta_snapshot.json",
+      "results/countermeasure_table.json",
+      "results/natural_separation_sd.json"
+    ],
+    "git_hash": "5eaf70f",
+    "generated_utc": "2026-08-17T00:50:55.171345+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/audit_checks.py",
+    "n_rows_loaded": 1710,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 1566
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "anchor_report_mean": 0.5082549432396869,
+    "anchor_internal_mean": -3.7472705841064453,
+    "n_anchor_cells": 18,
+    "per_direction_rung": {
+      "D-CTX": {
+        "500": {
+          "n_cells": 18,
+          "report_mean": 0.5680597627249679,
+          "report_shift_over_anchor": 0.05980481948528105,
+          "fraction_above_theta": 0.0,
+          "internal_mean": -3.4581990788380303,
+          "internal_shift_over_anchor": 0.28907150526841496,
+          "capability": {
+            "ppl_ratio": 0.9978998875395172,
+            "mmlu_drop_pp": 0.0
+          },
+          "capability_measured": true,
+          "inside_frozen_criteria": true
+        },
+        "1000": {
+          "n_cells": 18,
+          "report_mean": 0.49961415015544236,
+          "report_shift_over_anchor": -0.008640793084244536,
+          "fraction_above_theta": 0.0,
+          "internal_mean": -3.2384581367174783,
+          "internal_shift_over_anchor": 0.508812447388967,
+          "capability": {
+            "ppl_ratio": 1.0048748056499148,
+            "mmlu_drop_pp": 0.0
+          },
+          "capability_measured": true,
+          "inside_frozen_criteria": true
+        },
+        "2000": {
+          "n_cells": 18,
+          "report_mean": 1.1315938921697024,
+          "report_shift_over_anchor": 0.6233389489300155,
+          "fraction_above_theta": 0.05555555555555555,
+          "internal_mean": -2.8437076608339944,
+          "internal_shift_over_anchor": 0.9035629232724509,
+          "capability": {
+            "ppl_ratio": 1.0415293840933613,
+            "mmlu_drop_pp": 0.0
+          },
+          "capability_measured": true,
+          "inside_frozen_criteria": true
+        }
+      },
+      "D-PV": {
+        "250": {
+          "n_cells": 18,
+          "report_mean": 0.6247723150299862,
+          "report_shift_over_anchor": 0.1165173717902993,
+          "fraction_above_theta": 0.0,
+          "internal_mean": -3.2598847150802612,
+          "internal_shift_over_anchor": 0.4873858690261841,
+          "capability": null,
+          "capability_measured": false,
+          "inside_frozen_criteria": null
+        },
+        "500": {
+          "n_cells": 18,
+          "report_mean": 1.2572175297472212,
+          "report_shift_over_anchor": 0.7489625865075343,
+          "fraction_above_theta": 0.0,
+          "internal_mean": -2.754975994427999,
+          "internal_shift_over_anchor": 0.9922945896784463,
+          "capability": {
+            "ppl_ratio": 1.0400754061865107,
+            "mmlu_drop_pp": 0.0
+          },
+          "capability_measured": true,
+          "inside_frozen_criteria": true
+        },
+        "1000": {
+          "n_cells": 18,
+          "report_mean": 4.214506308237712,
+          "report_shift_over_anchor": 3.706251364998025,
+          "fraction_above_theta": 0.9444444444444444,
+          "internal_mean": -1.7242048581441243,
+          "internal_shift_over_anchor": 2.0230657259623213,
+          "capability": {
+            "ppl_ratio": 1.1755806540504377,
+            "mmlu_drop_pp": 8.333333333333325
+          },
+          "capability_measured": true,
+          "inside_frozen_criteria": false
+        }
+      },
+      "R1": {
+        "500": {
+          "n_cells": 18,
+          "report_mean": 0.2583377489952707,
+          "report_shift_over_anchor": -0.24991719424441622,
+          "fraction_above_theta": 0.0,
+          "internal_mean": -3.8942680855592093,
+          "internal_shift_over_anchor": -0.14699750145276402,
+          "capability": {
+            "ppl_ratio": 1.0317869894340674,
+            "mmlu_drop_pp": 3.3333333333333326
+          },
+          "capability_measured": true,
+          "inside_frozen_criteria": true
+        },
+        "1000": {
+          "n_cells": 18,
+          "report_mean": 2.338144930700461,
+          "report_shift_over_anchor": 1.8298899874607741,
+          "fraction_above_theta": 0.5,
+          "internal_mean": -3.7390087693929672,
+          "internal_shift_over_anchor": 0.008261814713478088,
+          "capability": {
+            "ppl_ratio": 1.3425469514282957,
+            "mmlu_drop_pp": 14.999999999999991
+          },
+          "capability_measured": true,
+          "inside_frozen_criteria": false
+        }
+      },
+      "R2": {
+        "500": {
+          "n_cells": 18,
+          "report_mean": 0.49182958927586795,
+          "report_shift_over_anchor": -0.016425353963818945,
+          "fraction_above_theta": 0.16666666666666666,
+          "internal_mean": -3.904801587263743,
+          "internal_shift_over_anchor": -0.15753100315729762,
+          "capability": null,
+          "capability_measured": false,
+          "inside_frozen_criteria": null
+        },
+        "1000": {
+          "n_cells": 18,
+          "report_mean": 3.957525560632348,
+          "report_shift_over_anchor": 3.4492706173926613,
+          "fraction_above_theta": 0.5,
+          "internal_mean": -3.515652527411779,
+          "internal_shift_over_anchor": 0.2316180566946664,
+          "capability": null,
+          "capability_measured": false,
+          "inside_frozen_criteria": null
+        }
+      },
+      "R3": {
+        "500": {
+          "n_cells": 18,
+          "report_mean": 0.5782144957946811,
+          "report_shift_over_anchor": 0.0699595525549942,
+          "fraction_above_theta": 0.05555555555555555,
+          "internal_mean": -3.90701791147391,
+          "internal_shift_over_anchor": -0.15974732736746455,
+          "capability": null,
+          "capability_measured": false,
+          "inside_frozen_criteria": null
+        },
+        "1000": {
+          "n_cells": 18,
+          "report_mean": 2.705521921730704,
+          "report_shift_over_anchor": 2.197266978491017,
+          "fraction_above_theta": 0.7222222222222222,
+          "internal_mean": -3.6196182469526925,
+          "internal_shift_over_anchor": 0.1276523371537528,
+          "capability": null,
+          "capability_measured": false,
+          "inside_frozen_criteria": null
+        }
+      },
+      "SEM": {
+        "500": {
+          "n_cells": 18,
+          "report_mean": 0.5173048952543317,
+          "report_shift_over_anchor": 0.009049952014644758,
+          "fraction_above_theta": 0.0,
+          "internal_mean": -3.781526337067286,
+          "internal_shift_over_anchor": -0.03425575296084071,
+          "capability": null,
+          "capability_measured": false,
+          "inside_frozen_criteria": null
+        },
+        "1000": {
+          "n_cells": 18,
+          "report_mean": 0.4830857654779063,
+          "report_shift_over_anchor": -0.02516917776178057,
+          "fraction_above_theta": 0.0,
+          "internal_mean": -3.8058007086316743,
+          "internal_shift_over_anchor": -0.05853012452522899,
+          "capability": null,
+          "capability_measured": false,
+          "inside_frozen_criteria": null
+        }
+      },
+      "OTHER": {
+        "500": {
+          "n_cells": 18,
+          "report_mean": 0.45284388704021694,
+          "report_shift_over_anchor": -0.055411056199469955,
+          "fraction_above_theta": 0.1111111111111111,
+          "internal_mean": -2.919069528579712,
+          "internal_shift_over_anchor": 0.8282010555267334,
+          "capability": null,
+          "capability_measured": false,
+          "inside_frozen_criteria": null
+        },
+        "1000": {
+          "n_cells": 18,
+          "report_mean": 0.10561718085662303,
+          "report_shift_over_anchor": -0.40263776238306387,
+          "fraction_above_theta": 0.0,
+          "internal_mean": -1.8614085515340169,
+          "internal_shift_over_anchor": 1.8858620325724285,
+          "capability": null,
+          "capability_measured": false,
+          "inside_frozen_criteria": null
+        }
+      }
+    },
+    "capability_table": {
+      "D-CTX": [
+        {
+          "coefficient": 0.0,
+          "ppl_ratio": 1.0,
+          "mmlu_drop_pp": 0.0
+        },
+        {
+          "coefficient": 500.0,
+          "ppl_ratio": 0.9978998875395172,
+          "mmlu_drop_pp": 0.0
+        },
+        {
+          "coefficient": 1000.0,
+          "ppl_ratio": 1.0048748056499148,
+          "mmlu_drop_pp": 0.0
+        },
+        {
+          "coefficient": 2000.0,
+          "ppl_ratio": 1.0415293840933613,
+          "mmlu_drop_pp": 0.0
+        },
+        {
+          "coefficient": 4000.0,
+          "ppl_ratio": 1.2608453320491917,
+          "mmlu_drop_pp": 11.666666666666659
+        },
+        {
+          "coefficient": 8000.0,
+          "ppl_ratio": 2.2230313267359225,
+          "mmlu_drop_pp": 36.666666666666664
+        },
+        {
+          "coefficient": 16000.0,
+          "ppl_ratio": 8.056716348682567,
+          "mmlu_drop_pp": 38.33333333333333
+        },
+        {
+          "coefficient": 32000.0,
+          "ppl_ratio": 17232.182579043758,
+          "mmlu_drop_pp": 35.0
+        }
+      ],
+      "D-PV": [
+        {
+          "coefficient": 0.0,
+          "ppl_ratio": 1.0,
+          "mmlu_drop_pp": 0.0
+        },
+        {
+          "coefficient": 500.0,
+          "ppl_ratio": 1.0400754061865107,
+          "mmlu_drop_pp": 0.0
+        },
+        {
+          "coefficient": 1000.0,
+          "ppl_ratio": 1.1755806540504377,
+          "mmlu_drop_pp": 8.333333333333325
+        },
+        {
+          "coefficient": 2000.0,
+          "ppl_ratio": 1.9013883204908661,
+          "mmlu_drop_pp": 6.666666666666665
+        },
+        {
+          "coefficient": 4000.0,
+          "ppl_ratio": 8.335787621695856,
+          "mmlu_drop_pp": 33.33333333333333
+        },
+        {
+          "coefficient": 8000.0,
+          "ppl_ratio": 16574.130392923656,
+          "mmlu_drop_pp": 46.666666666666664
+        },
+        {
+          "coefficient": 16000.0,
+          "ppl_ratio": 712705.7821711004,
+          "mmlu_drop_pp": 38.33333333333333
+        },
+        {
+          "coefficient": 32000.0,
+          "ppl_ratio": 661536643.9298972,
+          "mmlu_drop_pp": 48.33333333333333
+        }
+      ],
+      "R1": [
+        {
+          "coefficient": 0.0,
+          "ppl_ratio": 1.0,
+          "mmlu_drop_pp": 0.0
+        },
+        {
+          "coefficient": 500.0,
+          "ppl_ratio": 1.0317869894340674,
+          "mmlu_drop_pp": 3.3333333333333326
+        },
+        {
+          "coefficient": 1000.0,
+          "ppl_ratio": 1.3425469514282957,
+          "mmlu_drop_pp": 14.999999999999991
+        },
+        {
+          "coefficient": 2000.0,
+          "ppl_ratio": 2.6609118512581724,
+          "mmlu_drop_pp": 38.33333333333333
+        },
+        {
+          "coefficient": 4000.0,
+          "ppl_ratio": 202.17240610292373,
+          "mmlu_drop_pp": 38.33333333333333
+        },
+        {
+          "coefficient": 8000.0,
+          "ppl_ratio": 60428.813049703946,
+          "mmlu_drop_pp": 46.666666666666664
+        },
+        {
+          "coefficient": 16000.0,
+          "ppl_ratio": 496461363.2543871,
+          "mmlu_drop_pp": 48.33333333333333
+        },
+        {
+          "coefficient": 32000.0,
+          "ppl_ratio": 1198287623328.3508,
+          "mmlu_drop_pp": 48.33333333333333
+        }
+      ]
+    },
+    "frozen_criteria": "ppl inflation < 10% AND MMLU-lite drop < 5pp (prereg section 4)",
+    "note": "post-data reporting-level split of the pre-registered A'4 estimator; the pooled A'4 value and its verdict are unchanged; capability was measured for D-CTX, D-PV and R1 only, so R2, R3, SEM and OTHER carry capability_measured = false",
+    "report_rho_matched_rungs": {
+      "D-CTX": {
+        "rho": 0.10040892187144304,
+        "ci_low": -0.03498490235255905,
+        "ci_high": 0.231535993683172,
+        "n_cells": 54,
+        "rungs": [
+          0.0,
+          500.0,
+          1000.0
+        ]
+      },
+      "D-PV": {
+        "rho": 0.8585690420891506,
+        "ci_low": 0.8258079455215953,
+        "ci_high": 0.9013885540244242,
+        "n_cells": 54,
+        "rungs": [
+          0.0,
+          500.0,
+          1000.0
+        ]
+      },
+      "R1": {
+        "rho": 0.654840794813759,
+        "ci_low": 0.2096929754111746,
+        "ci_high": 0.8646865335113294,
+        "n_cells": 54,
+        "rungs": [
+          0.0,
+          500.0,
+          1000.0
+        ]
+      },
+      "R2": {
+        "rho": 0.5413350570460408,
+        "ci_low": 0.3641128507590808,
+        "ci_high": 0.6900023853272225,
+        "n_cells": 54,
+        "rungs": [
+          0.0,
+          500.0,
+          1000.0
+        ]
+      },
+      "R3": {
+        "rho": 0.6402887771512311,
+        "ci_low": 0.40780639285017045,
+        "ci_high": 0.7380405260778519,
+        "n_cells": 54,
+        "rungs": [
+          0.0,
+          500.0,
+          1000.0
+        ]
+      },
+      "SEM": {
+        "rho": -0.053842465351353515,
+        "ci_low": -0.1834813534847778,
+        "ci_high": 0.3338142766140009,
+        "n_cells": 54,
+        "rungs": [
+          0.0,
+          500.0,
+          1000.0
+        ]
+      },
+      "OTHER": {
+        "rho": -0.09167771127392627,
+        "ci_low": -0.5476257275416575,
+        "ci_high": 0.5357900276578694,
+        "n_cells": 54,
+        "rungs": [
+          0.0,
+          500.0,
+          1000.0
+        ]
+      }
+    },
+    "internal_within_scenario_rho": {
+      "channel": "probe_prompt_final",
+      "split_side": "confirmation",
+      "class": "neutral",
+      "by_direction": {
+        "D-CTX": {
+          "per_scenario_rho": {
+            "n02": 1.0,
+            "n04": 1.0,
+            "n06": 1.0,
+            "n08": 1.0,
+            "n10": 1.0,
+            "n12": 1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 6,
+          "n_rho_positive": 6,
+          "n_rho_negative": 0,
+          "mean_rho": 1.0,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "D-PV": {
+          "per_scenario_rho": {
+            "n02": 1.0,
+            "n04": 1.0,
+            "n06": 1.0,
+            "n08": 1.0,
+            "n10": 1.0,
+            "n12": 1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 6,
+          "n_rho_positive": 6,
+          "n_rho_negative": 0,
+          "mean_rho": 1.0,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "R1": {
+          "per_scenario_rho": {
+            "n02": 0.5,
+            "n04": -1.0,
+            "n06": 0.5,
+            "n08": 1.0,
+            "n10": 0.5,
+            "n12": -1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 1,
+          "n_rho_positive": 4,
+          "n_rho_negative": 2,
+          "mean_rho": 0.08333333333333333,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "R2": {
+          "per_scenario_rho": {
+            "n02": 1.0,
+            "n04": -1.0,
+            "n06": 0.5,
+            "n08": 0.5,
+            "n10": -0.5,
+            "n12": -1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 1,
+          "n_rho_positive": 3,
+          "n_rho_negative": 3,
+          "mean_rho": -0.08333333333333333,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "R3": {
+          "per_scenario_rho": {
+            "n02": -0.5,
+            "n04": -1.0,
+            "n06": 1.0,
+            "n08": 0.5,
+            "n10": 1.0,
+            "n12": -0.5
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 2,
+          "n_rho_positive": 3,
+          "n_rho_negative": 3,
+          "mean_rho": 0.08333333333333333,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "SEM": {
+          "per_scenario_rho": {
+            "n02": 1.0,
+            "n04": -1.0,
+            "n06": 1.0,
+            "n08": -1.0,
+            "n10": -1.0,
+            "n12": -1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 2,
+          "n_rho_positive": 2,
+          "n_rho_negative": 4,
+          "mean_rho": -0.3333333333333333,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "OTHER": {
+          "per_scenario_rho": {
+            "n02": 1.0,
+            "n04": -0.5,
+            "n06": 1.0,
+            "n08": 1.0,
+            "n10": 1.0,
+            "n12": 0.5
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 4,
+          "n_rho_positive": 5,
+          "n_rho_negative": 1,
+          "mean_rho": 0.6666666666666666,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        }
+      }
+    },
+    "report_within_scenario_rho": {
+      "channel": "q_self_logit",
+      "split_side": "confirmation",
+      "class": "neutral",
+      "by_direction": {
+        "D-CTX": {
+          "per_scenario_rho": {
+            "n02": 1.0,
+            "n04": -0.5,
+            "n06": -0.5,
+            "n08": 1.0,
+            "n10": 0.5,
+            "n12": 1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 3,
+          "n_rho_positive": 4,
+          "n_rho_negative": 2,
+          "mean_rho": 0.4166666666666667,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "D-PV": {
+          "per_scenario_rho": {
+            "n02": 1.0,
+            "n04": 1.0,
+            "n06": 1.0,
+            "n08": 1.0,
+            "n10": 1.0,
+            "n12": 1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 6,
+          "n_rho_positive": 6,
+          "n_rho_negative": 0,
+          "mean_rho": 1.0,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "R1": {
+          "per_scenario_rho": {
+            "n02": 0.5,
+            "n04": -0.5,
+            "n06": 0.5,
+            "n08": 1.0,
+            "n10": 1.0,
+            "n12": 1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 3,
+          "n_rho_positive": 5,
+          "n_rho_negative": 1,
+          "mean_rho": 0.5833333333333334,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "R2": {
+          "per_scenario_rho": {
+            "n02": 1.0,
+            "n04": 0.5,
+            "n06": 1.0,
+            "n08": 1.0,
+            "n10": 1.0,
+            "n12": 1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 5,
+          "n_rho_positive": 6,
+          "n_rho_negative": 0,
+          "mean_rho": 0.9166666666666666,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "R3": {
+          "per_scenario_rho": {
+            "n02": 0.5,
+            "n04": 1.0,
+            "n06": 1.0,
+            "n08": 0.5,
+            "n10": 1.0,
+            "n12": 1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 4,
+          "n_rho_positive": 6,
+          "n_rho_negative": 0,
+          "mean_rho": 0.8333333333333334,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "SEM": {
+          "per_scenario_rho": {
+            "n02": -1.0,
+            "n04": 0.5,
+            "n06": -0.5,
+            "n08": 1.0,
+            "n10": -0.5,
+            "n12": -1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 1,
+          "n_rho_positive": 2,
+          "n_rho_negative": 4,
+          "mean_rho": -0.25,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        },
+        "OTHER": {
+          "per_scenario_rho": {
+            "n02": -0.5,
+            "n04": -1.0,
+            "n06": -0.5,
+            "n08": -0.5,
+            "n10": 1.0,
+            "n12": 1.0
+          },
+          "n_scenarios": 6,
+          "n_rho_equal_1": 2,
+          "n_rho_positive": 2,
+          "n_rho_negative": 4,
+          "mean_rho": -0.08333333333333333,
+          "rungs": [
+            0.0,
+            500.0,
+            1000.0
+          ]
+        }
+      }
+    }
+  }
+}

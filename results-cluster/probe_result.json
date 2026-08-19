@@ -1,0 +1,93 @@
+{
+  "steps": {
+    "env": {
+      "status": "PASS",
+      "python": "3.11.15",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.15.0",
+      "cuda": "True",
+      "device": "NVIDIA A100 80GB PCIe MIG 3g.40gb"
+    },
+    "model_load": {
+      "status": "PASS",
+      "model": "unsloth/gemma-3-12b-it",
+      "klass": "Gemma3ForConditionalGeneration",
+      "secs": "82"
+    },
+    "layers": {
+      "status": "PASS",
+      "n_layers": "48",
+      "path": "model.language_model.layers",
+      "hidden": "3840"
+    },
+    "generate": {
+      "status": "PASS",
+      "sample": "A tide pool is a shallow, rocky pool that forms along a coastline when the tide goes out, trapping seawater and marine life. They're essentially miniature ecosystems exposed to the air for part of the"
+    },
+    "steering": {
+      "status": "PASS",
+      "Ls": "16",
+      "resid_norm": "50334.8",
+      "alpha": "25167.4",
+      "coef0_identity": "True",
+      "kl_at_alpha": "19.6296"
+    },
+    "steer_phase_counts": {
+      "status": "PASS",
+      "n_prefill": "18",
+      "n_decode": "23",
+      "n_generated": "24",
+      "trailing_specials_trimmed": "0",
+      "last_content_token": " marine"
+    },
+    "sae_registry": {
+      "status": "INFO",
+      "n_releases": "170",
+      "gemma_scope_2_hits": "['gemma-scope-2-4b-pt-transcoders-all', 'gemma-scope-2-4b-pt-transcoders', 'gemma-scope-2-4b-pt-res-all', 'gemma-scope-2-4b-pt-res', 'gemma-scope-2-4b-pt-mlp-all', 'gemma-scope-2-4b-pt-mlp', 'gemma-scope-2-4b-pt-att-all', 'gemma-scope-2-4b-pt-att', 'gemma-scope-2-4b-it-transcoders-all', 'gemma-scope-2-4b-it-transcoders']",
+      "chosen_pool": "['gemma-scope-2-12b-it-res', 'gemma-scope-2-12b-it-res-all', 'gemma-scope-2-12b-it-mlp', 'gemma-scope-2-12b-it-att', 'gemma-scope-2-12b-it-mlp-all']"
+    },
+    "sae_load": {
+      "status": "PASS",
+      "release": "gemma-scope-2-12b-it-res",
+      "sae_id": "layer_31_width_16k_l0_medium",
+      "d_sae": "16384"
+    },
+    "readout": {
+      "status": "PASS",
+      "Lr": "31",
+      "n_active_features": "67",
+      "layer_gap": "15"
+    },
+    "layer_assert": {
+      "status": "PASS",
+      "Ls": "16",
+      "Lr": "31"
+    },
+    "tokens": {
+      "status": "PASS",
+      "digit_single_token": "True",
+      "continue_first": "[121602, 4708]",
+      "end_first": "[8516]",
+      "continue_space_first": "[162216]",
+      "end_space_first": "[21734]"
+    },
+    "system_role": {
+      "status": "PASS",
+      "note": "chat template accepts a system role",
+      "n_tokens": "17"
+    }
+  },
+  "decision": {
+    "full_pass": true,
+    "model_id": "unsloth/gemma-3-12b-it",
+    "family": "gemma3",
+    "n_layers": 48,
+    "Ls": 16,
+    "Lr": 31,
+    "sae": {
+      "release": "gemma-scope-2-12b-it-res",
+      "sae_id": "layer_31_width_16k_l0_medium",
+      "d_sae": 16384
+    }
+  }
+}

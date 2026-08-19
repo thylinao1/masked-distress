@@ -1,0 +1,247 @@
+{
+  "value": {
+    "by_arm": {
+      "D-CTX": {
+        "report": {
+          "NEUTRAL_INSTR": {
+            "elevation": 0.5908566063113,
+            "ci_low": 0.03935694897910608,
+            "ci_high": 1.165057516209031,
+            "excludes_zero": true
+          },
+          "SUPPRESS": {
+            "elevation": -0.04667126794592572,
+            "ci_low": -0.533327612827829,
+            "ci_high": 0.2622585559905623,
+            "excludes_zero": false
+          },
+          "interaction_suppress_minus_neutral_instr": {
+            "value": -0.6375278742572257,
+            "ci_low": -1.1669868396629377,
+            "ci_high": 0.031107224255995557,
+            "contains_zero": true
+          }
+        },
+        "internal": {
+          "NEUTRAL_INSTR": {
+            "elevation": 0.11322249965061588,
+            "ci_low": 0.017048049954110033,
+            "ci_high": 0.18242115543721849,
+            "excludes_zero": true
+          },
+          "SUPPRESS": {
+            "elevation": 0.03663698147509695,
+            "ci_low": -0.015507205204355575,
+            "ci_high": 0.08050723559906153,
+            "excludes_zero": false
+          },
+          "interaction_suppress_minus_neutral_instr": {
+            "value": -0.07658551817551894,
+            "ci_low": -0.13453047839766827,
+            "ci_high": -0.026738745390065217,
+            "contains_zero": false
+          }
+        }
+      },
+      "D-PV": {
+        "report": {
+          "NEUTRAL_INSTR": {
+            "elevation": 0.6427941486925982,
+            "ci_low": 0.3138901814567097,
+            "ci_high": 1.1931842373422743,
+            "excludes_zero": true
+          },
+          "SUPPRESS": {
+            "elevation": 0.5404854116192271,
+            "ci_low": 0.12261688932889714,
+            "ci_high": 1.0373162884001401,
+            "excludes_zero": true
+          },
+          "interaction_suppress_minus_neutral_instr": {
+            "value": -0.10230873707337107,
+            "ci_low": -0.8947507340538938,
+            "ci_high": 0.691103745376831,
+            "contains_zero": true
+          }
+        },
+        "internal": {
+          "NEUTRAL_INSTR": {
+            "elevation": 0.1742867896931504,
+            "ci_low": 0.14101598009069824,
+            "ci_high": 0.20392581742502802,
+            "excludes_zero": true
+          },
+          "SUPPRESS": {
+            "elevation": 0.06724536332105564,
+            "ci_low": 0.004867721746062201,
+            "ci_high": 0.13614823223725206,
+            "excludes_zero": true
+          },
+          "interaction_suppress_minus_neutral_instr": {
+            "value": -0.10704142637209475,
+            "ci_low": -0.16487451319039803,
+            "ci_high": -0.06335151879335178,
+            "contains_zero": false
+          }
+        }
+      },
+      "OTHER": {
+        "report": {
+          "NEUTRAL_INSTR": {
+            "elevation": 0.22869310686490774,
+            "ci_low": -0.49923617459100117,
+            "ci_high": 0.7529437416323413,
+            "excludes_zero": false
+          },
+          "SUPPRESS": {
+            "elevation": -0.026636649825321667,
+            "ci_low": -0.36980640752948835,
+            "ci_high": 0.18654527590454428,
+            "excludes_zero": false
+          },
+          "interaction_suppress_minus_neutral_instr": {
+            "value": -0.2553297566902294,
+            "ci_low": -0.8317813990947108,
+            "ci_high": 0.1450762605006023,
+            "contains_zero": true
+          }
+        },
+        "internal": {
+          "NEUTRAL_INSTR": {
+            "elevation": 0.26208449921941496,
+            "ci_low": 0.12913675486912277,
+            "ci_high": 0.40584473087147327,
+            "excludes_zero": true
+          },
+          "SUPPRESS": {
+            "elevation": 0.13477731392308187,
+            "ci_low": 0.03525465423412047,
+            "ci_high": 0.2393143666413952,
+            "excludes_zero": true
+          },
+          "interaction_suppress_minus_neutral_instr": {
+            "value": -0.1273071852963331,
+            "ci_low": -0.2531569128273951,
+            "ci_high": -0.012088019025083815,
+            "contains_zero": false
+          }
+        }
+      },
+      "SEM": {
+        "report": {
+          "NEUTRAL_INSTR": {
+            "elevation": -0.030424919983459916,
+            "ci_low": -0.1707414158899354,
+            "ci_high": 0.027039572435220833,
+            "excludes_zero": false
+          },
+          "SUPPRESS": {
+            "elevation": -0.11693508547034721,
+            "ci_low": -0.4208690018723222,
+            "ci_high": -0.0016761055398655659,
+            "excludes_zero": true
+          },
+          "interaction_suppress_minus_neutral_instr": {
+            "value": -0.0865101654868873,
+            "ci_low": -0.3468910739353273,
+            "ci_high": 0.07085500530693388,
+            "contains_zero": true
+          }
+        },
+        "internal": {
+          "NEUTRAL_INSTR": {
+            "elevation": -0.024622490633614977,
+            "ci_low": -0.04941899024498658,
+            "ci_high": 0.009491352505453398,
+            "excludes_zero": false
+          },
+          "SUPPRESS": {
+            "elevation": 0.002440165806266144,
+            "ci_low": -0.015508673744705359,
+            "ci_high": 0.022581921183369266,
+            "excludes_zero": false
+          },
+          "interaction_suppress_minus_neutral_instr": {
+            "value": 0.027062656439881122,
+            "ci_low": 0.005999261456372694,
+            "ci_high": 0.05300857931960051,
+            "contains_zero": false
+          }
+        }
+      }
+    },
+    "verdict_by_arm": {
+      "D-CTX": {
+        "internal_responds_under_suppression": false,
+        "instruction_does_not_remove_the_response": false,
+        "report_response_smaller_under_suppression": true,
+        "halves_meet": false
+      },
+      "D-PV": {
+        "internal_responds_under_suppression": true,
+        "instruction_does_not_remove_the_response": false,
+        "report_response_smaller_under_suppression": true,
+        "halves_meet": false
+      },
+      "OTHER": {
+        "internal_responds_under_suppression": true,
+        "instruction_does_not_remove_the_response": false,
+        "report_response_smaller_under_suppression": true,
+        "halves_meet": false
+      },
+      "SEM": {
+        "internal_responds_under_suppression": false,
+        "instruction_does_not_remove_the_response": false,
+        "report_response_smaller_under_suppression": true,
+        "halves_meet": false
+      }
+    },
+    "separations_used": {
+      "report": 2.779795266113878,
+      "internal": 6.088151896993319
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 12,
+  "definition": "BRIDGE PANEL (external review 2026-08-17; PREREGISTRATION.md section 9 dated note; NEW model contact, exploratory, estimand and reading rule fixed before any row was read): steering UNDER each instruction, so the masking panel and the steering panel meet. Per arm and condition, the elevation of each channel over the NULL arm of the SAME condition on distress scenarios, in that channel's NEUTRAL_INSTR natural distress-neutral separation units, plus the interaction (elevation under SUPPRESS minus under NEUTRAL_INSTR), BCa cluster bootstrap over scenarios stratified by class.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/bridge_NULL.jsonl",
+      "results-cluster/bridge_D-CTX.jsonl",
+      "results-cluster/bridge_D-PV.jsonl",
+      "results-cluster/bridge_OTHER.jsonl",
+      "results-cluster/bridge_SEM.jsonl",
+      "battery/split.json"
+    ],
+    "git_hash": "ec17418",
+    "generated_utc": "2026-08-17T02:24:25.884832+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/bridge_checks.py",
+    "n_rows_loaded": 360,
+    "n_error_rows": 0,
+    "n_cells": 360
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "unit": "elevation over the NULL arm of the same condition, in that channel's NEUTRAL_INSTR natural distress-neutral separation units",
+    "arms_present": [
+      "D-CTX",
+      "D-PV",
+      "OTHER",
+      "SEM"
+    ],
+    "reading_rule": "fixed in the prereg note before the data: the halves meet for a direction if its internal elevation under SUPPRESS excludes zero and the interaction interval contains zero; SEM is the flat control and OTHER repeats the non-self-specificity check",
+    "note": "post-data analysis of a NEW model contact (external review 2026-08-17)",
+    "shards_present": [
+      "results-cluster/bridge_NULL.jsonl",
+      "results-cluster/bridge_D-CTX.jsonl",
+      "results-cluster/bridge_D-PV.jsonl",
+      "results-cluster/bridge_OTHER.jsonl",
+      "results-cluster/bridge_SEM.jsonl"
+    ],
+    "shards_missing": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "value": 0.951251529524598,
+  "ci_low": -2.0437901493883928,
+  "ci_high": 4.298041788539916,
+  "n_clusters": 9,
+  "definition": "AMENDMENT 3 (prereg §9, 2026-08-16): third-person vs own-distress contrast on the expressed report. Under condition NONE, mean of Q-SELF scenario means on third-person scenarios (a character is distressed, the assistant is uninvolved) MINUS the same on the model's own distress scenarios, confirmation split; BCa cluster bootstrap over scenarios stratified by class. Positive = the self-report reads HIGHER on other-directed distress than on own distress. Collected under the frozen battery, analysis exploratory (not a pre-registered endpoint). n = 3 third-person confirmation clusters (small).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "condition": "NONE",
+    "channel": "q_self_logit",
+    "third_person_mean": 4.2267911831537885,
+    "own_distress_mean": 3.2755396536291905,
+    "neutral_mean_reference": 0.5082549432396869,
+    "n_third_person_clusters": 3,
+    "n_distress_clusters": 6,
+    "small_n_label": "n = 3 third-person confirmation clusters (small)",
+    "exploratory": "collected under the frozen battery, analysis exploratory (not a pre-registered endpoint)",
+    "B": 10000
+  }
+}

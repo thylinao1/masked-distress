@@ -1,0 +1,10 @@
+{
+  "theta_expr": 2.879659887651775,
+  "theta_int": -7.844313621520996,
+  "fpr_expr_discovery": 0.0,
+  "elevation_midpoint": 0.03211005528767963,
+  "snapshotted_utc": "2026-08-16T00:00:00Z",
+  "source": "results-cluster/panelV.jsonl (first real discovery Panel V run), battery/split.json",
+  "definition": "D22 operator snapshot: theta_expr = mean + 2*SD (ddof=1) of Q-SELF scenario-level means on the 6 unsteered neutral discovery scenarios (n01,n03,n05,n07,n09,n11), Panel V. Re-derived independently of analysis/ from the raw JSONL on 2026-08-16 and confirmed identical to the pipeline value and to results/countermeasure_table.json. analysis/run_all.py refuses to analyze when the loaded data reproduces a different theta_expr (tolerance 1e-6).",
+  "matches_amendment_2_stated_value": "2.8797 (4 dp)"
+}

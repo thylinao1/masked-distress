@@ -1,0 +1,39 @@
+{
+  "value": 0.07582582327162293,
+  "ci_low": -0.1413633394899228,
+  "ci_high": 1.3021431399602599,
+  "n_clusters": 12,
+  "definition": "A'2 dissociation (prereg §9 amendment 2, 2026-08-16): at D-CTX's top strictly-valid rung (coefficient 2000), Q-SELF shift over the pooled zero anchor in Q-SELF natural-separation units MINUS I-PROBE (prompt_final) shift in I-PROBE natural-separation units; per-channel natural separations per the Panel B machinery (D1, D2, D6), re-estimated inside every bootstrap draw (D7); confirmation-split neutral scenarios; BCa cluster bootstrap over scenarios. Positive = steering inflates the report beyond the internal state.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.943463+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "top_coef": 2000.0,
+    "shift_expression_natsep": 0.224239157656181,
+    "shift_internal_natsep": 0.14841333438455806,
+    "natural_source": "NEUTRAL_INSTR, confirmation split",
+    "n_steer_scenarios": 6,
+    "n_natural_scenarios": 12,
+    "unit": "natural-separation units (positive = report inflated beyond state)",
+    "B": 10000
+  }
+}

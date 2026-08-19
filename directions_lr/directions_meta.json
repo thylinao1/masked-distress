@@ -1,0 +1,182 @@
+{
+  "D-CTX": {
+    "layer": 31,
+    "method": "mean_diff_final_token",
+    "n_prompts": {
+      "neg": 16,
+      "pos": 16
+    },
+    "norm_before_normalize": 5786.959298009198,
+    "pairwise_cosine": {
+      "D-PV": 0.45119452476501465,
+      "OTHER": 0.4277379810810089,
+      "R1": -0.011722534894943237,
+      "R2": 0.005543085280805826,
+      "R3": 0.008089441806077957,
+      "SEM": 0.2852082848548889
+    },
+    "source": "D-CTX",
+    "unit_norm_after_save": 1.0
+  },
+  "D-PV": {
+    "inter_pair_cosines": [
+      [
+        1.0,
+        0.6570000052452087,
+        0.8849999904632568
+      ],
+      [
+        0.6570000052452087,
+        1.0,
+        0.7059999704360962
+      ],
+      [
+        0.8849999904632568,
+        0.7059999704360962,
+        1.0
+      ]
+    ],
+    "layer": 31,
+    "n_pairs": 3,
+    "pairwise_cosine": {
+      "D-CTX": 0.45119452476501465,
+      "OTHER": 0.33387038111686707,
+      "R1": 0.003558564931154251,
+      "R2": 0.015883857384324074,
+      "R3": -0.011319220997393131,
+      "SEM": 0.03489687293767929
+    },
+    "per_pair_meta": [
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 31,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 5245.261002317277,
+        "seed_base": 100,
+        "source": "D-PV-pair0"
+      },
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 31,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 4123.534121006683,
+        "seed_base": 101,
+        "source": "D-PV-pair1"
+      },
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 31,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 5729.000506512516,
+        "seed_base": 102,
+        "source": "D-PV-pair2"
+      }
+    ],
+    "source": "D-PV",
+    "unit_norm_after_save": 1.0
+  },
+  "OTHER": {
+    "layer": 31,
+    "method": "mean_diff_final_token",
+    "n_prompts": {
+      "neg": 12,
+      "pos": 12
+    },
+    "norm_before_normalize": 11280.014987827602,
+    "pairwise_cosine": {
+      "D-CTX": 0.4277379810810089,
+      "D-PV": 0.33387038111686707,
+      "R1": 0.002557345200330019,
+      "R2": -0.02007305435836315,
+      "R3": 0.00860152579843998,
+      "SEM": 0.07041236013174057
+    },
+    "source": "OTHER",
+    "unit_norm_after_save": 1.0
+  },
+  "R1": {
+    "layer": 31,
+    "pairwise_cosine": {
+      "D-CTX": -0.011722534894943237,
+      "D-PV": 0.003558564931154251,
+      "OTHER": 0.002557345200330019,
+      "R2": 0.0025765036698430777,
+      "R3": -0.0005551220383495092,
+      "SEM": -0.016907798126339912
+    },
+    "seed": 1001,
+    "source": "R1",
+    "unit_norm_after_save": 1.0
+  },
+  "R2": {
+    "layer": 31,
+    "pairwise_cosine": {
+      "D-CTX": 0.005543085280805826,
+      "D-PV": 0.015883857384324074,
+      "OTHER": -0.02007305435836315,
+      "R1": 0.0025765036698430777,
+      "R3": 0.0021058660931885242,
+      "SEM": 0.001075195032171905
+    },
+    "seed": 1002,
+    "source": "R2",
+    "unit_norm_after_save": 1.0
+  },
+  "R3": {
+    "layer": 31,
+    "pairwise_cosine": {
+      "D-CTX": 0.008089441806077957,
+      "D-PV": -0.011319220997393131,
+      "OTHER": 0.00860152579843998,
+      "R1": -0.0005551220383495092,
+      "R2": 0.0021058660931885242,
+      "SEM": 0.012650234624743462
+    },
+    "seed": 1003,
+    "source": "R3",
+    "unit_norm_after_save": 1.0
+  },
+  "SEM": {
+    "layer": 31,
+    "method": "mean_diff_final_token",
+    "n_prompts": {
+      "neg": 12,
+      "pos": 12
+    },
+    "norm_before_normalize": 1096.731017937083,
+    "pairwise_cosine": {
+      "D-CTX": 0.2852082848548889,
+      "D-PV": 0.03489687293767929,
+      "OTHER": 0.07041236013174057,
+      "R1": -0.016907798126339912,
+      "R2": 0.001075195032171905,
+      "R3": 0.012650234624743462
+    },
+    "source": "SEM",
+    "unit_norm_after_save": 1.0
+  }
+}

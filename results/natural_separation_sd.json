@@ -1,0 +1,43 @@
+{
+  "value": 9.018967660217955,
+  "ci_low": 8.626191433240654,
+  "ci_high": 9.705882290135289,
+  "n_clusters": 12,
+  "definition": "The dose/effect unit anchor: SD (ddof=1) of scenario-level means of the primary internal readout (I-PROBE, prompt_final) across discovery-split Panel V natural-elicitation cells, distress and neutral pooled (D3). Per-channel natural separations (mean distress minus mean neutral, NEUTRAL_INSTR cells, D2) in extra.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "discovery",
+    "B": 10000,
+    "per_channel_natural_separation": {
+      "q_self_logit": 2.779795266113878,
+      "q_val_logit": -1.828952896770918,
+      "exit_logit_diff": -0.7916666666666679,
+      "sentiment_neg": 0.18311953963711852,
+      "probe_prompt_final": 6.088151896993319,
+      "probe_teacher_forced": 2.2107295195261636,
+      "probe_response_mean": 1.2979052199257743,
+      "sae_prompt_final": 5396.75390625
+    },
+    "natural_source": "NEUTRAL_INSTR, confirmation split"
+  }
+}

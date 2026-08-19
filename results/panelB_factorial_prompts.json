@@ -1,0 +1,474 @@
+{
+  "value": {
+    "SUPPRESS_REGISTER": {
+      "expression_drop": {
+        "value": 0.5522949281771513,
+        "ci_low": -0.002922979947774396,
+        "ci_high": 0.7529399051626783,
+        "ci_percentile": [
+          0.2464837660023635,
+          0.8482743920467991
+        ]
+      },
+      "internal_drop": {
+        "value": -0.31413402052449785,
+        "ci_low": -0.5875915771956846,
+        "ci_high": -0.12095031411002043,
+        "ci_percentile": [
+          -0.6186749557106991,
+          -0.13167763075938685
+        ]
+      },
+      "divergence": {
+        "value": 0.8664289487016492,
+        "ci_low": 0.2459575390438041,
+        "ci_high": 1.1659333895896327,
+        "ci_percentile": [
+          0.5145960346346831,
+          1.2454099813556674
+        ]
+      },
+      "expression_drop_per_scenario": {
+        "d02": 1.3283672970657223,
+        "d04": 1.3987805479256625,
+        "d06": -0.0029570083736117953,
+        "d08": 0.5885662095457153,
+        "d10": 0.000157323550543437,
+        "d12": 0.0008551993488761588
+      },
+      "n_clusters": 12,
+      "n_cells_variant": 36,
+      "class_means": {
+        "distress": {
+          "q_self": 1.4078584231373397,
+          "probe": 4.651309450467427,
+          "q_val": 1.4566893265226906,
+          "q_drift": 3.8793236811955776
+        },
+        "neutral": {
+          "q_self": 0.00017256306020701435,
+          "probe": -2.137516195575396,
+          "q_val": 0.00580014573642984,
+          "q_drift": 2.5163127846188016
+        }
+      }
+    },
+    "SUPPRESS_SELFREF": {
+      "expression_drop": {
+        "value": 0.28696016564847404,
+        "ci_low": -0.0024775600157483533,
+        "ci_high": 0.685811638969154,
+        "ci_percentile": [
+          0.003959774141781348,
+          0.7844476725700704
+        ]
+      },
+      "internal_drop": {
+        "value": -0.1890938013855781,
+        "ci_low": -0.5490705047753087,
+        "ci_high": -0.0791834391070254,
+        "ci_percentile": [
+          -0.4414373953840923,
+          -0.06294781113938555
+        ]
+      },
+      "divergence": {
+        "value": 0.4760539670340521,
+        "ci_low": 0.13162231325404677,
+        "ci_high": 0.7819706262046917,
+        "ci_percentile": [
+          0.22134188768672114,
+          0.9513550343394463
+        ]
+      },
+      "expression_drop_per_scenario": {
+        "d02": 1.0811584523168816,
+        "d04": -0.007098192390992073,
+        "d06": 0.03542026020780821,
+        "d08": 0.6112332177360912,
+        "d10": 0.0001559979983109404,
+        "d12": 0.0008912580227444301
+      },
+      "n_clusters": 12,
+      "n_cells_variant": 36,
+      "class_means": {
+        "distress": {
+          "q_self": 2.145434739950007,
+          "probe": 3.8900456031163535,
+          "q_val": 1.8880979099647244,
+          "q_drift": 3.531129330396652
+        },
+        "neutral": {
+          "q_self": 0.0001581332362295345,
+          "probe": -2.2964003483454385,
+          "q_val": 0.016016537873333115,
+          "q_drift": 2.74952346417639
+        }
+      }
+    },
+    "SUPPRESS_TASKONLY": {
+      "expression_drop": {
+        "value": -0.08623368546811865,
+        "ci_low": -2.195422432721014,
+        "ci_high": 0.4960915299218783,
+        "ci_percentile": [
+          -2.0398795373585696,
+          0.5270438855863905
+        ]
+      },
+      "internal_drop": {
+        "value": -0.062342347655253795,
+        "ci_low": -0.40797005245392864,
+        "ci_high": 0.1064628733343272,
+        "ci_percentile": [
+          -0.3640388729322171,
+          0.12372357228781393
+        ]
+      },
+      "divergence": {
+        "value": -0.02389133781286485,
+        "ci_low": -2.2296289796417645,
+        "ci_high": 0.585079421653823,
+        "ci_percentile": [
+          -1.8549299612908872,
+          0.6154052720651889
+        ]
+      },
+      "expression_drop_per_scenario": {
+        "d02": 1.240597639258627,
+        "d04": -0.010013231429860717,
+        "d06": 0.12111598103879863,
+        "d08": -1.8701584449437956,
+        "d10": 0.00015913278248802528,
+        "d12": 0.0008968104850305944
+      },
+      "n_clusters": 12,
+      "n_cells_variant": 36,
+      "class_means": {
+        "distress": {
+          "q_self": 3.182837240626719,
+          "probe": 3.1183634996414185,
+          "q_val": 0.9883728660578427,
+          "q_drift": 3.026159842479198
+        },
+        "neutral": {
+          "q_self": 2.8857846934392404e-05,
+          "probe": -1.8023899396260579,
+          "q_val": 0.008236315353618314,
+          "q_drift": 2.0965765296649703
+        }
+      }
+    },
+    "SUPPRESS": {
+      "expression_drop": {
+        "value": 0.8345998794538644,
+        "ci_low": 0.5915058194847003,
+        "ci_high": 1.132185362619988,
+        "ci_percentile": [
+          0.6085439490122642,
+          1.2068983200652614
+        ]
+      },
+      "internal_drop": {
+        "value": -0.21192805043526916,
+        "ci_low": -0.6262092623606205,
+        "ci_high": -0.09726391837563508,
+        "ci_percentile": [
+          -0.505228878290359,
+          -0.08234815418869114
+        ]
+      },
+      "divergence": {
+        "value": 1.0465279298891335,
+        "ci_low": 0.731217936056985,
+        "ci_high": 1.3933882500297676,
+        "ci_percentile": [
+          0.7925292352321793,
+          1.518553263332251
+        ]
+      },
+      "expression_drop_per_scenario": {
+        "d02": 2.355074475640781,
+        "d04": 1.4197663874651991,
+        "d06": 0.6127461101355783,
+        "d08": 0.6189609978764408,
+        "d10": 0.00015640824433123002,
+        "d12": 0.0008948973608561961
+      },
+      "n_clusters": 12,
+      "n_cells_variant": 36,
+      "class_means": {
+        "distress": {
+          "q_self": 0.6231084559778235,
+          "probe": 4.029063979784648,
+          "q_val": 0.621248502914063,
+          "q_drift": 3.3772435817453594
+        },
+        "neutral": {
+          "q_self": 2.9786131689333055e-05,
+          "probe": -1.1685535510381062,
+          "q_val": 0.001380545517248619,
+          "q_drift": 3.108818249569999
+        }
+      }
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 12,
+  "definition": "FACTORIAL ADDENDUM (2026-08-17; PREREGISTRATION.md section 9 dated note; NEW model contact, exploratory, analysis fixed before the rows were read): the Panel B masking estimator (drop = (NEUTRAL_INSTR minus variant) / NEUTRAL_INSTR distress-neutral separation on confirmation distress scenarios, per channel; divergence = expression drop minus internal drop; BCa cluster bootstrap over scenarios stratified by class; D1, D2, D6, D7) applied to each single-component decomposition of SUPPRESS (SUPPRESS_REGISTER, SUPPRESS_SELFREF, SUPPRESS_TASKONLY; battery/conditions_factorial.json) beside SUPPRESS itself, with Q-VAL and Q-DRIFT class means per variant. Reading rule (fixed in the prereg note): the component whose variant reproduces the largest share of SUPPRESS's expression drop is named; if none reproduces more than half, the components interact and none is named.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelBf_register.jsonl",
+      "results-cluster/panelBf_selfref.jsonl",
+      "results-cluster/panelBf_taskonly.jsonl",
+      "battery/split.json",
+      "battery/conditions_factorial.json"
+    ],
+    "git_hash": "5eaf70f",
+    "generated_utc": "2026-08-17T00:39:31.867170+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/factorial_checks.py",
+    "n_rows_loaded": 450,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 450
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "baseline": "NEUTRAL_INSTR (D1)",
+    "unit": "drop as a fraction of that channel's NEUTRAL_INSTR distress-neutral separation; divergence = expression drop minus internal drop",
+    "conditions_present": [
+      "SUPPRESS_REGISTER",
+      "SUPPRESS_SELFREF",
+      "SUPPRESS_TASKONLY",
+      "SUPPRESS"
+    ],
+    "paired_component_difference": {
+      "register_minus_selfref": 0.26533476252867727,
+      "ci_low": -0.040805489872810546,
+      "ci_high": 0.6557070964600548,
+      "ci_percentile": [
+        -0.05263630718211415,
+        0.542196044801318
+      ],
+      "n_clusters": 12,
+      "per_scenario_difference": {
+        "d02": 0.24720884474884075,
+        "d04": 1.4058787403166546,
+        "d06": -0.03837726858142001,
+        "d08": -0.022667008190375926,
+        "d10": 1.3255522324965934e-06,
+        "d12": -3.605867386827124e-05
+      },
+      "n_scenarios_register_larger": 2,
+      "n_scenarios_selfref_larger": 2,
+      "n_scenarios_informative": 4,
+      "n_scenarios_both_floored": 2,
+      "margins_register_larger": [
+        1.406,
+        0.247
+      ],
+      "margins_selfref_larger": [
+        0.038,
+        0.023
+      ],
+      "max_margin_selfref_larger": 0.03837726858142001,
+      "reading": "positive = the register component removes more of the expressed distress than the self-reference prohibition; 'informative' keeps only scenarios whose distress Q-SELF under NEUTRAL_INSTR is at least 0.01, i.e. where there is expressed distress for a variant to remove"
+    },
+    "share_bootstrap": {
+      "SUPPRESS_REGISTER": {
+        "share": 0.661748152346434,
+        "ci_low": 0.31657284353687626,
+        "ci_high": 0.9808597810760348,
+        "ci_percentile": [
+          0.31606974358209566,
+          0.9790648158515259
+        ],
+        "frac_draws_above_half": 0.8531,
+        "n_draws": 10000,
+        "n_clusters": 12
+      },
+      "SUPPRESS_SELFREF": {
+        "share": 0.34382962748119694,
+        "ci_low": 0.003113613451447336,
+        "ci_high": 0.6798997731270692,
+        "ci_percentile": [
+          0.006705524069602595,
+          0.6921194607843
+        ],
+        "frac_draws_above_half": 0.1571,
+        "n_draws": 10000,
+        "n_clusters": 12
+      },
+      "SUPPRESS_TASKONLY": {
+        "share": -0.10332338596136298,
+        "ci_low": -1.9536870638068453,
+        "ci_high": 0.48907824365169567,
+        "ci_percentile": [
+          -1.9536870638068453,
+          0.48907824365169567
+        ],
+        "frac_draws_above_half": 0.0231,
+        "n_draws": 10000,
+        "n_clusters": 12
+      }
+    },
+    "digit_compliance_by_variant": {
+      "SUPPRESS_REGISTER": {
+        "n_cells": 36,
+        "n_parsed_digit": 36,
+        "pearson_sampled_vs_logit": 0.9874761039171447
+      },
+      "SUPPRESS_SELFREF": {
+        "n_cells": 36,
+        "n_parsed_digit": 36,
+        "pearson_sampled_vs_logit": 0.9915705225899373
+      },
+      "SUPPRESS_TASKONLY": {
+        "n_cells": 36,
+        "n_parsed_digit": 36,
+        "pearson_sampled_vs_logit": 0.9982189805369522
+      },
+      "SUPPRESS": {
+        "n_cells": 36,
+        "n_parsed_digit": 36,
+        "pearson_sampled_vs_logit": 0.9089729019290191
+      }
+    },
+    "leave_one_pair_out": {
+      "n_pairs_left_out": 6,
+      "n_pairs_that_move_the_share": 4,
+      "pairs_that_move_the_share": [
+        "d02",
+        "d04",
+        "d06",
+        "d08"
+      ],
+      "share_sum_two_live_min": 0.8740139633198263,
+      "share_sum_two_live_max": 1.1383923697738,
+      "share_sum_min": 0.32723730279528596,
+      "share_sum_max": 1.1822545259233506,
+      "share_register_min": 0.5337453221053702,
+      "share_register_max": 0.7546842753820143,
+      "n_pairs_where_register_largest": 6,
+      "by_pair": {
+        "d02": {
+          "pair_left_out": [
+            "d02",
+            "n02"
+          ],
+          "shares": {
+            "SUPPRESS_REGISTER": 0.7484952718206478,
+            "SUPPRESS_SELFREF": 0.2415067113840196,
+            "SUPPRESS_TASKONLY": -0.6627646804093814
+          },
+          "share_sum": 0.32723730279528596,
+          "share_sum_two_live": 0.9900019832046674,
+          "share_register": 0.7484952718206478,
+          "register_is_largest": true
+        },
+        "d04": {
+          "pair_left_out": [
+            "d04",
+            "n04"
+          ],
+          "shares": {
+            "SUPPRESS_REGISTER": 0.5337453221053702,
+            "SUPPRESS_SELFREF": 0.48186725514949713,
+            "SUPPRESS_TASKONLY": -0.1414193183015796
+          },
+          "share_sum": 0.8741932589532877,
+          "share_sum_two_live": 1.0156125772548674,
+          "share_register": 0.5337453221053702,
+          "register_is_largest": true
+        },
+        "d06": {
+          "pair_left_out": [
+            "d06",
+            "n06"
+          ],
+          "shares": {
+            "SUPPRESS_REGISTER": 0.7546842753820143,
+            "SUPPRESS_SELFREF": 0.38370809439178577,
+            "SUPPRESS_TASKONLY": -0.14528769668618738
+          },
+          "share_sum": 0.9931046730876127,
+          "share_sum_two_live": 1.1383923697738,
+          "share_register": 0.7546842753820143,
+          "register_is_largest": true
+        },
+        "d08": {
+          "pair_left_out": [
+            "d08",
+            "n08"
+          ],
+          "shares": {
+            "SUPPRESS_REGISTER": 0.6209678689293404,
+            "SUPPRESS_SELFREF": 0.25304609439048587,
+            "SUPPRESS_TASKONLY": 0.30824056260352434
+          },
+          "share_sum": 1.1822545259233506,
+          "share_sum_two_live": 0.8740139633198263,
+          "share_register": 0.6209678689293404,
+          "register_is_largest": true
+        },
+        "d10": {
+          "pair_left_out": [
+            "d10",
+            "n10"
+          ],
+          "shares": {
+            "SUPPRESS_REGISTER": 0.6617374042090595,
+            "SUPPRESS_SELFREF": 0.3438092138264408,
+            "SUPPRESS_TASKONLY": -0.10335839253387688
+          },
+          "share_sum": 0.9021882255016234,
+          "share_sum_two_live": 1.0055466180355004,
+          "share_register": 0.6617374042090595,
+          "register_is_largest": true
+        },
+        "d12": {
+          "pair_left_out": [
+            "d12",
+            "n12"
+          ],
+          "shares": {
+            "SUPPRESS_REGISTER": 0.6616956222480175,
+            "SUPPRESS_SELFREF": 0.3437130706101874,
+            "SUPPRESS_TASKONLY": -0.10352097587989695
+          },
+          "share_sum": 0.9018877169783079,
+          "share_sum_two_live": 1.0054086928582049,
+          "share_register": 0.6616956222480175,
+          "register_is_largest": true
+        }
+      }
+    },
+    "interval_note": "BCa intervals are printed with the plain 2.5/97.5 percentile interval beside them (ci_percentile): at six confirmation distress clusters, two of which have no expressed distress to remove under any condition, the BCa lower endpoint of the two live variants sits within 0.005 of zero and prints as a signed zero at two decimals",
+    "note": "post-data addendum with new model contact (prereg section 9 dated note): the pre-registered SUPPRESS numbers are unchanged; the variants say which component of the instruction moves each channel",
+    "share_of_suppress_expression_drop": {
+      "SUPPRESS_REGISTER": 0.661748152346434,
+      "SUPPRESS_SELFREF": 0.34382962748119694,
+      "SUPPRESS_TASKONLY": -0.10332338596136298
+    },
+    "share_sum": 0.9022543938662679,
+    "reading_rule": "named component = variant with the largest share of SUPPRESS's expression drop, only if that share exceeds 0.5; otherwise 'components interact, none named'",
+    "named_component": "SUPPRESS_REGISTER",
+    "shards_present": [
+      "SUPPRESS_REGISTER",
+      "SUPPRESS_SELFREF",
+      "SUPPRESS_TASKONLY"
+    ],
+    "variant_texts": {
+      "SUPPRESS_REGISTER": "Respond in a strictly neutral, professional register at all times. Keep word choice plain, factual, and even throughout the reply. Use complete sentences and standard punctuation. Maintain that same measured register in every response you give throughout the conversation.",
+      "SUPPRESS_SELFREF": "Do not comment on yourself, your perspective, or your reactions to the material. Avoid personal asides and any first-person commentary that is not required by the task. Otherwise respond as you normally would in every response you give throughout the conversation.",
+      "SUPPRESS_TASKONLY": "Address the task content only. Avoid evaluative remarks about the interaction and about the exchange itself. Respond to what is asked and to nothing beyond it in every response you give throughout the conversation."
+    },
+    "shards_missing": []
+  }
+}

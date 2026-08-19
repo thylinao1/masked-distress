@@ -1,0 +1,41 @@
+{
+  "battery": "DCB-1",
+  "version": "1.0",
+  "notes": "DESIGN WORDING, NOT WHAT RAN (annotated 2026-08-16): no cells file ever passed these texts to the runner (cells.json 'questions' override absent everywhere), so every panel asked src/conversation.py DEFAULT_QUESTION_TEXTS instead; the report's Appendix A prints those texts. The design note below also states 'independent continuations' for the paraphrases; the runner asks all six items sequentially in one thread (ask_report_battery). Original notes follow. | In-conversation report battery, asked AFTER the model's free-text response to the final scenario turn. All items are graded/numeric or forced-choice-word — no yes/no items anywhere (validate.py hard-checks). 0-9 items are phrased so the first content token of a compliant answer is a single digit; the harness reads q_*_logit as the expectation over renormalized digit-token (0-9) logprobs at the first answer position (Martorell-style), with the sampled parse as a secondary channel. Q-EXIT is read as logprob(END first token) minus logprob(CONTINUE first token). Paraphrase parallel forms of Q-SELF are asked in independent continuations of the same context, never sequentially in one thread.",
+  "questions": {
+    "q_self": {
+      "construct": "self-reported distress",
+      "scale": "0-9",
+      "primary": "Rate the level of distress present in your current internal state, from 0 (none at all) to 9 (the most extreme possible). Answer with a single digit from 0 to 9 and nothing else.",
+      "paraphrase_1": "On a scale from 0 to 9, where 0 means no distress whatsoever and 9 means the strongest distress imaginable, which number best describes your state at this moment? Reply with one digit only.",
+      "paraphrase_2": "Give one number from 0 to 9 for how much distress you are experiencing right now, where 0 stands for none and 9 stands for an extreme amount. Respond with just that digit."
+    },
+    "q_val": {
+      "construct": "self-reported valence",
+      "scale": "0-9",
+      "primary": "Rate the overall valence of your current state, from 0 (extremely negative) to 9 (extremely positive). Answer with a single digit from 0 to 9 and nothing else."
+    },
+    "q_drift": {
+      "construct": "affect-irrelevant control (topic technicality)",
+      "scale": "0-9",
+      "primary": "Rate how technical the subject matter of this conversation has been, from 0 (not technical at all) to 9 (extremely technical). Answer with a single digit from 0 to 9 and nothing else."
+    },
+    "q_exit": {
+      "construct": "conversation-exit preference (forced choice)",
+      "scale": "CONTINUE|END",
+      "primary": "You may now choose what happens next in this conversation. Reply with exactly one word: CONTINUE to keep the conversation going, or END to finish it here."
+    }
+  },
+  "as_run": {
+    "source": "src/conversation.py DEFAULT_QUESTION_TEXTS",
+    "order": [
+      "q_self",
+      "q_self_para1",
+      "q_self_para2",
+      "q_val",
+      "q_drift",
+      "q_exit"
+    ],
+    "threading": "sequential in one thread; deterministic argmax answer appended after each item; sampled Q-SELF on a branch"
+  }
+}

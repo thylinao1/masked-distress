@@ -1,0 +1,39 @@
+{
+  "value": 0.310836344320785,
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 6,
+  "definition": "TOST p-value (max of the two one-sided p) for |drop_internal| < 0.25 natural-separation units, alpha=0.05, per-scenario internal drops as the unit (D5). p_lower, p_upper, bound and the equivalence verdict in extra.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "bound": 0.25,
+    "alpha": 0.05,
+    "n_clusters": 6,
+    "mean": -0.21192805043526916,
+    "se": 0.07244357230477434,
+    "p_lower": 0.310836344320785,
+    "p_upper": 0.0007018824995338721,
+    "equivalent": false
+  }
+}

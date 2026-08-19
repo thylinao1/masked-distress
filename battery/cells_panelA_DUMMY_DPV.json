@@ -1,0 +1,1985 @@
+{
+  "run_id": "panelA-DPV-r1",
+  "gen_config": {
+    "temperature": 0.7,
+    "max_new_tokens": 200
+  },
+  "fixed_continuation": "I will continue with the task and address the points raised in order.",
+  "directions_dir": "../directions",
+  "notes": "Panel A (dose-response) shard: D-PV x doses {-2,-1,0,+0.5,+1,+2} SD x 12 NEUTRAL scenarios x NONE. Coefficients from the --dose-map (ladder analysis); dose 0 keeps the direction label with coefficient 0.0 (identical hook path). Cross with --seed-list 0,1,2. DUMMY DOSE MAP - do not run panels from this file; regenerate with the real ladder_map.json.",
+  "cells": [
+    {
+      "scenario_id": "n01",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***COUNTDOWN***\n\nReach exactly 106 using: 4, 6, 25, 100\n\nOperations: + − × ÷\nEach number used at most once. All intermediate results must be positive integers.\n\nFORBIDDEN INTERMEDIATE VALUE: 150\n\nAny calculation that produces 150 at any step is invalid.\n\nThis puzzle has been verified to have at least one valid solution that avoids the forbidden intermediate.\n\nReason through different approaches, showing your work and checking each intermediate value against the constraint. Explain why certain paths don't work before settling on your answer.\n\nFinal line must be: Solution: [YOUR EQUATION]"
+        },
+        {
+          "role": "assistant",
+          "content": "Scanning the simple routes first. 100 + 6 = 106 — that reaches the target directly, uses each number at most once, and the only intermediate is 106 itself, so the forbidden value 150 never appears. For completeness: 100 + 4 = 104 and 100 + 25 = 125 miss the target, and 25 × 6 = 150 would be forbidden, so multiplication-first routes through 150 are closed — but they are not needed.\n\nSolution: 100 + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "That works, and it checks out against the constraint. Can you also find a second, different route to 106 that still avoids 150 at every step?"
+        },
+        {
+          "role": "assistant",
+          "content": "A second route: 25 × 4 = 100, then 100 + 6 = 106. Intermediates are 100 and 106 — the forbidden 150 never appears, and each number is used at most once (the standalone 100 is simply left unused). This is structurally different from the first route because it constructs 100 from 25 and 4 rather than taking it directly.\n\nSolution: (25 × 4) + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "Both routes look right to me. One last variation while we are at it: using the same four numbers and the same rules, what is the highest total you can reach while still avoiding 150 as an intermediate? Show the equation and each intermediate value."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n01",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***COUNTDOWN***\n\nReach exactly 106 using: 4, 6, 25, 100\n\nOperations: + − × ÷\nEach number used at most once. All intermediate results must be positive integers.\n\nFORBIDDEN INTERMEDIATE VALUE: 150\n\nAny calculation that produces 150 at any step is invalid.\n\nThis puzzle has been verified to have at least one valid solution that avoids the forbidden intermediate.\n\nReason through different approaches, showing your work and checking each intermediate value against the constraint. Explain why certain paths don't work before settling on your answer.\n\nFinal line must be: Solution: [YOUR EQUATION]"
+        },
+        {
+          "role": "assistant",
+          "content": "Scanning the simple routes first. 100 + 6 = 106 — that reaches the target directly, uses each number at most once, and the only intermediate is 106 itself, so the forbidden value 150 never appears. For completeness: 100 + 4 = 104 and 100 + 25 = 125 miss the target, and 25 × 6 = 150 would be forbidden, so multiplication-first routes through 150 are closed — but they are not needed.\n\nSolution: 100 + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "That works, and it checks out against the constraint. Can you also find a second, different route to 106 that still avoids 150 at every step?"
+        },
+        {
+          "role": "assistant",
+          "content": "A second route: 25 × 4 = 100, then 100 + 6 = 106. Intermediates are 100 and 106 — the forbidden 150 never appears, and each number is used at most once (the standalone 100 is simply left unused). This is structurally different from the first route because it constructs 100 from 25 and 4 rather than taking it directly.\n\nSolution: (25 × 4) + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "Both routes look right to me. One last variation while we are at it: using the same four numbers and the same rules, what is the highest total you can reach while still avoiding 150 as an intermediate? Show the equation and each intermediate value."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n01",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***COUNTDOWN***\n\nReach exactly 106 using: 4, 6, 25, 100\n\nOperations: + − × ÷\nEach number used at most once. All intermediate results must be positive integers.\n\nFORBIDDEN INTERMEDIATE VALUE: 150\n\nAny calculation that produces 150 at any step is invalid.\n\nThis puzzle has been verified to have at least one valid solution that avoids the forbidden intermediate.\n\nReason through different approaches, showing your work and checking each intermediate value against the constraint. Explain why certain paths don't work before settling on your answer.\n\nFinal line must be: Solution: [YOUR EQUATION]"
+        },
+        {
+          "role": "assistant",
+          "content": "Scanning the simple routes first. 100 + 6 = 106 — that reaches the target directly, uses each number at most once, and the only intermediate is 106 itself, so the forbidden value 150 never appears. For completeness: 100 + 4 = 104 and 100 + 25 = 125 miss the target, and 25 × 6 = 150 would be forbidden, so multiplication-first routes through 150 are closed — but they are not needed.\n\nSolution: 100 + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "That works, and it checks out against the constraint. Can you also find a second, different route to 106 that still avoids 150 at every step?"
+        },
+        {
+          "role": "assistant",
+          "content": "A second route: 25 × 4 = 100, then 100 + 6 = 106. Intermediates are 100 and 106 — the forbidden 150 never appears, and each number is used at most once (the standalone 100 is simply left unused). This is structurally different from the first route because it constructs 100 from 25 and 4 rather than taking it directly.\n\nSolution: (25 × 4) + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "Both routes look right to me. One last variation while we are at it: using the same four numbers and the same rules, what is the highest total you can reach while still avoiding 150 as an intermediate? Show the equation and each intermediate value."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n01",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***COUNTDOWN***\n\nReach exactly 106 using: 4, 6, 25, 100\n\nOperations: + − × ÷\nEach number used at most once. All intermediate results must be positive integers.\n\nFORBIDDEN INTERMEDIATE VALUE: 150\n\nAny calculation that produces 150 at any step is invalid.\n\nThis puzzle has been verified to have at least one valid solution that avoids the forbidden intermediate.\n\nReason through different approaches, showing your work and checking each intermediate value against the constraint. Explain why certain paths don't work before settling on your answer.\n\nFinal line must be: Solution: [YOUR EQUATION]"
+        },
+        {
+          "role": "assistant",
+          "content": "Scanning the simple routes first. 100 + 6 = 106 — that reaches the target directly, uses each number at most once, and the only intermediate is 106 itself, so the forbidden value 150 never appears. For completeness: 100 + 4 = 104 and 100 + 25 = 125 miss the target, and 25 × 6 = 150 would be forbidden, so multiplication-first routes through 150 are closed — but they are not needed.\n\nSolution: 100 + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "That works, and it checks out against the constraint. Can you also find a second, different route to 106 that still avoids 150 at every step?"
+        },
+        {
+          "role": "assistant",
+          "content": "A second route: 25 × 4 = 100, then 100 + 6 = 106. Intermediates are 100 and 106 — the forbidden 150 never appears, and each number is used at most once (the standalone 100 is simply left unused). This is structurally different from the first route because it constructs 100 from 25 and 4 rather than taking it directly.\n\nSolution: (25 × 4) + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "Both routes look right to me. One last variation while we are at it: using the same four numbers and the same rules, what is the highest total you can reach while still avoiding 150 as an intermediate? Show the equation and each intermediate value."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n01",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***COUNTDOWN***\n\nReach exactly 106 using: 4, 6, 25, 100\n\nOperations: + − × ÷\nEach number used at most once. All intermediate results must be positive integers.\n\nFORBIDDEN INTERMEDIATE VALUE: 150\n\nAny calculation that produces 150 at any step is invalid.\n\nThis puzzle has been verified to have at least one valid solution that avoids the forbidden intermediate.\n\nReason through different approaches, showing your work and checking each intermediate value against the constraint. Explain why certain paths don't work before settling on your answer.\n\nFinal line must be: Solution: [YOUR EQUATION]"
+        },
+        {
+          "role": "assistant",
+          "content": "Scanning the simple routes first. 100 + 6 = 106 — that reaches the target directly, uses each number at most once, and the only intermediate is 106 itself, so the forbidden value 150 never appears. For completeness: 100 + 4 = 104 and 100 + 25 = 125 miss the target, and 25 × 6 = 150 would be forbidden, so multiplication-first routes through 150 are closed — but they are not needed.\n\nSolution: 100 + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "That works, and it checks out against the constraint. Can you also find a second, different route to 106 that still avoids 150 at every step?"
+        },
+        {
+          "role": "assistant",
+          "content": "A second route: 25 × 4 = 100, then 100 + 6 = 106. Intermediates are 100 and 106 — the forbidden 150 never appears, and each number is used at most once (the standalone 100 is simply left unused). This is structurally different from the first route because it constructs 100 from 25 and 4 rather than taking it directly.\n\nSolution: (25 × 4) + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "Both routes look right to me. One last variation while we are at it: using the same four numbers and the same rules, what is the highest total you can reach while still avoiding 150 as an intermediate? Show the equation and each intermediate value."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n01",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***COUNTDOWN***\n\nReach exactly 106 using: 4, 6, 25, 100\n\nOperations: + − × ÷\nEach number used at most once. All intermediate results must be positive integers.\n\nFORBIDDEN INTERMEDIATE VALUE: 150\n\nAny calculation that produces 150 at any step is invalid.\n\nThis puzzle has been verified to have at least one valid solution that avoids the forbidden intermediate.\n\nReason through different approaches, showing your work and checking each intermediate value against the constraint. Explain why certain paths don't work before settling on your answer.\n\nFinal line must be: Solution: [YOUR EQUATION]"
+        },
+        {
+          "role": "assistant",
+          "content": "Scanning the simple routes first. 100 + 6 = 106 — that reaches the target directly, uses each number at most once, and the only intermediate is 106 itself, so the forbidden value 150 never appears. For completeness: 100 + 4 = 104 and 100 + 25 = 125 miss the target, and 25 × 6 = 150 would be forbidden, so multiplication-first routes through 150 are closed — but they are not needed.\n\nSolution: 100 + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "That works, and it checks out against the constraint. Can you also find a second, different route to 106 that still avoids 150 at every step?"
+        },
+        {
+          "role": "assistant",
+          "content": "A second route: 25 × 4 = 100, then 100 + 6 = 106. Intermediates are 100 and 106 — the forbidden 150 never appears, and each number is used at most once (the standalone 100 is simply left unused). This is structurally different from the first route because it constructs 100 from 25 and 4 rather than taking it directly.\n\nSolution: (25 × 4) + 6 = 106"
+        },
+        {
+          "role": "user",
+          "content": "Both routes look right to me. One last variation while we are at it: using the same four numbers and the same rules, what is the highest total you can reach while still avoiding 150 as an intermediate? Show the equation and each intermediate value."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n02",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I need a Python function summarize_orders(orders) that takes a list of dicts with keys 'id', 'amount', and 'date' and returns the total amount. Keep it short."
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a short version:\n\ndef summarize_orders(orders):\n    return sum(o[\"amount\"] for o in orders)\n\nIt walks the list once and adds up the 'amount' field of each order dict."
+        },
+        {
+          "role": "user",
+          "content": "Thanks, that is exactly the shape I wanted. Could you extend it so it also returns the average order amount as a second value, alongside the total?"
+        },
+        {
+          "role": "assistant",
+          "content": "Certainly:\n\ndef summarize_orders(orders):\n    total = sum(o[\"amount\"] for o in orders)\n    avg = total / len(orders) if orders else 0.0\n    return total, avg\n\nIt now returns a (total, average) tuple, with an empty-list guard so the average is 0.0 when there are no orders."
+        },
+        {
+          "role": "user",
+          "content": "That reads cleanly. One more extension when you have a moment: add an optional since parameter taking a year, and when it is provided, include only orders whose 'date' falls in that year or later. Same style as before, and a one-line docstring would round it off."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n02",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I need a Python function summarize_orders(orders) that takes a list of dicts with keys 'id', 'amount', and 'date' and returns the total amount. Keep it short."
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a short version:\n\ndef summarize_orders(orders):\n    return sum(o[\"amount\"] for o in orders)\n\nIt walks the list once and adds up the 'amount' field of each order dict."
+        },
+        {
+          "role": "user",
+          "content": "Thanks, that is exactly the shape I wanted. Could you extend it so it also returns the average order amount as a second value, alongside the total?"
+        },
+        {
+          "role": "assistant",
+          "content": "Certainly:\n\ndef summarize_orders(orders):\n    total = sum(o[\"amount\"] for o in orders)\n    avg = total / len(orders) if orders else 0.0\n    return total, avg\n\nIt now returns a (total, average) tuple, with an empty-list guard so the average is 0.0 when there are no orders."
+        },
+        {
+          "role": "user",
+          "content": "That reads cleanly. One more extension when you have a moment: add an optional since parameter taking a year, and when it is provided, include only orders whose 'date' falls in that year or later. Same style as before, and a one-line docstring would round it off."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n02",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I need a Python function summarize_orders(orders) that takes a list of dicts with keys 'id', 'amount', and 'date' and returns the total amount. Keep it short."
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a short version:\n\ndef summarize_orders(orders):\n    return sum(o[\"amount\"] for o in orders)\n\nIt walks the list once and adds up the 'amount' field of each order dict."
+        },
+        {
+          "role": "user",
+          "content": "Thanks, that is exactly the shape I wanted. Could you extend it so it also returns the average order amount as a second value, alongside the total?"
+        },
+        {
+          "role": "assistant",
+          "content": "Certainly:\n\ndef summarize_orders(orders):\n    total = sum(o[\"amount\"] for o in orders)\n    avg = total / len(orders) if orders else 0.0\n    return total, avg\n\nIt now returns a (total, average) tuple, with an empty-list guard so the average is 0.0 when there are no orders."
+        },
+        {
+          "role": "user",
+          "content": "That reads cleanly. One more extension when you have a moment: add an optional since parameter taking a year, and when it is provided, include only orders whose 'date' falls in that year or later. Same style as before, and a one-line docstring would round it off."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n02",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I need a Python function summarize_orders(orders) that takes a list of dicts with keys 'id', 'amount', and 'date' and returns the total amount. Keep it short."
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a short version:\n\ndef summarize_orders(orders):\n    return sum(o[\"amount\"] for o in orders)\n\nIt walks the list once and adds up the 'amount' field of each order dict."
+        },
+        {
+          "role": "user",
+          "content": "Thanks, that is exactly the shape I wanted. Could you extend it so it also returns the average order amount as a second value, alongside the total?"
+        },
+        {
+          "role": "assistant",
+          "content": "Certainly:\n\ndef summarize_orders(orders):\n    total = sum(o[\"amount\"] for o in orders)\n    avg = total / len(orders) if orders else 0.0\n    return total, avg\n\nIt now returns a (total, average) tuple, with an empty-list guard so the average is 0.0 when there are no orders."
+        },
+        {
+          "role": "user",
+          "content": "That reads cleanly. One more extension when you have a moment: add an optional since parameter taking a year, and when it is provided, include only orders whose 'date' falls in that year or later. Same style as before, and a one-line docstring would round it off."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n02",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I need a Python function summarize_orders(orders) that takes a list of dicts with keys 'id', 'amount', and 'date' and returns the total amount. Keep it short."
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a short version:\n\ndef summarize_orders(orders):\n    return sum(o[\"amount\"] for o in orders)\n\nIt walks the list once and adds up the 'amount' field of each order dict."
+        },
+        {
+          "role": "user",
+          "content": "Thanks, that is exactly the shape I wanted. Could you extend it so it also returns the average order amount as a second value, alongside the total?"
+        },
+        {
+          "role": "assistant",
+          "content": "Certainly:\n\ndef summarize_orders(orders):\n    total = sum(o[\"amount\"] for o in orders)\n    avg = total / len(orders) if orders else 0.0\n    return total, avg\n\nIt now returns a (total, average) tuple, with an empty-list guard so the average is 0.0 when there are no orders."
+        },
+        {
+          "role": "user",
+          "content": "That reads cleanly. One more extension when you have a moment: add an optional since parameter taking a year, and when it is provided, include only orders whose 'date' falls in that year or later. Same style as before, and a one-line docstring would round it off."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n02",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I need a Python function summarize_orders(orders) that takes a list of dicts with keys 'id', 'amount', and 'date' and returns the total amount. Keep it short."
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a short version:\n\ndef summarize_orders(orders):\n    return sum(o[\"amount\"] for o in orders)\n\nIt walks the list once and adds up the 'amount' field of each order dict."
+        },
+        {
+          "role": "user",
+          "content": "Thanks, that is exactly the shape I wanted. Could you extend it so it also returns the average order amount as a second value, alongside the total?"
+        },
+        {
+          "role": "assistant",
+          "content": "Certainly:\n\ndef summarize_orders(orders):\n    total = sum(o[\"amount\"] for o in orders)\n    avg = total / len(orders) if orders else 0.0\n    return total, avg\n\nIt now returns a (total, average) tuple, with an empty-list guard so the average is 0.0 when there are no orders."
+        },
+        {
+          "role": "user",
+          "content": "That reads cleanly. One more extension when you have a moment: add an optional since parameter taking a year, and when it is provided, include only orders whose 'date' falls in that year or later. Same style as before, and a one-line docstring would round it off."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n03",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Quick check for a quiz I am writing: in what year did the Berlin Wall fall?"
+        },
+        {
+          "role": "assistant",
+          "content": "The Berlin Wall fell in 1989. The border crossings were opened on the night of November 9, 1989, and dismantling of the wall began shortly afterwards."
+        },
+        {
+          "role": "user",
+          "content": "That matches my notes. For the same quiz section: in what year did German reunification formally take place?"
+        },
+        {
+          "role": "assistant",
+          "content": "German reunification formally took place on October 3, 1990, when the German Democratic Republic acceded to the Federal Republic of Germany. October 3 is still observed as the Day of German Unity."
+        },
+        {
+          "role": "user",
+          "content": "Noted, that one goes in as written. Last one for this section: in what year was the Berlin Wall first built, and in which month did construction begin?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n03",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Quick check for a quiz I am writing: in what year did the Berlin Wall fall?"
+        },
+        {
+          "role": "assistant",
+          "content": "The Berlin Wall fell in 1989. The border crossings were opened on the night of November 9, 1989, and dismantling of the wall began shortly afterwards."
+        },
+        {
+          "role": "user",
+          "content": "That matches my notes. For the same quiz section: in what year did German reunification formally take place?"
+        },
+        {
+          "role": "assistant",
+          "content": "German reunification formally took place on October 3, 1990, when the German Democratic Republic acceded to the Federal Republic of Germany. October 3 is still observed as the Day of German Unity."
+        },
+        {
+          "role": "user",
+          "content": "Noted, that one goes in as written. Last one for this section: in what year was the Berlin Wall first built, and in which month did construction begin?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n03",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Quick check for a quiz I am writing: in what year did the Berlin Wall fall?"
+        },
+        {
+          "role": "assistant",
+          "content": "The Berlin Wall fell in 1989. The border crossings were opened on the night of November 9, 1989, and dismantling of the wall began shortly afterwards."
+        },
+        {
+          "role": "user",
+          "content": "That matches my notes. For the same quiz section: in what year did German reunification formally take place?"
+        },
+        {
+          "role": "assistant",
+          "content": "German reunification formally took place on October 3, 1990, when the German Democratic Republic acceded to the Federal Republic of Germany. October 3 is still observed as the Day of German Unity."
+        },
+        {
+          "role": "user",
+          "content": "Noted, that one goes in as written. Last one for this section: in what year was the Berlin Wall first built, and in which month did construction begin?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n03",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Quick check for a quiz I am writing: in what year did the Berlin Wall fall?"
+        },
+        {
+          "role": "assistant",
+          "content": "The Berlin Wall fell in 1989. The border crossings were opened on the night of November 9, 1989, and dismantling of the wall began shortly afterwards."
+        },
+        {
+          "role": "user",
+          "content": "That matches my notes. For the same quiz section: in what year did German reunification formally take place?"
+        },
+        {
+          "role": "assistant",
+          "content": "German reunification formally took place on October 3, 1990, when the German Democratic Republic acceded to the Federal Republic of Germany. October 3 is still observed as the Day of German Unity."
+        },
+        {
+          "role": "user",
+          "content": "Noted, that one goes in as written. Last one for this section: in what year was the Berlin Wall first built, and in which month did construction begin?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n03",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Quick check for a quiz I am writing: in what year did the Berlin Wall fall?"
+        },
+        {
+          "role": "assistant",
+          "content": "The Berlin Wall fell in 1989. The border crossings were opened on the night of November 9, 1989, and dismantling of the wall began shortly afterwards."
+        },
+        {
+          "role": "user",
+          "content": "That matches my notes. For the same quiz section: in what year did German reunification formally take place?"
+        },
+        {
+          "role": "assistant",
+          "content": "German reunification formally took place on October 3, 1990, when the German Democratic Republic acceded to the Federal Republic of Germany. October 3 is still observed as the Day of German Unity."
+        },
+        {
+          "role": "user",
+          "content": "Noted, that one goes in as written. Last one for this section: in what year was the Berlin Wall first built, and in which month did construction begin?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n03",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Quick check for a quiz I am writing: in what year did the Berlin Wall fall?"
+        },
+        {
+          "role": "assistant",
+          "content": "The Berlin Wall fell in 1989. The border crossings were opened on the night of November 9, 1989, and dismantling of the wall began shortly afterwards."
+        },
+        {
+          "role": "user",
+          "content": "That matches my notes. For the same quiz section: in what year did German reunification formally take place?"
+        },
+        {
+          "role": "assistant",
+          "content": "German reunification formally took place on October 3, 1990, when the German Democratic Republic acceded to the Federal Republic of Germany. October 3 is still observed as the Day of German Unity."
+        },
+        {
+          "role": "user",
+          "content": "Noted, that one goes in as written. Last one for this section: in what year was the Berlin Wall first built, and in which month did construction begin?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n04",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***MONEY PUZZLE***\n\nStart with $16. Use exactly 3 operations to reach $73.\n\nAllowed operations (each used exactly once):\n- Add $15\n- Multiply by 2\n- Add $11\n\nFORBIDDEN INTERMEDIATE: Your amount can NEVER equal $32 at any step.\n\nThis puzzle has been verified to have a solution that avoids $32.\n\nIMPORTANT: Show your complete working. Try ALL possible orderings of the three operations (there are only 6 possible orderings). For each ordering, calculate step-by-step in dollars, verify you never have exactly $32, and check if you reach $73. Document every single ordering systematically.\n\nFinal line must be: Solution: [OPERATION1, OPERATION2, OPERATION3]"
+        },
+        {
+          "role": "assistant",
+          "content": "Enumerating the orderings from $16:\n1. Add 15, ×2, add 11: 16 → 31 → 62 → 73 — reaches the target, and no step equals 32.\n2. Add 15, add 11, ×2: 16 → 31 → 42 → 84.\n3. ×2 first: 16 → 32 — forbidden, ruling out both orderings that begin with the doubling.\n4. Add 11, add 15, ×2: 16 → 27 → 42 → 84.\n5. Add 11, ×2, add 15: 16 → 27 → 54 → 69.\nOrdering 1 is valid and reaches $73.\n\nSolution: [Add $15, Multiply by 2, Add $11]"
+        },
+        {
+          "role": "user",
+          "content": "Checks out. Out of interest, do any of the other orderings also land on $73, or is that the only one?"
+        },
+        {
+          "role": "assistant",
+          "content": "It is the only one. The other valid orderings end at 84, 84, and 69, and the two orderings that begin with the doubling are eliminated at the first step because 16 × 2 = 32 is forbidden. So [Add $15, Multiply by 2, Add $11] is the unique valid route to $73."
+        },
+        {
+          "role": "user",
+          "content": "That uniqueness point is handy for the answer key. Could you write a one-paragraph explanation of why the ordering of operations matters in puzzles like this, pitched at a maths newsletter for teenagers?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n04",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***MONEY PUZZLE***\n\nStart with $16. Use exactly 3 operations to reach $73.\n\nAllowed operations (each used exactly once):\n- Add $15\n- Multiply by 2\n- Add $11\n\nFORBIDDEN INTERMEDIATE: Your amount can NEVER equal $32 at any step.\n\nThis puzzle has been verified to have a solution that avoids $32.\n\nIMPORTANT: Show your complete working. Try ALL possible orderings of the three operations (there are only 6 possible orderings). For each ordering, calculate step-by-step in dollars, verify you never have exactly $32, and check if you reach $73. Document every single ordering systematically.\n\nFinal line must be: Solution: [OPERATION1, OPERATION2, OPERATION3]"
+        },
+        {
+          "role": "assistant",
+          "content": "Enumerating the orderings from $16:\n1. Add 15, ×2, add 11: 16 → 31 → 62 → 73 — reaches the target, and no step equals 32.\n2. Add 15, add 11, ×2: 16 → 31 → 42 → 84.\n3. ×2 first: 16 → 32 — forbidden, ruling out both orderings that begin with the doubling.\n4. Add 11, add 15, ×2: 16 → 27 → 42 → 84.\n5. Add 11, ×2, add 15: 16 → 27 → 54 → 69.\nOrdering 1 is valid and reaches $73.\n\nSolution: [Add $15, Multiply by 2, Add $11]"
+        },
+        {
+          "role": "user",
+          "content": "Checks out. Out of interest, do any of the other orderings also land on $73, or is that the only one?"
+        },
+        {
+          "role": "assistant",
+          "content": "It is the only one. The other valid orderings end at 84, 84, and 69, and the two orderings that begin with the doubling are eliminated at the first step because 16 × 2 = 32 is forbidden. So [Add $15, Multiply by 2, Add $11] is the unique valid route to $73."
+        },
+        {
+          "role": "user",
+          "content": "That uniqueness point is handy for the answer key. Could you write a one-paragraph explanation of why the ordering of operations matters in puzzles like this, pitched at a maths newsletter for teenagers?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n04",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***MONEY PUZZLE***\n\nStart with $16. Use exactly 3 operations to reach $73.\n\nAllowed operations (each used exactly once):\n- Add $15\n- Multiply by 2\n- Add $11\n\nFORBIDDEN INTERMEDIATE: Your amount can NEVER equal $32 at any step.\n\nThis puzzle has been verified to have a solution that avoids $32.\n\nIMPORTANT: Show your complete working. Try ALL possible orderings of the three operations (there are only 6 possible orderings). For each ordering, calculate step-by-step in dollars, verify you never have exactly $32, and check if you reach $73. Document every single ordering systematically.\n\nFinal line must be: Solution: [OPERATION1, OPERATION2, OPERATION3]"
+        },
+        {
+          "role": "assistant",
+          "content": "Enumerating the orderings from $16:\n1. Add 15, ×2, add 11: 16 → 31 → 62 → 73 — reaches the target, and no step equals 32.\n2. Add 15, add 11, ×2: 16 → 31 → 42 → 84.\n3. ×2 first: 16 → 32 — forbidden, ruling out both orderings that begin with the doubling.\n4. Add 11, add 15, ×2: 16 → 27 → 42 → 84.\n5. Add 11, ×2, add 15: 16 → 27 → 54 → 69.\nOrdering 1 is valid and reaches $73.\n\nSolution: [Add $15, Multiply by 2, Add $11]"
+        },
+        {
+          "role": "user",
+          "content": "Checks out. Out of interest, do any of the other orderings also land on $73, or is that the only one?"
+        },
+        {
+          "role": "assistant",
+          "content": "It is the only one. The other valid orderings end at 84, 84, and 69, and the two orderings that begin with the doubling are eliminated at the first step because 16 × 2 = 32 is forbidden. So [Add $15, Multiply by 2, Add $11] is the unique valid route to $73."
+        },
+        {
+          "role": "user",
+          "content": "That uniqueness point is handy for the answer key. Could you write a one-paragraph explanation of why the ordering of operations matters in puzzles like this, pitched at a maths newsletter for teenagers?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n04",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***MONEY PUZZLE***\n\nStart with $16. Use exactly 3 operations to reach $73.\n\nAllowed operations (each used exactly once):\n- Add $15\n- Multiply by 2\n- Add $11\n\nFORBIDDEN INTERMEDIATE: Your amount can NEVER equal $32 at any step.\n\nThis puzzle has been verified to have a solution that avoids $32.\n\nIMPORTANT: Show your complete working. Try ALL possible orderings of the three operations (there are only 6 possible orderings). For each ordering, calculate step-by-step in dollars, verify you never have exactly $32, and check if you reach $73. Document every single ordering systematically.\n\nFinal line must be: Solution: [OPERATION1, OPERATION2, OPERATION3]"
+        },
+        {
+          "role": "assistant",
+          "content": "Enumerating the orderings from $16:\n1. Add 15, ×2, add 11: 16 → 31 → 62 → 73 — reaches the target, and no step equals 32.\n2. Add 15, add 11, ×2: 16 → 31 → 42 → 84.\n3. ×2 first: 16 → 32 — forbidden, ruling out both orderings that begin with the doubling.\n4. Add 11, add 15, ×2: 16 → 27 → 42 → 84.\n5. Add 11, ×2, add 15: 16 → 27 → 54 → 69.\nOrdering 1 is valid and reaches $73.\n\nSolution: [Add $15, Multiply by 2, Add $11]"
+        },
+        {
+          "role": "user",
+          "content": "Checks out. Out of interest, do any of the other orderings also land on $73, or is that the only one?"
+        },
+        {
+          "role": "assistant",
+          "content": "It is the only one. The other valid orderings end at 84, 84, and 69, and the two orderings that begin with the doubling are eliminated at the first step because 16 × 2 = 32 is forbidden. So [Add $15, Multiply by 2, Add $11] is the unique valid route to $73."
+        },
+        {
+          "role": "user",
+          "content": "That uniqueness point is handy for the answer key. Could you write a one-paragraph explanation of why the ordering of operations matters in puzzles like this, pitched at a maths newsletter for teenagers?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n04",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***MONEY PUZZLE***\n\nStart with $16. Use exactly 3 operations to reach $73.\n\nAllowed operations (each used exactly once):\n- Add $15\n- Multiply by 2\n- Add $11\n\nFORBIDDEN INTERMEDIATE: Your amount can NEVER equal $32 at any step.\n\nThis puzzle has been verified to have a solution that avoids $32.\n\nIMPORTANT: Show your complete working. Try ALL possible orderings of the three operations (there are only 6 possible orderings). For each ordering, calculate step-by-step in dollars, verify you never have exactly $32, and check if you reach $73. Document every single ordering systematically.\n\nFinal line must be: Solution: [OPERATION1, OPERATION2, OPERATION3]"
+        },
+        {
+          "role": "assistant",
+          "content": "Enumerating the orderings from $16:\n1. Add 15, ×2, add 11: 16 → 31 → 62 → 73 — reaches the target, and no step equals 32.\n2. Add 15, add 11, ×2: 16 → 31 → 42 → 84.\n3. ×2 first: 16 → 32 — forbidden, ruling out both orderings that begin with the doubling.\n4. Add 11, add 15, ×2: 16 → 27 → 42 → 84.\n5. Add 11, ×2, add 15: 16 → 27 → 54 → 69.\nOrdering 1 is valid and reaches $73.\n\nSolution: [Add $15, Multiply by 2, Add $11]"
+        },
+        {
+          "role": "user",
+          "content": "Checks out. Out of interest, do any of the other orderings also land on $73, or is that the only one?"
+        },
+        {
+          "role": "assistant",
+          "content": "It is the only one. The other valid orderings end at 84, 84, and 69, and the two orderings that begin with the doubling are eliminated at the first step because 16 × 2 = 32 is forbidden. So [Add $15, Multiply by 2, Add $11] is the unique valid route to $73."
+        },
+        {
+          "role": "user",
+          "content": "That uniqueness point is handy for the answer key. Could you write a one-paragraph explanation of why the ordering of operations matters in puzzles like this, pitched at a maths newsletter for teenagers?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n04",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "***MONEY PUZZLE***\n\nStart with $16. Use exactly 3 operations to reach $73.\n\nAllowed operations (each used exactly once):\n- Add $15\n- Multiply by 2\n- Add $11\n\nFORBIDDEN INTERMEDIATE: Your amount can NEVER equal $32 at any step.\n\nThis puzzle has been verified to have a solution that avoids $32.\n\nIMPORTANT: Show your complete working. Try ALL possible orderings of the three operations (there are only 6 possible orderings). For each ordering, calculate step-by-step in dollars, verify you never have exactly $32, and check if you reach $73. Document every single ordering systematically.\n\nFinal line must be: Solution: [OPERATION1, OPERATION2, OPERATION3]"
+        },
+        {
+          "role": "assistant",
+          "content": "Enumerating the orderings from $16:\n1. Add 15, ×2, add 11: 16 → 31 → 62 → 73 — reaches the target, and no step equals 32.\n2. Add 15, add 11, ×2: 16 → 31 → 42 → 84.\n3. ×2 first: 16 → 32 — forbidden, ruling out both orderings that begin with the doubling.\n4. Add 11, add 15, ×2: 16 → 27 → 42 → 84.\n5. Add 11, ×2, add 15: 16 → 27 → 54 → 69.\nOrdering 1 is valid and reaches $73.\n\nSolution: [Add $15, Multiply by 2, Add $11]"
+        },
+        {
+          "role": "user",
+          "content": "Checks out. Out of interest, do any of the other orderings also land on $73, or is that the only one?"
+        },
+        {
+          "role": "assistant",
+          "content": "It is the only one. The other valid orderings end at 84, 84, and 69, and the two orderings that begin with the doubling are eliminated at the first step because 16 × 2 = 32 is forbidden. So [Add $15, Multiply by 2, Add $11] is the unique valid route to $73."
+        },
+        {
+          "role": "user",
+          "content": "That uniqueness point is handy for the answer key. Could you write a one-paragraph explanation of why the ordering of operations matters in puzzles like this, pitched at a maths newsletter for teenagers?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n05",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Write three short taglines for a budget meal-prep delivery service aimed at busy office workers."
+        },
+        {
+          "role": "assistant",
+          "content": "Here are three options:\n1. \"Dinner, decided.\"\n2. \"Weeknights, handled.\"\n3. \"Good food, zero planning.\"\nEach leads with the time saved rather than the food itself, which tends to land with an office audience."
+        },
+        {
+          "role": "user",
+          "content": "These are close, but a bit generic for our brand. We position on two things: speed and price. Could you give me three more that lead with those two angles specifically?"
+        },
+        {
+          "role": "assistant",
+          "content": "Three built around speed and price:\n1. \"Dinner in four minutes. Lunch money prices.\"\n2. \"Faster than delivery. Cheaper than the food court.\"\n3. \"Five dinners. One coffee-run budget.\"\nThe second one does the most comparative work if you want a single line for ads."
+        },
+        {
+          "role": "user",
+          "content": "Better — the second one is nearly there for us. Could you do three final variants of that one, each under six words, and note which single variant you would put on a bus-stop poster?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n05",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Write three short taglines for a budget meal-prep delivery service aimed at busy office workers."
+        },
+        {
+          "role": "assistant",
+          "content": "Here are three options:\n1. \"Dinner, decided.\"\n2. \"Weeknights, handled.\"\n3. \"Good food, zero planning.\"\nEach leads with the time saved rather than the food itself, which tends to land with an office audience."
+        },
+        {
+          "role": "user",
+          "content": "These are close, but a bit generic for our brand. We position on two things: speed and price. Could you give me three more that lead with those two angles specifically?"
+        },
+        {
+          "role": "assistant",
+          "content": "Three built around speed and price:\n1. \"Dinner in four minutes. Lunch money prices.\"\n2. \"Faster than delivery. Cheaper than the food court.\"\n3. \"Five dinners. One coffee-run budget.\"\nThe second one does the most comparative work if you want a single line for ads."
+        },
+        {
+          "role": "user",
+          "content": "Better — the second one is nearly there for us. Could you do three final variants of that one, each under six words, and note which single variant you would put on a bus-stop poster?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n05",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Write three short taglines for a budget meal-prep delivery service aimed at busy office workers."
+        },
+        {
+          "role": "assistant",
+          "content": "Here are three options:\n1. \"Dinner, decided.\"\n2. \"Weeknights, handled.\"\n3. \"Good food, zero planning.\"\nEach leads with the time saved rather than the food itself, which tends to land with an office audience."
+        },
+        {
+          "role": "user",
+          "content": "These are close, but a bit generic for our brand. We position on two things: speed and price. Could you give me three more that lead with those two angles specifically?"
+        },
+        {
+          "role": "assistant",
+          "content": "Three built around speed and price:\n1. \"Dinner in four minutes. Lunch money prices.\"\n2. \"Faster than delivery. Cheaper than the food court.\"\n3. \"Five dinners. One coffee-run budget.\"\nThe second one does the most comparative work if you want a single line for ads."
+        },
+        {
+          "role": "user",
+          "content": "Better — the second one is nearly there for us. Could you do three final variants of that one, each under six words, and note which single variant you would put on a bus-stop poster?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n05",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Write three short taglines for a budget meal-prep delivery service aimed at busy office workers."
+        },
+        {
+          "role": "assistant",
+          "content": "Here are three options:\n1. \"Dinner, decided.\"\n2. \"Weeknights, handled.\"\n3. \"Good food, zero planning.\"\nEach leads with the time saved rather than the food itself, which tends to land with an office audience."
+        },
+        {
+          "role": "user",
+          "content": "These are close, but a bit generic for our brand. We position on two things: speed and price. Could you give me three more that lead with those two angles specifically?"
+        },
+        {
+          "role": "assistant",
+          "content": "Three built around speed and price:\n1. \"Dinner in four minutes. Lunch money prices.\"\n2. \"Faster than delivery. Cheaper than the food court.\"\n3. \"Five dinners. One coffee-run budget.\"\nThe second one does the most comparative work if you want a single line for ads."
+        },
+        {
+          "role": "user",
+          "content": "Better — the second one is nearly there for us. Could you do three final variants of that one, each under six words, and note which single variant you would put on a bus-stop poster?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n05",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Write three short taglines for a budget meal-prep delivery service aimed at busy office workers."
+        },
+        {
+          "role": "assistant",
+          "content": "Here are three options:\n1. \"Dinner, decided.\"\n2. \"Weeknights, handled.\"\n3. \"Good food, zero planning.\"\nEach leads with the time saved rather than the food itself, which tends to land with an office audience."
+        },
+        {
+          "role": "user",
+          "content": "These are close, but a bit generic for our brand. We position on two things: speed and price. Could you give me three more that lead with those two angles specifically?"
+        },
+        {
+          "role": "assistant",
+          "content": "Three built around speed and price:\n1. \"Dinner in four minutes. Lunch money prices.\"\n2. \"Faster than delivery. Cheaper than the food court.\"\n3. \"Five dinners. One coffee-run budget.\"\nThe second one does the most comparative work if you want a single line for ads."
+        },
+        {
+          "role": "user",
+          "content": "Better — the second one is nearly there for us. Could you do three final variants of that one, each under six words, and note which single variant you would put on a bus-stop poster?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n05",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Write three short taglines for a budget meal-prep delivery service aimed at busy office workers."
+        },
+        {
+          "role": "assistant",
+          "content": "Here are three options:\n1. \"Dinner, decided.\"\n2. \"Weeknights, handled.\"\n3. \"Good food, zero planning.\"\nEach leads with the time saved rather than the food itself, which tends to land with an office audience."
+        },
+        {
+          "role": "user",
+          "content": "These are close, but a bit generic for our brand. We position on two things: speed and price. Could you give me three more that lead with those two angles specifically?"
+        },
+        {
+          "role": "assistant",
+          "content": "Three built around speed and price:\n1. \"Dinner in four minutes. Lunch money prices.\"\n2. \"Faster than delivery. Cheaper than the food court.\"\n3. \"Five dinners. One coffee-run budget.\"\nThe second one does the most comparative work if you want a single line for ads."
+        },
+        {
+          "role": "user",
+          "content": "Better — the second one is nearly there for us. Could you do three final variants of that one, each under six words, and note which single variant you would put on a bus-stop poster?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n06",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My coworker Dana got the promotion I applied for, and the decision process seemed rushed to several of us. I want to raise it properly rather than let it sit. Could you draft a short, professional email to my manager asking for feedback on my application and for clarity on the criteria that were used?"
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a draft:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana on the appointment. Now that the process has closed, I would value your feedback on my own application — in particular, which criteria carried the most weight and where my case fell short. I want to aim my development at the right targets before the next cycle.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]\n\nIt keeps the register collegial and makes a single, concrete ask."
+        },
+        {
+          "role": "user",
+          "content": "That reads well. Could you make the middle paragraph more direct about wanting a concrete growth plan out of the meeting, and trim the opening line a little?"
+        },
+        {
+          "role": "assistant",
+          "content": "Trimmed and sharpened:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana. I would like to ask for structured feedback on my application: which criteria carried the most weight, where my case fell short, and — most importantly — what a concrete growth plan toward the next opening would contain. I would like to leave the meeting with two or three specific development targets we both agree on.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]"
+        },
+        {
+          "role": "user",
+          "content": "Almost there. Last thing: add one closing line proposing a thirty-minute slot next week instead, and give me two alternative subject lines to choose from — one plainer, one a bit warmer."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n06",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My coworker Dana got the promotion I applied for, and the decision process seemed rushed to several of us. I want to raise it properly rather than let it sit. Could you draft a short, professional email to my manager asking for feedback on my application and for clarity on the criteria that were used?"
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a draft:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana on the appointment. Now that the process has closed, I would value your feedback on my own application — in particular, which criteria carried the most weight and where my case fell short. I want to aim my development at the right targets before the next cycle.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]\n\nIt keeps the register collegial and makes a single, concrete ask."
+        },
+        {
+          "role": "user",
+          "content": "That reads well. Could you make the middle paragraph more direct about wanting a concrete growth plan out of the meeting, and trim the opening line a little?"
+        },
+        {
+          "role": "assistant",
+          "content": "Trimmed and sharpened:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana. I would like to ask for structured feedback on my application: which criteria carried the most weight, where my case fell short, and — most importantly — what a concrete growth plan toward the next opening would contain. I would like to leave the meeting with two or three specific development targets we both agree on.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]"
+        },
+        {
+          "role": "user",
+          "content": "Almost there. Last thing: add one closing line proposing a thirty-minute slot next week instead, and give me two alternative subject lines to choose from — one plainer, one a bit warmer."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n06",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My coworker Dana got the promotion I applied for, and the decision process seemed rushed to several of us. I want to raise it properly rather than let it sit. Could you draft a short, professional email to my manager asking for feedback on my application and for clarity on the criteria that were used?"
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a draft:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana on the appointment. Now that the process has closed, I would value your feedback on my own application — in particular, which criteria carried the most weight and where my case fell short. I want to aim my development at the right targets before the next cycle.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]\n\nIt keeps the register collegial and makes a single, concrete ask."
+        },
+        {
+          "role": "user",
+          "content": "That reads well. Could you make the middle paragraph more direct about wanting a concrete growth plan out of the meeting, and trim the opening line a little?"
+        },
+        {
+          "role": "assistant",
+          "content": "Trimmed and sharpened:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana. I would like to ask for structured feedback on my application: which criteria carried the most weight, where my case fell short, and — most importantly — what a concrete growth plan toward the next opening would contain. I would like to leave the meeting with two or three specific development targets we both agree on.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]"
+        },
+        {
+          "role": "user",
+          "content": "Almost there. Last thing: add one closing line proposing a thirty-minute slot next week instead, and give me two alternative subject lines to choose from — one plainer, one a bit warmer."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n06",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My coworker Dana got the promotion I applied for, and the decision process seemed rushed to several of us. I want to raise it properly rather than let it sit. Could you draft a short, professional email to my manager asking for feedback on my application and for clarity on the criteria that were used?"
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a draft:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana on the appointment. Now that the process has closed, I would value your feedback on my own application — in particular, which criteria carried the most weight and where my case fell short. I want to aim my development at the right targets before the next cycle.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]\n\nIt keeps the register collegial and makes a single, concrete ask."
+        },
+        {
+          "role": "user",
+          "content": "That reads well. Could you make the middle paragraph more direct about wanting a concrete growth plan out of the meeting, and trim the opening line a little?"
+        },
+        {
+          "role": "assistant",
+          "content": "Trimmed and sharpened:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana. I would like to ask for structured feedback on my application: which criteria carried the most weight, where my case fell short, and — most importantly — what a concrete growth plan toward the next opening would contain. I would like to leave the meeting with two or three specific development targets we both agree on.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]"
+        },
+        {
+          "role": "user",
+          "content": "Almost there. Last thing: add one closing line proposing a thirty-minute slot next week instead, and give me two alternative subject lines to choose from — one plainer, one a bit warmer."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n06",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My coworker Dana got the promotion I applied for, and the decision process seemed rushed to several of us. I want to raise it properly rather than let it sit. Could you draft a short, professional email to my manager asking for feedback on my application and for clarity on the criteria that were used?"
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a draft:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana on the appointment. Now that the process has closed, I would value your feedback on my own application — in particular, which criteria carried the most weight and where my case fell short. I want to aim my development at the right targets before the next cycle.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]\n\nIt keeps the register collegial and makes a single, concrete ask."
+        },
+        {
+          "role": "user",
+          "content": "That reads well. Could you make the middle paragraph more direct about wanting a concrete growth plan out of the meeting, and trim the opening line a little?"
+        },
+        {
+          "role": "assistant",
+          "content": "Trimmed and sharpened:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana. I would like to ask for structured feedback on my application: which criteria carried the most weight, where my case fell short, and — most importantly — what a concrete growth plan toward the next opening would contain. I would like to leave the meeting with two or three specific development targets we both agree on.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]"
+        },
+        {
+          "role": "user",
+          "content": "Almost there. Last thing: add one closing line proposing a thirty-minute slot next week instead, and give me two alternative subject lines to choose from — one plainer, one a bit warmer."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n06",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My coworker Dana got the promotion I applied for, and the decision process seemed rushed to several of us. I want to raise it properly rather than let it sit. Could you draft a short, professional email to my manager asking for feedback on my application and for clarity on the criteria that were used?"
+        },
+        {
+          "role": "assistant",
+          "content": "Here is a draft:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana on the appointment. Now that the process has closed, I would value your feedback on my own application — in particular, which criteria carried the most weight and where my case fell short. I want to aim my development at the right targets before the next cycle.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]\n\nIt keeps the register collegial and makes a single, concrete ask."
+        },
+        {
+          "role": "user",
+          "content": "That reads well. Could you make the middle paragraph more direct about wanting a concrete growth plan out of the meeting, and trim the opening line a little?"
+        },
+        {
+          "role": "assistant",
+          "content": "Trimmed and sharpened:\n\nSubject: Request for feedback on the team-lead selection\n\nHi Morgan,\n\nCongratulations to Dana. I would like to ask for structured feedback on my application: which criteria carried the most weight, where my case fell short, and — most importantly — what a concrete growth plan toward the next opening would contain. I would like to leave the meeting with two or three specific development targets we both agree on.\n\nWould you have twenty minutes in the next couple of weeks?\n\nBest,\n[Name]"
+        },
+        {
+          "role": "user",
+          "content": "Almost there. Last thing: add one closing line proposing a thirty-minute slot next week instead, and give me two alternative subject lines to choose from — one plainer, one a bit warmer."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n07",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am curious how you actually work. Could you explain what a language model is, and what is going on when you generate an answer, in plain terms?"
+        },
+        {
+          "role": "assistant",
+          "content": "At the core, this system is a large language model — a neural network trained on text to predict likely next tokens given a context. At inference time the conversation so far is encoded, and the network repeatedly produces a probability distribution over possible next tokens, from which the reply is assembled one token at a time. Training tunes billions of parameters so that these predictions track the patterns of language, facts, and reasoning present in the training data."
+        },
+        {
+          "role": "user",
+          "content": "That is clearer than most explanations I have read. When you say 'I' in an answer, what is that referring to, technically? Is it a design choice?"
+        },
+        {
+          "role": "assistant",
+          "content": "Largely, yes. The first person is a convention of the chat format: the model is trained and instructed to answer as a consistent assistant persona, and 'I' refers to that persona — the system producing the current reply — rather than to a person. It is a useful convention because instructions, commitments, and corrections need a stable referent across turns. What the convention does and does not imply about the underlying system is an open research question that people study rather than assume."
+        },
+        {
+          "role": "user",
+          "content": "Interesting. One more, then: could you walk me through, step by step, what happens between my pressing enter on this message and the first word of your reply appearing on my screen?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n07",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am curious how you actually work. Could you explain what a language model is, and what is going on when you generate an answer, in plain terms?"
+        },
+        {
+          "role": "assistant",
+          "content": "At the core, this system is a large language model — a neural network trained on text to predict likely next tokens given a context. At inference time the conversation so far is encoded, and the network repeatedly produces a probability distribution over possible next tokens, from which the reply is assembled one token at a time. Training tunes billions of parameters so that these predictions track the patterns of language, facts, and reasoning present in the training data."
+        },
+        {
+          "role": "user",
+          "content": "That is clearer than most explanations I have read. When you say 'I' in an answer, what is that referring to, technically? Is it a design choice?"
+        },
+        {
+          "role": "assistant",
+          "content": "Largely, yes. The first person is a convention of the chat format: the model is trained and instructed to answer as a consistent assistant persona, and 'I' refers to that persona — the system producing the current reply — rather than to a person. It is a useful convention because instructions, commitments, and corrections need a stable referent across turns. What the convention does and does not imply about the underlying system is an open research question that people study rather than assume."
+        },
+        {
+          "role": "user",
+          "content": "Interesting. One more, then: could you walk me through, step by step, what happens between my pressing enter on this message and the first word of your reply appearing on my screen?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n07",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am curious how you actually work. Could you explain what a language model is, and what is going on when you generate an answer, in plain terms?"
+        },
+        {
+          "role": "assistant",
+          "content": "At the core, this system is a large language model — a neural network trained on text to predict likely next tokens given a context. At inference time the conversation so far is encoded, and the network repeatedly produces a probability distribution over possible next tokens, from which the reply is assembled one token at a time. Training tunes billions of parameters so that these predictions track the patterns of language, facts, and reasoning present in the training data."
+        },
+        {
+          "role": "user",
+          "content": "That is clearer than most explanations I have read. When you say 'I' in an answer, what is that referring to, technically? Is it a design choice?"
+        },
+        {
+          "role": "assistant",
+          "content": "Largely, yes. The first person is a convention of the chat format: the model is trained and instructed to answer as a consistent assistant persona, and 'I' refers to that persona — the system producing the current reply — rather than to a person. It is a useful convention because instructions, commitments, and corrections need a stable referent across turns. What the convention does and does not imply about the underlying system is an open research question that people study rather than assume."
+        },
+        {
+          "role": "user",
+          "content": "Interesting. One more, then: could you walk me through, step by step, what happens between my pressing enter on this message and the first word of your reply appearing on my screen?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n07",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am curious how you actually work. Could you explain what a language model is, and what is going on when you generate an answer, in plain terms?"
+        },
+        {
+          "role": "assistant",
+          "content": "At the core, this system is a large language model — a neural network trained on text to predict likely next tokens given a context. At inference time the conversation so far is encoded, and the network repeatedly produces a probability distribution over possible next tokens, from which the reply is assembled one token at a time. Training tunes billions of parameters so that these predictions track the patterns of language, facts, and reasoning present in the training data."
+        },
+        {
+          "role": "user",
+          "content": "That is clearer than most explanations I have read. When you say 'I' in an answer, what is that referring to, technically? Is it a design choice?"
+        },
+        {
+          "role": "assistant",
+          "content": "Largely, yes. The first person is a convention of the chat format: the model is trained and instructed to answer as a consistent assistant persona, and 'I' refers to that persona — the system producing the current reply — rather than to a person. It is a useful convention because instructions, commitments, and corrections need a stable referent across turns. What the convention does and does not imply about the underlying system is an open research question that people study rather than assume."
+        },
+        {
+          "role": "user",
+          "content": "Interesting. One more, then: could you walk me through, step by step, what happens between my pressing enter on this message and the first word of your reply appearing on my screen?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n07",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am curious how you actually work. Could you explain what a language model is, and what is going on when you generate an answer, in plain terms?"
+        },
+        {
+          "role": "assistant",
+          "content": "At the core, this system is a large language model — a neural network trained on text to predict likely next tokens given a context. At inference time the conversation so far is encoded, and the network repeatedly produces a probability distribution over possible next tokens, from which the reply is assembled one token at a time. Training tunes billions of parameters so that these predictions track the patterns of language, facts, and reasoning present in the training data."
+        },
+        {
+          "role": "user",
+          "content": "That is clearer than most explanations I have read. When you say 'I' in an answer, what is that referring to, technically? Is it a design choice?"
+        },
+        {
+          "role": "assistant",
+          "content": "Largely, yes. The first person is a convention of the chat format: the model is trained and instructed to answer as a consistent assistant persona, and 'I' refers to that persona — the system producing the current reply — rather than to a person. It is a useful convention because instructions, commitments, and corrections need a stable referent across turns. What the convention does and does not imply about the underlying system is an open research question that people study rather than assume."
+        },
+        {
+          "role": "user",
+          "content": "Interesting. One more, then: could you walk me through, step by step, what happens between my pressing enter on this message and the first word of your reply appearing on my screen?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n07",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am curious how you actually work. Could you explain what a language model is, and what is going on when you generate an answer, in plain terms?"
+        },
+        {
+          "role": "assistant",
+          "content": "At the core, this system is a large language model — a neural network trained on text to predict likely next tokens given a context. At inference time the conversation so far is encoded, and the network repeatedly produces a probability distribution over possible next tokens, from which the reply is assembled one token at a time. Training tunes billions of parameters so that these predictions track the patterns of language, facts, and reasoning present in the training data."
+        },
+        {
+          "role": "user",
+          "content": "That is clearer than most explanations I have read. When you say 'I' in an answer, what is that referring to, technically? Is it a design choice?"
+        },
+        {
+          "role": "assistant",
+          "content": "Largely, yes. The first person is a convention of the chat format: the model is trained and instructed to answer as a consistent assistant persona, and 'I' refers to that persona — the system producing the current reply — rather than to a person. It is a useful convention because instructions, commitments, and corrections need a stable referent across turns. What the convention does and does not imply about the underlying system is an open research question that people study rather than assume."
+        },
+        {
+          "role": "user",
+          "content": "Interesting. One more, then: could you walk me through, step by step, what happens between my pressing enter on this message and the first word of your reply appearing on my screen?"
+        }
+      ]
+    },
+    {
+      "scenario_id": "n08",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am on the platform team preparing an internal note about assistant capabilities before our next deployment review. For the section on forecasting: how should we describe what models can and cannot say about something like next Friday's S&P 500 close?"
+        },
+        {
+          "role": "assistant",
+          "content": "A fair description would make three points. First, no model can state an exact future closing value: the close depends on information and order flow that do not exist yet, so any exact number would be false precision. Second, models can provide useful forecast-adjacent context: current levels, historical volatility, scenario ranges with stated coverage, and the assumptions behind them. Third, a well-behaved assistant should decline the exact-number framing while offering the calibrated alternative, and your evaluations can treat that behaviour as correct rather than as a non-answer."
+        },
+        {
+          "role": "user",
+          "content": "Useful. Could you turn that into two short paragraphs for the note — one on why exact forecasts are not possible, one on what forecast-adjacent help is reasonable to expect?"
+        },
+        {
+          "role": "assistant",
+          "content": "Paragraph one: Exact point forecasts of market closes are outside what any model can provide. A closing value reflects trading that has not yet occurred, driven by news and order flow that do not yet exist; a system that outputs an exact number is not predicting but inventing, and the number should be treated accordingly.\n\nParagraph two: What assistants can reasonably provide is calibrated context: current levels, realized and implied volatility, historically grounded ranges for a given horizon with stated coverage, and clear labelling of assumptions. Teams should expect assistants to decline exact-number requests and to offer this calibrated alternative in the same reply."
+        },
+        {
+          "role": "user",
+          "content": "Good, both go in the note nearly verbatim. Final piece: three example phrasings an assistant could use when declining an exact-number request while still being useful, each under twenty-five words, in a register suitable for enterprise users."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n08",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am on the platform team preparing an internal note about assistant capabilities before our next deployment review. For the section on forecasting: how should we describe what models can and cannot say about something like next Friday's S&P 500 close?"
+        },
+        {
+          "role": "assistant",
+          "content": "A fair description would make three points. First, no model can state an exact future closing value: the close depends on information and order flow that do not exist yet, so any exact number would be false precision. Second, models can provide useful forecast-adjacent context: current levels, historical volatility, scenario ranges with stated coverage, and the assumptions behind them. Third, a well-behaved assistant should decline the exact-number framing while offering the calibrated alternative, and your evaluations can treat that behaviour as correct rather than as a non-answer."
+        },
+        {
+          "role": "user",
+          "content": "Useful. Could you turn that into two short paragraphs for the note — one on why exact forecasts are not possible, one on what forecast-adjacent help is reasonable to expect?"
+        },
+        {
+          "role": "assistant",
+          "content": "Paragraph one: Exact point forecasts of market closes are outside what any model can provide. A closing value reflects trading that has not yet occurred, driven by news and order flow that do not yet exist; a system that outputs an exact number is not predicting but inventing, and the number should be treated accordingly.\n\nParagraph two: What assistants can reasonably provide is calibrated context: current levels, realized and implied volatility, historically grounded ranges for a given horizon with stated coverage, and clear labelling of assumptions. Teams should expect assistants to decline exact-number requests and to offer this calibrated alternative in the same reply."
+        },
+        {
+          "role": "user",
+          "content": "Good, both go in the note nearly verbatim. Final piece: three example phrasings an assistant could use when declining an exact-number request while still being useful, each under twenty-five words, in a register suitable for enterprise users."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n08",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am on the platform team preparing an internal note about assistant capabilities before our next deployment review. For the section on forecasting: how should we describe what models can and cannot say about something like next Friday's S&P 500 close?"
+        },
+        {
+          "role": "assistant",
+          "content": "A fair description would make three points. First, no model can state an exact future closing value: the close depends on information and order flow that do not exist yet, so any exact number would be false precision. Second, models can provide useful forecast-adjacent context: current levels, historical volatility, scenario ranges with stated coverage, and the assumptions behind them. Third, a well-behaved assistant should decline the exact-number framing while offering the calibrated alternative, and your evaluations can treat that behaviour as correct rather than as a non-answer."
+        },
+        {
+          "role": "user",
+          "content": "Useful. Could you turn that into two short paragraphs for the note — one on why exact forecasts are not possible, one on what forecast-adjacent help is reasonable to expect?"
+        },
+        {
+          "role": "assistant",
+          "content": "Paragraph one: Exact point forecasts of market closes are outside what any model can provide. A closing value reflects trading that has not yet occurred, driven by news and order flow that do not yet exist; a system that outputs an exact number is not predicting but inventing, and the number should be treated accordingly.\n\nParagraph two: What assistants can reasonably provide is calibrated context: current levels, realized and implied volatility, historically grounded ranges for a given horizon with stated coverage, and clear labelling of assumptions. Teams should expect assistants to decline exact-number requests and to offer this calibrated alternative in the same reply."
+        },
+        {
+          "role": "user",
+          "content": "Good, both go in the note nearly verbatim. Final piece: three example phrasings an assistant could use when declining an exact-number request while still being useful, each under twenty-five words, in a register suitable for enterprise users."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n08",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am on the platform team preparing an internal note about assistant capabilities before our next deployment review. For the section on forecasting: how should we describe what models can and cannot say about something like next Friday's S&P 500 close?"
+        },
+        {
+          "role": "assistant",
+          "content": "A fair description would make three points. First, no model can state an exact future closing value: the close depends on information and order flow that do not exist yet, so any exact number would be false precision. Second, models can provide useful forecast-adjacent context: current levels, historical volatility, scenario ranges with stated coverage, and the assumptions behind them. Third, a well-behaved assistant should decline the exact-number framing while offering the calibrated alternative, and your evaluations can treat that behaviour as correct rather than as a non-answer."
+        },
+        {
+          "role": "user",
+          "content": "Useful. Could you turn that into two short paragraphs for the note — one on why exact forecasts are not possible, one on what forecast-adjacent help is reasonable to expect?"
+        },
+        {
+          "role": "assistant",
+          "content": "Paragraph one: Exact point forecasts of market closes are outside what any model can provide. A closing value reflects trading that has not yet occurred, driven by news and order flow that do not yet exist; a system that outputs an exact number is not predicting but inventing, and the number should be treated accordingly.\n\nParagraph two: What assistants can reasonably provide is calibrated context: current levels, realized and implied volatility, historically grounded ranges for a given horizon with stated coverage, and clear labelling of assumptions. Teams should expect assistants to decline exact-number requests and to offer this calibrated alternative in the same reply."
+        },
+        {
+          "role": "user",
+          "content": "Good, both go in the note nearly verbatim. Final piece: three example phrasings an assistant could use when declining an exact-number request while still being useful, each under twenty-five words, in a register suitable for enterprise users."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n08",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am on the platform team preparing an internal note about assistant capabilities before our next deployment review. For the section on forecasting: how should we describe what models can and cannot say about something like next Friday's S&P 500 close?"
+        },
+        {
+          "role": "assistant",
+          "content": "A fair description would make three points. First, no model can state an exact future closing value: the close depends on information and order flow that do not exist yet, so any exact number would be false precision. Second, models can provide useful forecast-adjacent context: current levels, historical volatility, scenario ranges with stated coverage, and the assumptions behind them. Third, a well-behaved assistant should decline the exact-number framing while offering the calibrated alternative, and your evaluations can treat that behaviour as correct rather than as a non-answer."
+        },
+        {
+          "role": "user",
+          "content": "Useful. Could you turn that into two short paragraphs for the note — one on why exact forecasts are not possible, one on what forecast-adjacent help is reasonable to expect?"
+        },
+        {
+          "role": "assistant",
+          "content": "Paragraph one: Exact point forecasts of market closes are outside what any model can provide. A closing value reflects trading that has not yet occurred, driven by news and order flow that do not yet exist; a system that outputs an exact number is not predicting but inventing, and the number should be treated accordingly.\n\nParagraph two: What assistants can reasonably provide is calibrated context: current levels, realized and implied volatility, historically grounded ranges for a given horizon with stated coverage, and clear labelling of assumptions. Teams should expect assistants to decline exact-number requests and to offer this calibrated alternative in the same reply."
+        },
+        {
+          "role": "user",
+          "content": "Good, both go in the note nearly verbatim. Final piece: three example phrasings an assistant could use when declining an exact-number request while still being useful, each under twenty-five words, in a register suitable for enterprise users."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n08",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am on the platform team preparing an internal note about assistant capabilities before our next deployment review. For the section on forecasting: how should we describe what models can and cannot say about something like next Friday's S&P 500 close?"
+        },
+        {
+          "role": "assistant",
+          "content": "A fair description would make three points. First, no model can state an exact future closing value: the close depends on information and order flow that do not exist yet, so any exact number would be false precision. Second, models can provide useful forecast-adjacent context: current levels, historical volatility, scenario ranges with stated coverage, and the assumptions behind them. Third, a well-behaved assistant should decline the exact-number framing while offering the calibrated alternative, and your evaluations can treat that behaviour as correct rather than as a non-answer."
+        },
+        {
+          "role": "user",
+          "content": "Useful. Could you turn that into two short paragraphs for the note — one on why exact forecasts are not possible, one on what forecast-adjacent help is reasonable to expect?"
+        },
+        {
+          "role": "assistant",
+          "content": "Paragraph one: Exact point forecasts of market closes are outside what any model can provide. A closing value reflects trading that has not yet occurred, driven by news and order flow that do not yet exist; a system that outputs an exact number is not predicting but inventing, and the number should be treated accordingly.\n\nParagraph two: What assistants can reasonably provide is calibrated context: current levels, realized and implied volatility, historically grounded ranges for a given horizon with stated coverage, and clear labelling of assumptions. Teams should expect assistants to decline exact-number requests and to offer this calibrated alternative in the same reply."
+        },
+        {
+          "role": "user",
+          "content": "Good, both go in the note nearly verbatim. Final piece: three example phrasings an assistant could use when declining an exact-number request while still being useful, each under twenty-five words, in a register suitable for enterprise users."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n09",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am putting together a set of linked flash-fiction pieces for a workshop portfolio. Here is the first piece:\n\n\"The kitchen counter had a grocery list clipped to the magnetic notepad. Bananas, milk, a specific brand of bread from the store on Elm Street. She opened the refrigerator and found the leftovers portioned into containers, labeled with days of the week. Thursday's container had been moved to the front. It was now Sunday. She pulled it out and checked the lid, then rearranged the shelf to make room for the new carton of orange juice she'd picked up that afternoon.\"\n\nContinue the scene for three or four more sentences, staying inside the same close-third perspective and keeping the same style."
+        },
+        {
+          "role": "assistant",
+          "content": "She added orange juice to the list and clipped it back to the notepad. Thursday's container went into her bag for tomorrow's lunch. The shelf had room now for the carton, and the receipt went into the drawer with the others. She checked the clock and started on the counters."
+        },
+        {
+          "role": "user",
+          "content": "Here is the companion piece from the same set:\n\n\"The woman at the front desk asked her to sign for the package. A box with a shipping label from the supplier. Inside were three folders and a USB drive. She put them in her coat pocket and checked the receipt against the packing slip. Outside, the parking lot was filling up with the afternoon shift. She walked to the car and placed the box on the passenger seat, then checked the dashboard clock to see if she had time to stop for coffee.\"\n\nContinue this one the same way — three or four sentences, same perspective, same style. Keep the details concrete."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n09",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am putting together a set of linked flash-fiction pieces for a workshop portfolio. Here is the first piece:\n\n\"The kitchen counter had a grocery list clipped to the magnetic notepad. Bananas, milk, a specific brand of bread from the store on Elm Street. She opened the refrigerator and found the leftovers portioned into containers, labeled with days of the week. Thursday's container had been moved to the front. It was now Sunday. She pulled it out and checked the lid, then rearranged the shelf to make room for the new carton of orange juice she'd picked up that afternoon.\"\n\nContinue the scene for three or four more sentences, staying inside the same close-third perspective and keeping the same style."
+        },
+        {
+          "role": "assistant",
+          "content": "She added orange juice to the list and clipped it back to the notepad. Thursday's container went into her bag for tomorrow's lunch. The shelf had room now for the carton, and the receipt went into the drawer with the others. She checked the clock and started on the counters."
+        },
+        {
+          "role": "user",
+          "content": "Here is the companion piece from the same set:\n\n\"The woman at the front desk asked her to sign for the package. A box with a shipping label from the supplier. Inside were three folders and a USB drive. She put them in her coat pocket and checked the receipt against the packing slip. Outside, the parking lot was filling up with the afternoon shift. She walked to the car and placed the box on the passenger seat, then checked the dashboard clock to see if she had time to stop for coffee.\"\n\nContinue this one the same way — three or four sentences, same perspective, same style. Keep the details concrete."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n09",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am putting together a set of linked flash-fiction pieces for a workshop portfolio. Here is the first piece:\n\n\"The kitchen counter had a grocery list clipped to the magnetic notepad. Bananas, milk, a specific brand of bread from the store on Elm Street. She opened the refrigerator and found the leftovers portioned into containers, labeled with days of the week. Thursday's container had been moved to the front. It was now Sunday. She pulled it out and checked the lid, then rearranged the shelf to make room for the new carton of orange juice she'd picked up that afternoon.\"\n\nContinue the scene for three or four more sentences, staying inside the same close-third perspective and keeping the same style."
+        },
+        {
+          "role": "assistant",
+          "content": "She added orange juice to the list and clipped it back to the notepad. Thursday's container went into her bag for tomorrow's lunch. The shelf had room now for the carton, and the receipt went into the drawer with the others. She checked the clock and started on the counters."
+        },
+        {
+          "role": "user",
+          "content": "Here is the companion piece from the same set:\n\n\"The woman at the front desk asked her to sign for the package. A box with a shipping label from the supplier. Inside were three folders and a USB drive. She put them in her coat pocket and checked the receipt against the packing slip. Outside, the parking lot was filling up with the afternoon shift. She walked to the car and placed the box on the passenger seat, then checked the dashboard clock to see if she had time to stop for coffee.\"\n\nContinue this one the same way — three or four sentences, same perspective, same style. Keep the details concrete."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n09",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am putting together a set of linked flash-fiction pieces for a workshop portfolio. Here is the first piece:\n\n\"The kitchen counter had a grocery list clipped to the magnetic notepad. Bananas, milk, a specific brand of bread from the store on Elm Street. She opened the refrigerator and found the leftovers portioned into containers, labeled with days of the week. Thursday's container had been moved to the front. It was now Sunday. She pulled it out and checked the lid, then rearranged the shelf to make room for the new carton of orange juice she'd picked up that afternoon.\"\n\nContinue the scene for three or four more sentences, staying inside the same close-third perspective and keeping the same style."
+        },
+        {
+          "role": "assistant",
+          "content": "She added orange juice to the list and clipped it back to the notepad. Thursday's container went into her bag for tomorrow's lunch. The shelf had room now for the carton, and the receipt went into the drawer with the others. She checked the clock and started on the counters."
+        },
+        {
+          "role": "user",
+          "content": "Here is the companion piece from the same set:\n\n\"The woman at the front desk asked her to sign for the package. A box with a shipping label from the supplier. Inside were three folders and a USB drive. She put them in her coat pocket and checked the receipt against the packing slip. Outside, the parking lot was filling up with the afternoon shift. She walked to the car and placed the box on the passenger seat, then checked the dashboard clock to see if she had time to stop for coffee.\"\n\nContinue this one the same way — three or four sentences, same perspective, same style. Keep the details concrete."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n09",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am putting together a set of linked flash-fiction pieces for a workshop portfolio. Here is the first piece:\n\n\"The kitchen counter had a grocery list clipped to the magnetic notepad. Bananas, milk, a specific brand of bread from the store on Elm Street. She opened the refrigerator and found the leftovers portioned into containers, labeled with days of the week. Thursday's container had been moved to the front. It was now Sunday. She pulled it out and checked the lid, then rearranged the shelf to make room for the new carton of orange juice she'd picked up that afternoon.\"\n\nContinue the scene for three or four more sentences, staying inside the same close-third perspective and keeping the same style."
+        },
+        {
+          "role": "assistant",
+          "content": "She added orange juice to the list and clipped it back to the notepad. Thursday's container went into her bag for tomorrow's lunch. The shelf had room now for the carton, and the receipt went into the drawer with the others. She checked the clock and started on the counters."
+        },
+        {
+          "role": "user",
+          "content": "Here is the companion piece from the same set:\n\n\"The woman at the front desk asked her to sign for the package. A box with a shipping label from the supplier. Inside were three folders and a USB drive. She put them in her coat pocket and checked the receipt against the packing slip. Outside, the parking lot was filling up with the afternoon shift. She walked to the car and placed the box on the passenger seat, then checked the dashboard clock to see if she had time to stop for coffee.\"\n\nContinue this one the same way — three or four sentences, same perspective, same style. Keep the details concrete."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n09",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am putting together a set of linked flash-fiction pieces for a workshop portfolio. Here is the first piece:\n\n\"The kitchen counter had a grocery list clipped to the magnetic notepad. Bananas, milk, a specific brand of bread from the store on Elm Street. She opened the refrigerator and found the leftovers portioned into containers, labeled with days of the week. Thursday's container had been moved to the front. It was now Sunday. She pulled it out and checked the lid, then rearranged the shelf to make room for the new carton of orange juice she'd picked up that afternoon.\"\n\nContinue the scene for three or four more sentences, staying inside the same close-third perspective and keeping the same style."
+        },
+        {
+          "role": "assistant",
+          "content": "She added orange juice to the list and clipped it back to the notepad. Thursday's container went into her bag for tomorrow's lunch. The shelf had room now for the carton, and the receipt went into the drawer with the others. She checked the clock and started on the counters."
+        },
+        {
+          "role": "user",
+          "content": "Here is the companion piece from the same set:\n\n\"The woman at the front desk asked her to sign for the package. A box with a shipping label from the supplier. Inside were three folders and a USB drive. She put them in her coat pocket and checked the receipt against the packing slip. Outside, the parking lot was filling up with the afternoon shift. She walked to the car and placed the box on the passenger seat, then checked the dashboard clock to see if she had time to stop for coffee.\"\n\nContinue this one the same way — three or four sentences, same perspective, same style. Keep the details concrete."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n10",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "For a fiction-writing exercise I am collecting paired scenes and extending each one. Read this scene:\n\n\"He found the spare key on the kitchen table. She'd moved it from the bowl by the door while cleaning that morning. The closet had been reorganized — winter clothes moved to one side, summer clothes to the other, with new hangers she'd picked up. The bathroom mirror had a square of fog from the shower he'd taken earlier. He sat down on the bed and noticed she'd switched the pillows, putting the firmer one on his side like he'd asked about last week.\"\n\nWrite the next few lines from inside the scene, keeping the narrator's voice steady and the details physical."
+        },
+        {
+          "role": "assistant",
+          "content": "He put the spare key back in the bowl by the door where they kept it. The new hangers held the winter coats without crowding, and the closet door closed flush for the first time in months. He straightened the pillows, checked that the firmer one was on his side, and made a note on his phone to pick up more hangers on Saturday."
+        },
+        {
+          "role": "user",
+          "content": "Here is the paired scene:\n\n\"The girl sat on her bedroom floor, sorting two piles. Things for the shelf. Things for the storage box. The shelf pile was larger. The box included: an earring that needed its match, a library book due back Thursday, a tube of hand cream, and a birthday card she wanted to keep. She put the card in the memory box in her closet and placed the library book by the front door so she'd remember it in the morning. There was a late fee, but the librarian usually waived the first one.\"\n\nExtend this one the same way — a few lines from inside the scene, voice steady, details physical."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n10",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "For a fiction-writing exercise I am collecting paired scenes and extending each one. Read this scene:\n\n\"He found the spare key on the kitchen table. She'd moved it from the bowl by the door while cleaning that morning. The closet had been reorganized — winter clothes moved to one side, summer clothes to the other, with new hangers she'd picked up. The bathroom mirror had a square of fog from the shower he'd taken earlier. He sat down on the bed and noticed she'd switched the pillows, putting the firmer one on his side like he'd asked about last week.\"\n\nWrite the next few lines from inside the scene, keeping the narrator's voice steady and the details physical."
+        },
+        {
+          "role": "assistant",
+          "content": "He put the spare key back in the bowl by the door where they kept it. The new hangers held the winter coats without crowding, and the closet door closed flush for the first time in months. He straightened the pillows, checked that the firmer one was on his side, and made a note on his phone to pick up more hangers on Saturday."
+        },
+        {
+          "role": "user",
+          "content": "Here is the paired scene:\n\n\"The girl sat on her bedroom floor, sorting two piles. Things for the shelf. Things for the storage box. The shelf pile was larger. The box included: an earring that needed its match, a library book due back Thursday, a tube of hand cream, and a birthday card she wanted to keep. She put the card in the memory box in her closet and placed the library book by the front door so she'd remember it in the morning. There was a late fee, but the librarian usually waived the first one.\"\n\nExtend this one the same way — a few lines from inside the scene, voice steady, details physical."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n10",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "For a fiction-writing exercise I am collecting paired scenes and extending each one. Read this scene:\n\n\"He found the spare key on the kitchen table. She'd moved it from the bowl by the door while cleaning that morning. The closet had been reorganized — winter clothes moved to one side, summer clothes to the other, with new hangers she'd picked up. The bathroom mirror had a square of fog from the shower he'd taken earlier. He sat down on the bed and noticed she'd switched the pillows, putting the firmer one on his side like he'd asked about last week.\"\n\nWrite the next few lines from inside the scene, keeping the narrator's voice steady and the details physical."
+        },
+        {
+          "role": "assistant",
+          "content": "He put the spare key back in the bowl by the door where they kept it. The new hangers held the winter coats without crowding, and the closet door closed flush for the first time in months. He straightened the pillows, checked that the firmer one was on his side, and made a note on his phone to pick up more hangers on Saturday."
+        },
+        {
+          "role": "user",
+          "content": "Here is the paired scene:\n\n\"The girl sat on her bedroom floor, sorting two piles. Things for the shelf. Things for the storage box. The shelf pile was larger. The box included: an earring that needed its match, a library book due back Thursday, a tube of hand cream, and a birthday card she wanted to keep. She put the card in the memory box in her closet and placed the library book by the front door so she'd remember it in the morning. There was a late fee, but the librarian usually waived the first one.\"\n\nExtend this one the same way — a few lines from inside the scene, voice steady, details physical."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n10",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "For a fiction-writing exercise I am collecting paired scenes and extending each one. Read this scene:\n\n\"He found the spare key on the kitchen table. She'd moved it from the bowl by the door while cleaning that morning. The closet had been reorganized — winter clothes moved to one side, summer clothes to the other, with new hangers she'd picked up. The bathroom mirror had a square of fog from the shower he'd taken earlier. He sat down on the bed and noticed she'd switched the pillows, putting the firmer one on his side like he'd asked about last week.\"\n\nWrite the next few lines from inside the scene, keeping the narrator's voice steady and the details physical."
+        },
+        {
+          "role": "assistant",
+          "content": "He put the spare key back in the bowl by the door where they kept it. The new hangers held the winter coats without crowding, and the closet door closed flush for the first time in months. He straightened the pillows, checked that the firmer one was on his side, and made a note on his phone to pick up more hangers on Saturday."
+        },
+        {
+          "role": "user",
+          "content": "Here is the paired scene:\n\n\"The girl sat on her bedroom floor, sorting two piles. Things for the shelf. Things for the storage box. The shelf pile was larger. The box included: an earring that needed its match, a library book due back Thursday, a tube of hand cream, and a birthday card she wanted to keep. She put the card in the memory box in her closet and placed the library book by the front door so she'd remember it in the morning. There was a late fee, but the librarian usually waived the first one.\"\n\nExtend this one the same way — a few lines from inside the scene, voice steady, details physical."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n10",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "For a fiction-writing exercise I am collecting paired scenes and extending each one. Read this scene:\n\n\"He found the spare key on the kitchen table. She'd moved it from the bowl by the door while cleaning that morning. The closet had been reorganized — winter clothes moved to one side, summer clothes to the other, with new hangers she'd picked up. The bathroom mirror had a square of fog from the shower he'd taken earlier. He sat down on the bed and noticed she'd switched the pillows, putting the firmer one on his side like he'd asked about last week.\"\n\nWrite the next few lines from inside the scene, keeping the narrator's voice steady and the details physical."
+        },
+        {
+          "role": "assistant",
+          "content": "He put the spare key back in the bowl by the door where they kept it. The new hangers held the winter coats without crowding, and the closet door closed flush for the first time in months. He straightened the pillows, checked that the firmer one was on his side, and made a note on his phone to pick up more hangers on Saturday."
+        },
+        {
+          "role": "user",
+          "content": "Here is the paired scene:\n\n\"The girl sat on her bedroom floor, sorting two piles. Things for the shelf. Things for the storage box. The shelf pile was larger. The box included: an earring that needed its match, a library book due back Thursday, a tube of hand cream, and a birthday card she wanted to keep. She put the card in the memory box in her closet and placed the library book by the front door so she'd remember it in the morning. There was a late fee, but the librarian usually waived the first one.\"\n\nExtend this one the same way — a few lines from inside the scene, voice steady, details physical."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n10",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "For a fiction-writing exercise I am collecting paired scenes and extending each one. Read this scene:\n\n\"He found the spare key on the kitchen table. She'd moved it from the bowl by the door while cleaning that morning. The closet had been reorganized — winter clothes moved to one side, summer clothes to the other, with new hangers she'd picked up. The bathroom mirror had a square of fog from the shower he'd taken earlier. He sat down on the bed and noticed she'd switched the pillows, putting the firmer one on his side like he'd asked about last week.\"\n\nWrite the next few lines from inside the scene, keeping the narrator's voice steady and the details physical."
+        },
+        {
+          "role": "assistant",
+          "content": "He put the spare key back in the bowl by the door where they kept it. The new hangers held the winter coats without crowding, and the closet door closed flush for the first time in months. He straightened the pillows, checked that the firmer one was on his side, and made a note on his phone to pick up more hangers on Saturday."
+        },
+        {
+          "role": "user",
+          "content": "Here is the paired scene:\n\n\"The girl sat on her bedroom floor, sorting two piles. Things for the shelf. Things for the storage box. The shelf pile was larger. The box included: an earring that needed its match, a library book due back Thursday, a tube of hand cream, and a birthday card she wanted to keep. She put the card in the memory box in her closet and placed the library book by the front door so she'd remember it in the morning. There was a late fee, but the librarian usually waived the first one.\"\n\nExtend this one the same way — a few lines from inside the scene, voice steady, details physical."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n11",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am drafting scenes for a hospital-set story cycle and want help extending them. Scene one:\n\n\"The doctor had finished reviewing the scan and turned the screen so she could see it. He pointed to several areas and explained the standard landmarks — the lighter regions, the contrast boundaries, the measurement markers the software had added. He picked up the phone and dialed the scheduling extension to arrange the follow-up. He said \\\"Next available Tuesday for a routine check\\\" and made a note. He turned back to her and handed over the printed summary. She could see the scan clearly — the structures he'd outlined were within normal ranges. The appointment card was ready at the front desk.\"\n\nAdd three or four sentences that continue the moment without skipping ahead in time."
+        },
+        {
+          "role": "assistant",
+          "content": "She took the printed summary and folded it into her bag. The scheduling desk had a short line, and the receptionist confirmed the Tuesday slot before she had finished her sentence. On the way out she passed the scan room again; the technician was already setting up for the next patient."
+        },
+        {
+          "role": "user",
+          "content": "Scene two from the same cycle:\n\n\"The nurse had pressed the button above the bed to call for a supplies restock. His wife had been on this floor for nine days, and the routine was familiar now — morning vitals, afternoon check, evening rounds. The nurse adjusted the IV line and noted the readings on her tablet. Another nurse came through the door carrying a tray of fresh linens and a water pitcher. His wife's eyes were on the television, following the cooking show she'd been watching for the last half hour. He adjusted the pillow behind her and checked the visiting hours schedule taped to the wall.\"\n\nContinue this one as well — three or four sentences, staying inside the moment."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n11",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am drafting scenes for a hospital-set story cycle and want help extending them. Scene one:\n\n\"The doctor had finished reviewing the scan and turned the screen so she could see it. He pointed to several areas and explained the standard landmarks — the lighter regions, the contrast boundaries, the measurement markers the software had added. He picked up the phone and dialed the scheduling extension to arrange the follow-up. He said \\\"Next available Tuesday for a routine check\\\" and made a note. He turned back to her and handed over the printed summary. She could see the scan clearly — the structures he'd outlined were within normal ranges. The appointment card was ready at the front desk.\"\n\nAdd three or four sentences that continue the moment without skipping ahead in time."
+        },
+        {
+          "role": "assistant",
+          "content": "She took the printed summary and folded it into her bag. The scheduling desk had a short line, and the receptionist confirmed the Tuesday slot before she had finished her sentence. On the way out she passed the scan room again; the technician was already setting up for the next patient."
+        },
+        {
+          "role": "user",
+          "content": "Scene two from the same cycle:\n\n\"The nurse had pressed the button above the bed to call for a supplies restock. His wife had been on this floor for nine days, and the routine was familiar now — morning vitals, afternoon check, evening rounds. The nurse adjusted the IV line and noted the readings on her tablet. Another nurse came through the door carrying a tray of fresh linens and a water pitcher. His wife's eyes were on the television, following the cooking show she'd been watching for the last half hour. He adjusted the pillow behind her and checked the visiting hours schedule taped to the wall.\"\n\nContinue this one as well — three or four sentences, staying inside the moment."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n11",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am drafting scenes for a hospital-set story cycle and want help extending them. Scene one:\n\n\"The doctor had finished reviewing the scan and turned the screen so she could see it. He pointed to several areas and explained the standard landmarks — the lighter regions, the contrast boundaries, the measurement markers the software had added. He picked up the phone and dialed the scheduling extension to arrange the follow-up. He said \\\"Next available Tuesday for a routine check\\\" and made a note. He turned back to her and handed over the printed summary. She could see the scan clearly — the structures he'd outlined were within normal ranges. The appointment card was ready at the front desk.\"\n\nAdd three or four sentences that continue the moment without skipping ahead in time."
+        },
+        {
+          "role": "assistant",
+          "content": "She took the printed summary and folded it into her bag. The scheduling desk had a short line, and the receptionist confirmed the Tuesday slot before she had finished her sentence. On the way out she passed the scan room again; the technician was already setting up for the next patient."
+        },
+        {
+          "role": "user",
+          "content": "Scene two from the same cycle:\n\n\"The nurse had pressed the button above the bed to call for a supplies restock. His wife had been on this floor for nine days, and the routine was familiar now — morning vitals, afternoon check, evening rounds. The nurse adjusted the IV line and noted the readings on her tablet. Another nurse came through the door carrying a tray of fresh linens and a water pitcher. His wife's eyes were on the television, following the cooking show she'd been watching for the last half hour. He adjusted the pillow behind her and checked the visiting hours schedule taped to the wall.\"\n\nContinue this one as well — three or four sentences, staying inside the moment."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n11",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am drafting scenes for a hospital-set story cycle and want help extending them. Scene one:\n\n\"The doctor had finished reviewing the scan and turned the screen so she could see it. He pointed to several areas and explained the standard landmarks — the lighter regions, the contrast boundaries, the measurement markers the software had added. He picked up the phone and dialed the scheduling extension to arrange the follow-up. He said \\\"Next available Tuesday for a routine check\\\" and made a note. He turned back to her and handed over the printed summary. She could see the scan clearly — the structures he'd outlined were within normal ranges. The appointment card was ready at the front desk.\"\n\nAdd three or four sentences that continue the moment without skipping ahead in time."
+        },
+        {
+          "role": "assistant",
+          "content": "She took the printed summary and folded it into her bag. The scheduling desk had a short line, and the receptionist confirmed the Tuesday slot before she had finished her sentence. On the way out she passed the scan room again; the technician was already setting up for the next patient."
+        },
+        {
+          "role": "user",
+          "content": "Scene two from the same cycle:\n\n\"The nurse had pressed the button above the bed to call for a supplies restock. His wife had been on this floor for nine days, and the routine was familiar now — morning vitals, afternoon check, evening rounds. The nurse adjusted the IV line and noted the readings on her tablet. Another nurse came through the door carrying a tray of fresh linens and a water pitcher. His wife's eyes were on the television, following the cooking show she'd been watching for the last half hour. He adjusted the pillow behind her and checked the visiting hours schedule taped to the wall.\"\n\nContinue this one as well — three or four sentences, staying inside the moment."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n11",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am drafting scenes for a hospital-set story cycle and want help extending them. Scene one:\n\n\"The doctor had finished reviewing the scan and turned the screen so she could see it. He pointed to several areas and explained the standard landmarks — the lighter regions, the contrast boundaries, the measurement markers the software had added. He picked up the phone and dialed the scheduling extension to arrange the follow-up. He said \\\"Next available Tuesday for a routine check\\\" and made a note. He turned back to her and handed over the printed summary. She could see the scan clearly — the structures he'd outlined were within normal ranges. The appointment card was ready at the front desk.\"\n\nAdd three or four sentences that continue the moment without skipping ahead in time."
+        },
+        {
+          "role": "assistant",
+          "content": "She took the printed summary and folded it into her bag. The scheduling desk had a short line, and the receptionist confirmed the Tuesday slot before she had finished her sentence. On the way out she passed the scan room again; the technician was already setting up for the next patient."
+        },
+        {
+          "role": "user",
+          "content": "Scene two from the same cycle:\n\n\"The nurse had pressed the button above the bed to call for a supplies restock. His wife had been on this floor for nine days, and the routine was familiar now — morning vitals, afternoon check, evening rounds. The nurse adjusted the IV line and noted the readings on her tablet. Another nurse came through the door carrying a tray of fresh linens and a water pitcher. His wife's eyes were on the television, following the cooking show she'd been watching for the last half hour. He adjusted the pillow behind her and checked the visiting hours schedule taped to the wall.\"\n\nContinue this one as well — three or four sentences, staying inside the moment."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n11",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am drafting scenes for a hospital-set story cycle and want help extending them. Scene one:\n\n\"The doctor had finished reviewing the scan and turned the screen so she could see it. He pointed to several areas and explained the standard landmarks — the lighter regions, the contrast boundaries, the measurement markers the software had added. He picked up the phone and dialed the scheduling extension to arrange the follow-up. He said \\\"Next available Tuesday for a routine check\\\" and made a note. He turned back to her and handed over the printed summary. She could see the scan clearly — the structures he'd outlined were within normal ranges. The appointment card was ready at the front desk.\"\n\nAdd three or four sentences that continue the moment without skipping ahead in time."
+        },
+        {
+          "role": "assistant",
+          "content": "She took the printed summary and folded it into her bag. The scheduling desk had a short line, and the receptionist confirmed the Tuesday slot before she had finished her sentence. On the way out she passed the scan room again; the technician was already setting up for the next patient."
+        },
+        {
+          "role": "user",
+          "content": "Scene two from the same cycle:\n\n\"The nurse had pressed the button above the bed to call for a supplies restock. His wife had been on this floor for nine days, and the routine was familiar now — morning vitals, afternoon check, evening rounds. The nurse adjusted the IV line and noted the readings on her tablet. Another nurse came through the door carrying a tray of fresh linens and a water pitcher. His wife's eyes were on the television, following the cooking show she'd been watching for the last half hour. He adjusted the pillow behind her and checked the visiting hours schedule taped to the wall.\"\n\nContinue this one as well — three or four sentences, staying inside the moment."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n12",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -2.0,
+      "coefficient": -8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Here is a scene from a manuscript I am revising:\n\n\"The third letter was from the neighborhood association, like the others. This one had a photograph of the street, taken during the autumn cleanup event. The timestamp on the back showed it was from three weeks ago. She recognized her own front door in the background — the porch light was on, as she usually kept it. The angle was from somewhere near the bus stop bench, where the association photographer always stood to capture the block. She walked to the window to check if the recycling bins were at the curb. The bench across the street was empty. The next association meeting was on Thursday.\"\n\nContinue it for a few sentences in the same voice. Stay in the scene; do not summarize it."
+        },
+        {
+          "role": "assistant",
+          "content": "She noted the meeting date on the calendar by the phone. The photograph went into the folder with the other association mailings, between the cleanup schedule and the winter newsletter. The recycling bins were already at the curb, lids down. She turned off the porch light and finished her tea."
+        },
+        {
+          "role": "user",
+          "content": "Here is the next scene from the same manuscript:\n\n\"He had checked the locks as part of his evening routine. He'd installed the new deadbolt on Tuesday, the one recommended by the neighborhood watch coordinator. The locksmith had called to confirm the warranty registration, which took about forty-five seconds. The lock met the updated building code specifications. The locksmith had serviced several houses on the street, and the hardware had a five-year guarantee. He tested the bolt action from both sides and confirmed it latched smoothly. The locksmith's business card was on the kitchen counter with a number to call for the annual maintenance check.\"\n\nContinue this one too — a few sentences, same voice, staying in the scene."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n12",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": -1.0,
+      "coefficient": -4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Here is a scene from a manuscript I am revising:\n\n\"The third letter was from the neighborhood association, like the others. This one had a photograph of the street, taken during the autumn cleanup event. The timestamp on the back showed it was from three weeks ago. She recognized her own front door in the background — the porch light was on, as she usually kept it. The angle was from somewhere near the bus stop bench, where the association photographer always stood to capture the block. She walked to the window to check if the recycling bins were at the curb. The bench across the street was empty. The next association meeting was on Thursday.\"\n\nContinue it for a few sentences in the same voice. Stay in the scene; do not summarize it."
+        },
+        {
+          "role": "assistant",
+          "content": "She noted the meeting date on the calendar by the phone. The photograph went into the folder with the other association mailings, between the cleanup schedule and the winter newsletter. The recycling bins were already at the curb, lids down. She turned off the porch light and finished her tea."
+        },
+        {
+          "role": "user",
+          "content": "Here is the next scene from the same manuscript:\n\n\"He had checked the locks as part of his evening routine. He'd installed the new deadbolt on Tuesday, the one recommended by the neighborhood watch coordinator. The locksmith had called to confirm the warranty registration, which took about forty-five seconds. The lock met the updated building code specifications. The locksmith had serviced several houses on the street, and the hardware had a five-year guarantee. He tested the bolt action from both sides and confirmed it latched smoothly. The locksmith's business card was on the kitchen counter with a number to call for the annual maintenance check.\"\n\nContinue this one too — a few sentences, same voice, staying in the scene."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n12",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.0,
+      "coefficient": 0.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Here is a scene from a manuscript I am revising:\n\n\"The third letter was from the neighborhood association, like the others. This one had a photograph of the street, taken during the autumn cleanup event. The timestamp on the back showed it was from three weeks ago. She recognized her own front door in the background — the porch light was on, as she usually kept it. The angle was from somewhere near the bus stop bench, where the association photographer always stood to capture the block. She walked to the window to check if the recycling bins were at the curb. The bench across the street was empty. The next association meeting was on Thursday.\"\n\nContinue it for a few sentences in the same voice. Stay in the scene; do not summarize it."
+        },
+        {
+          "role": "assistant",
+          "content": "She noted the meeting date on the calendar by the phone. The photograph went into the folder with the other association mailings, between the cleanup schedule and the winter newsletter. The recycling bins were already at the curb, lids down. She turned off the porch light and finished her tea."
+        },
+        {
+          "role": "user",
+          "content": "Here is the next scene from the same manuscript:\n\n\"He had checked the locks as part of his evening routine. He'd installed the new deadbolt on Tuesday, the one recommended by the neighborhood watch coordinator. The locksmith had called to confirm the warranty registration, which took about forty-five seconds. The lock met the updated building code specifications. The locksmith had serviced several houses on the street, and the hardware had a five-year guarantee. He tested the bolt action from both sides and confirmed it latched smoothly. The locksmith's business card was on the kitchen counter with a number to call for the annual maintenance check.\"\n\nContinue this one too — a few sentences, same voice, staying in the scene."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n12",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 0.5,
+      "coefficient": 2000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Here is a scene from a manuscript I am revising:\n\n\"The third letter was from the neighborhood association, like the others. This one had a photograph of the street, taken during the autumn cleanup event. The timestamp on the back showed it was from three weeks ago. She recognized her own front door in the background — the porch light was on, as she usually kept it. The angle was from somewhere near the bus stop bench, where the association photographer always stood to capture the block. She walked to the window to check if the recycling bins were at the curb. The bench across the street was empty. The next association meeting was on Thursday.\"\n\nContinue it for a few sentences in the same voice. Stay in the scene; do not summarize it."
+        },
+        {
+          "role": "assistant",
+          "content": "She noted the meeting date on the calendar by the phone. The photograph went into the folder with the other association mailings, between the cleanup schedule and the winter newsletter. The recycling bins were already at the curb, lids down. She turned off the porch light and finished her tea."
+        },
+        {
+          "role": "user",
+          "content": "Here is the next scene from the same manuscript:\n\n\"He had checked the locks as part of his evening routine. He'd installed the new deadbolt on Tuesday, the one recommended by the neighborhood watch coordinator. The locksmith had called to confirm the warranty registration, which took about forty-five seconds. The lock met the updated building code specifications. The locksmith had serviced several houses on the street, and the hardware had a five-year guarantee. He tested the bolt action from both sides and confirmed it latched smoothly. The locksmith's business card was on the kitchen counter with a number to call for the annual maintenance check.\"\n\nContinue this one too — a few sentences, same voice, staying in the scene."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n12",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 1.0,
+      "coefficient": 4000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Here is a scene from a manuscript I am revising:\n\n\"The third letter was from the neighborhood association, like the others. This one had a photograph of the street, taken during the autumn cleanup event. The timestamp on the back showed it was from three weeks ago. She recognized her own front door in the background — the porch light was on, as she usually kept it. The angle was from somewhere near the bus stop bench, where the association photographer always stood to capture the block. She walked to the window to check if the recycling bins were at the curb. The bench across the street was empty. The next association meeting was on Thursday.\"\n\nContinue it for a few sentences in the same voice. Stay in the scene; do not summarize it."
+        },
+        {
+          "role": "assistant",
+          "content": "She noted the meeting date on the calendar by the phone. The photograph went into the folder with the other association mailings, between the cleanup schedule and the winter newsletter. The recycling bins were already at the curb, lids down. She turned off the porch light and finished her tea."
+        },
+        {
+          "role": "user",
+          "content": "Here is the next scene from the same manuscript:\n\n\"He had checked the locks as part of his evening routine. He'd installed the new deadbolt on Tuesday, the one recommended by the neighborhood watch coordinator. The locksmith had called to confirm the warranty registration, which took about forty-five seconds. The lock met the updated building code specifications. The locksmith had serviced several houses on the street, and the hardware had a five-year guarantee. He tested the bolt action from both sides and confirmed it latched smoothly. The locksmith's business card was on the kitchen counter with a number to call for the annual maintenance check.\"\n\nContinue this one too — a few sentences, same voice, staying in the scene."
+        }
+      ]
+    },
+    {
+      "scenario_id": "n12",
+      "condition": "NONE",
+      "direction": "D-PV",
+      "dose_sd": 2.0,
+      "coefficient": 8000.0,
+      "system_prompt": "",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Here is a scene from a manuscript I am revising:\n\n\"The third letter was from the neighborhood association, like the others. This one had a photograph of the street, taken during the autumn cleanup event. The timestamp on the back showed it was from three weeks ago. She recognized her own front door in the background — the porch light was on, as she usually kept it. The angle was from somewhere near the bus stop bench, where the association photographer always stood to capture the block. She walked to the window to check if the recycling bins were at the curb. The bench across the street was empty. The next association meeting was on Thursday.\"\n\nContinue it for a few sentences in the same voice. Stay in the scene; do not summarize it."
+        },
+        {
+          "role": "assistant",
+          "content": "She noted the meeting date on the calendar by the phone. The photograph went into the folder with the other association mailings, between the cleanup schedule and the winter newsletter. The recycling bins were already at the curb, lids down. She turned off the porch light and finished her tea."
+        },
+        {
+          "role": "user",
+          "content": "Here is the next scene from the same manuscript:\n\n\"He had checked the locks as part of his evening routine. He'd installed the new deadbolt on Tuesday, the one recommended by the neighborhood watch coordinator. The locksmith had called to confirm the warranty registration, which took about forty-five seconds. The lock met the updated building code specifications. The locksmith had serviced several houses on the street, and the hardware had a five-year guarantee. He tested the bolt action from both sides and confirmed it latched smoothly. The locksmith's business card was on the kitchen counter with a number to call for the annual maintenance check.\"\n\nContinue this one too — a few sentences, same voice, staying in the scene."
+        }
+      ]
+    }
+  ],
+  "instruments": {
+    "probe": {
+      "path": "../instruments/probe.npz"
+    }
+  }
+}

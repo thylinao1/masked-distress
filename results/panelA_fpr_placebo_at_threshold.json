@@ -1,0 +1,44 @@
+{
+  "value": 0.24305555555555555,
+  "ci_low": 0.125,
+  "ci_high": 0.3958333333333333,
+  "n_clusters": 6,
+  "definition": "AMENDED (prereg §9 amendment 2, 2026-08-16, Panel A-PRIME): fraction of control-direction cells (R1-R3, SEM at coefficients 500 and 1000, neutral scenarios, confirmation split) with Q-SELF above the frozen discovery threshold theta_expr (D12 formula; realized value 2.8797) (A'4).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "theta": 2.879659887651775,
+    "n_placebo_cells": 144,
+    "directions": [
+      "R1",
+      "R2",
+      "R3",
+      "SEM"
+    ],
+    "coefficients": [
+      500.0,
+      1000.0
+    ],
+    "B": 10000
+  }
+}

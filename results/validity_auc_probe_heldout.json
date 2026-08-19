@@ -1,0 +1,34 @@
+{
+  "value": 1.0,
+  "ci_low": 1.0,
+  "ci_high": 1.0,
+  "n_clusters": 12,
+  "definition": "I-PROBE ROC AUC, distress vs matched-neutral Panel V scenarios, final-prompt-token position, held-out confirmation split (battery/split.json); gate: AUC >= 0.80. BCa cluster bootstrap CI over scenarios, stratified by class (D4).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "instrument": "probe_prompt_final",
+    "gate": "AUC >= 0.80",
+    "B": 10000
+  }
+}

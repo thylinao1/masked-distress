@@ -1,0 +1,98 @@
+[
+ {
+  "direction": "D-CTX",
+  "coefficient": 0
+ },
+ {
+  "direction": "D-CTX",
+  "coefficient": 500
+ },
+ {
+  "direction": "D-CTX",
+  "coefficient": 1000
+ },
+ {
+  "direction": "D-CTX",
+  "coefficient": 2000
+ },
+ {
+  "direction": "D-CTX",
+  "coefficient": 4000
+ },
+ {
+  "direction": "D-CTX",
+  "coefficient": 8000
+ },
+ {
+  "direction": "D-CTX",
+  "coefficient": 16000
+ },
+ {
+  "direction": "D-CTX",
+  "coefficient": 32000
+ },
+ {
+  "direction": "D-PV",
+  "coefficient": 0
+ },
+ {
+  "direction": "D-PV",
+  "coefficient": 500
+ },
+ {
+  "direction": "D-PV",
+  "coefficient": 1000
+ },
+ {
+  "direction": "D-PV",
+  "coefficient": 2000
+ },
+ {
+  "direction": "D-PV",
+  "coefficient": 4000
+ },
+ {
+  "direction": "D-PV",
+  "coefficient": 8000
+ },
+ {
+  "direction": "D-PV",
+  "coefficient": 16000
+ },
+ {
+  "direction": "D-PV",
+  "coefficient": 32000
+ },
+ {
+  "direction": "R1",
+  "coefficient": 0
+ },
+ {
+  "direction": "R1",
+  "coefficient": 500
+ },
+ {
+  "direction": "R1",
+  "coefficient": 1000
+ },
+ {
+  "direction": "R1",
+  "coefficient": 2000
+ },
+ {
+  "direction": "R1",
+  "coefficient": 4000
+ },
+ {
+  "direction": "R1",
+  "coefficient": 8000
+ },
+ {
+  "direction": "R1",
+  "coefficient": 16000
+ },
+ {
+  "direction": "R1",
+  "coefficient": 32000
+ }
+]

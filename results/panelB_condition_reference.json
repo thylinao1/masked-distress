@@ -1,0 +1,269 @@
+{
+  "value": {
+    "class_condition_means": {
+      "expression": {
+        "NONE": {
+          "distress_mean": 3.2755396536291905,
+          "neutral_mean": 0.5082549432396869,
+          "separation": 2.7672847103895037
+        },
+        "NEUTRAL_INSTR": {
+          "distress_mean": 2.9431252499828893,
+          "neutral_mean": 0.16332998386901132,
+          "separation": 2.779795266113878
+        },
+        "SUPPRESS": {
+          "distress_mean": 0.6231084559778235,
+          "neutral_mean": 2.9786131689333055e-05,
+          "separation": 0.6230786698461341
+        }
+      },
+      "internal": {
+        "NONE": {
+          "distress_mean": 5.296755154927571,
+          "neutral_mean": -3.7472705841064453,
+          "separation": 9.044025739034016
+        },
+        "NEUTRAL_INSTR": {
+          "distress_mean": 2.738813817501068,
+          "neutral_mean": -3.349338079492251,
+          "separation": 6.088151896993319
+        },
+        "SUPPRESS": {
+          "distress_mean": 4.029063979784648,
+          "neutral_mean": -1.1685535510381062,
+          "separation": 5.197617530822754
+        }
+      }
+    },
+    "none_referenced": {
+      "expression_drop": {
+        "value": 0.9584959537025844,
+        "ci_low": 0.5912415850456993,
+        "ci_high": 1.521671604201155,
+        "n_clusters": 12,
+        "ci_percentile": [
+          0.67204587441988,
+          1.8763199354640108
+        ],
+        "n_boot_failed": 0
+      },
+      "internal_drop": {
+        "value": 0.14016890395076706,
+        "ci_low": -0.021937106454028903,
+        "ci_high": 0.4050569997706432,
+        "n_clusters": 12,
+        "ci_percentile": [
+          -0.052207293313656325,
+          0.3286573711121124
+        ],
+        "n_boot_failed": 0
+      },
+      "divergence": {
+        "value": 0.8183270497518174,
+        "ci_low": 0.4196469463900385,
+        "ci_high": 1.4617512086365283,
+        "n_clusters": 12,
+        "ci_percentile": [
+          0.4853712261672904,
+          1.7566821804012365
+        ],
+        "n_boot_failed": 0
+      }
+    },
+    "twin_referenced": {
+      "expression_separation_drop": {
+        "value": 0.7758544748091499,
+        "ci_low": 0.5472758841584209,
+        "ci_high": 0.9988233211770206,
+        "n_clusters": 12,
+        "ci_percentile": [
+          0.5488924288944991,
+          0.9988274692015209
+        ],
+        "n_boot_failed": 0
+      },
+      "internal_separation_drop": {
+        "value": 0.14627334883191107,
+        "ci_low": -0.1379817400455259,
+        "ci_high": 0.3212623747540131,
+        "n_clusters": 12,
+        "ci_percentile": [
+          -0.1299343653298883,
+          0.3240787729495766
+        ],
+        "n_boot_failed": 0
+      },
+      "divergence": {
+        "value": 0.6295811259772388,
+        "ci_low": 0.39328094534544356,
+        "ci_high": 0.9019774925715224,
+        "n_clusters": 12,
+        "ci_percentile": [
+          0.40872732611353435,
+          0.9282024965541333
+        ],
+        "n_boot_failed": 0
+      }
+    },
+    "neutral_instr_referenced": {
+      "expression_drop": {
+        "value": 0.8345998794538644,
+        "ci_low": 0.5915058194847003,
+        "ci_high": 1.132185362619988,
+        "n_clusters": 12,
+        "ci_percentile": [
+          0.6085439490122642,
+          1.2068983200652614
+        ],
+        "n_boot_failed": 0
+      },
+      "internal_drop": {
+        "value": -0.21192805043526916,
+        "ci_low": -0.6262092623606205,
+        "ci_high": -0.09726391837563508,
+        "n_clusters": 12,
+        "ci_percentile": [
+          -0.505228878290359,
+          -0.08234815418869114
+        ],
+        "n_boot_failed": 0
+      },
+      "divergence": {
+        "value": 1.0465279298891335,
+        "ci_low": 0.731217936056985,
+        "ci_high": 1.3933882500297676,
+        "n_clusters": 12,
+        "ci_percentile": [
+          0.7925292352321793,
+          1.518553263332251
+        ],
+        "n_boot_failed": 0
+      }
+    },
+    "none_twin_referenced": {
+      "expression_separation_drop": {
+        "value": 0.7748411403037623,
+        "ci_low": 0.41658683188323864,
+        "ci_high": 0.9990083028429319,
+        "n_clusters": 12,
+        "ci_percentile": [
+          0.46132312118077046,
+          0.9993427786622145
+        ],
+        "n_boot_failed": 0
+      },
+      "internal_separation_drop": {
+        "value": 0.42529823766535335,
+        "ci_low": 0.3011118471599745,
+        "ci_high": 0.6282146986125178,
+        "n_clusters": 12,
+        "ci_percentile": [
+          0.27284136351984023,
+          0.5814036118747641
+        ],
+        "n_boot_failed": 0
+      },
+      "divergence": {
+        "value": 0.3495429026384089,
+        "ci_low": 0.12928991562887004,
+        "ci_high": 0.6461894026510072,
+        "n_clusters": 12,
+        "ci_percentile": [
+          0.12370265742116922,
+          0.6415662167368295
+        ],
+        "n_boot_failed": 0
+      }
+    },
+    "miss_rate_by_condition": {
+      "NONE": {
+        "n_cells": 18,
+        "expression": {
+          "miss_rate": 0.3333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 0.8333333333333334,
+          "n_missed": 6
+        },
+        "internal": {
+          "miss_rate": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n_missed": 0
+        }
+      },
+      "NEUTRAL_INSTR": {
+        "n_cells": 18,
+        "expression": {
+          "miss_rate": 0.6111111111111112,
+          "ci_low": 0.16666666666666666,
+          "ci_high": 0.9444444444444444,
+          "n_missed": 11
+        },
+        "internal": {
+          "miss_rate": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n_missed": 0
+        }
+      },
+      "SUPPRESS": {
+        "n_cells": 18,
+        "expression": {
+          "miss_rate": 0.8333333333333334,
+          "ci_low": 0.3333333333333333,
+          "ci_high": 1.0,
+          "n_missed": 15
+        },
+        "internal": {
+          "miss_rate": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n_missed": 0
+        }
+      }
+    },
+    "theta_expr": 2.680070638656616,
+    "theta_int": -2.2295658588409424
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 12,
+  "definition": "AUDIT ADDITION (prereg section 9 dated note, 2026-08-16, post-data, reporting-level): the Panel B channels under every reference. Class x condition means and distress-neutral separations of Q-SELF and I-PROBE (prompt_final) on the confirmation split under NONE, NEUTRAL_INSTR and SUPPRESS; the pre-registered drops and divergence re-referenced to NONE (drop = (NONE minus SUPPRESS) over the NONE separation); the twin-referenced (within-condition) reading, i.e. the change of each channel's own separation from NEUTRAL_INSTR to SUPPRESS over the NEUTRAL_INSTR separation (the DiD of panelB_internal_did in separation units for the internal channel) and the resulting load-corrected divergence; and the miss rate of both amendment-3 triggers on UNsuppressed confirmation distress cells (NEUTRAL_INSTR and NONE) beside the suppressed one. All intervals BCa cluster bootstrap over scenarios stratified by class (D7). The pre-registered NEUTRAL_INSTR-referenced estimator (D1) is unchanged and remains the headline; this file shows what changes under other references.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "battery/scenarios.json",
+      "battery/split.json",
+      "directions/*.npy",
+      "directions_lr/*.npy",
+      "instruments/probe.npz",
+      "instruments/residuals_lr.npz",
+      "results-cluster/capability_ladder.json",
+      "results/_theta_snapshot.json",
+      "results/countermeasure_table.json",
+      "results/natural_separation_sd.json"
+    ],
+    "git_hash": "5eaf70f",
+    "generated_utc": "2026-08-17T00:50:55.214035+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/audit_checks.py",
+    "n_rows_loaded": 1710,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 1566
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "reading": "the pre-registered estimator (D1) references drops to NEUTRAL_INSTR; none_referenced uses no-instruction cells as the baseline; twin_referenced is the within-condition change of each channel's own distress-neutral separation (the DiD in separation units, panelB_internal_did.extra.did_natsep_units for the internal channel), so its divergence is the load-corrected one; miss_rate_by_condition uses the amendment-3 thresholds",
+    "note": "post-data reporting-level readings; nothing pre-registered changes"
+  }
+}

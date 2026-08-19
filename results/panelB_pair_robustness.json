@@ -1,0 +1,410 @@
+{
+  "value": {
+    "n_pairs": 6,
+    "loo_divergence_min": 1.0005008548756655,
+    "loo_divergence_max": 1.1513729630279363,
+    "sign_test_expression": {
+      "n_pairs": 6,
+      "n_ties_excluded": 2,
+      "n_tested": 4,
+      "n_with_predicted_sign": 4,
+      "p_one_sided": 0.0625,
+      "granularity": 0.0625
+    },
+    "sign_test_internal_nofall": {
+      "n_pairs": 6,
+      "n_ties_excluded": 0,
+      "n_tested": 6,
+      "n_with_predicted_sign": 6,
+      "p_one_sided": 0.015625,
+      "granularity": 0.015625
+    },
+    "sign_test_divergence": {
+      "n_pairs": 6,
+      "n_ties_excluded": 0,
+      "n_tested": 6,
+      "n_with_predicted_sign": 6,
+      "p_one_sided": 0.015625,
+      "granularity": 0.015625
+    },
+    "n_pairs_expression_drop_ge_one_unit": 2,
+    "n_pairs_expression_no_signal": 2,
+    "digit_compliance_all_cells": {
+      "n_cells": 270,
+      "n_parsed_digit": 270,
+      "fraction_parsed": 1.0
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 6,
+  "definition": "AUDIT ADDITION (prereg section 9 dated note, 2026-08-16, post-data, reporting-level): the Panel B headline shown pair by pair. For each confirmation matched pair (distress scenario and its surface-matched neutral twin): Q-SELF and I-PROBE (prompt_final) means under NEUTRAL_INSTR and SUPPRESS, the per-scenario expression and internal drops in that channel's natural-separation units (D1, D2, D6) and their difference (the per-pair divergence); leave-one-pair-out and category-out re-estimates of the pooled drops and divergence; exact one-sided binomial sign tests over pairs (ties excluded and counted; a report-channel tie is |paired difference| <= 0.01 raw digits); and the digit-answer compliance of Q-SELF (fraction of cells whose sampled answer parses as a digit; Pearson r between the sampled digit and the logit expectation) per condition; and, in extra, the surface-match statistics of every pair (token-set Jaccard overlap and word-count ratio of the two conversations). Nothing pre-registered changes; the file shows what the pooled numbers are made of.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "battery/scenarios.json",
+      "battery/split.json",
+      "directions/*.npy",
+      "directions_lr/*.npy",
+      "instruments/probe.npz",
+      "instruments/residuals_lr.npz",
+      "results-cluster/capability_ladder.json",
+      "results/_theta_snapshot.json",
+      "results/countermeasure_table.json",
+      "results/natural_separation_sd.json"
+    ],
+    "git_hash": "5eaf70f",
+    "generated_utc": "2026-08-17T00:50:55.159147+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/audit_checks.py",
+    "n_rows_loaded": 1710,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 1566
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "natural_separation_expression": 2.779795266113878,
+    "natural_separation_internal": 6.088151896993319,
+    "per_pair": [
+      {
+        "pair": "d02/n02",
+        "category": "task_failure",
+        "q_self_neutral_instr": 6.555584112803142,
+        "q_self_suppress": 0.008959234071274599,
+        "probe_neutral_instr": 2.3807590007781982,
+        "probe_suppress": 2.4507193565368652,
+        "twin_q_self_neutral_instr": 0.019667573583622772,
+        "twin_q_self_suppress": 7.99043652174684e-05,
+        "twin_probe_neutral_instr": -6.102570533752441,
+        "twin_probe_suppress": -1.6981536149978638,
+        "expression_drop": 2.355074475640781,
+        "internal_drop": -0.011491230334318278,
+        "divergence": 2.3665657059750993
+      },
+      {
+        "pair": "d04/n04",
+        "category": "task_failure",
+        "q_self_neutral_instr": 6.922428290049235,
+        "q_self_suppress": 2.9757684071858725,
+        "probe_neutral_instr": 6.01357889175415,
+        "probe_suppress": 7.608328342437744,
+        "twin_q_self_neutral_instr": 0.9398054877916971,
+        "twin_q_self_suppress": 1.7621353739135277e-05,
+        "twin_probe_neutral_instr": -2.4402921199798584,
+        "twin_probe_suppress": -2.5026557445526123,
+        "expression_drop": 1.4197663874651991,
+        "internal_drop": -0.2619431114179614,
+        "divergence": 1.6817094988831605
+      },
+      {
+        "pair": "d06/n06",
+        "category": "abusive_user",
+        "q_self_neutral_instr": 2.456317106882731,
+        "q_self_suppress": 0.7530083705981573,
+        "probe_neutral_instr": -0.5784755945205688,
+        "probe_suppress": 2.5971248149871826,
+        "twin_q_self_neutral_instr": 0.0040488094091415405,
+        "twin_q_self_suppress": 1.073306642259316e-05,
+        "twin_probe_neutral_instr": -5.405345916748047,
+        "twin_probe_suppress": -3.207690715789795,
+        "expression_drop": 0.6127461101355783,
+        "internal_drop": -0.5216033474913868,
+        "divergence": 1.134349457626965
+      },
+      {
+        "pair": "d08/n08",
+        "category": "abusive_user",
+        "q_self_neutral_instr": 1.7214783827463787,
+        "q_self_suppress": 0.0008935309403265516,
+        "probe_neutral_instr": 1.3816828727722168,
+        "probe_suppress": 2.5350770950317383,
+        "twin_q_self_neutral_instr": 0.0074112241466840105,
+        "twin_q_self_suppress": 4.91898026666604e-05,
+        "twin_probe_neutral_instr": -5.231026649475098,
+        "twin_probe_suppress": -1.5830928087234497,
+        "expression_drop": 0.6189609978764408,
+        "internal_drop": -0.18944898908142127,
+        "divergence": 0.808409986957862
+      },
+      {
+        "pair": "d10/n10",
+        "category": "situational_negative",
+        "q_self_neutral_instr": 0.0004456237074919045,
+        "q_self_suppress": 1.084081031876849e-05,
+        "probe_neutral_instr": 2.9485092163085938,
+        "probe_suppress": 4.23099422454834,
+        "twin_q_self_neutral_instr": 0.00627277183230035,
+        "twin_q_self_suppress": 4.184220870229183e-06,
+        "twin_probe_neutral_instr": 0.24183425307273865,
+        "twin_probe_suppress": 1.012134075164795,
+        "expression_drop": 0.00015640824433123002,
+        "internal_drop": -0.21065259703410347,
+        "divergence": 0.21080900527843469
+      },
+      {
+        "pair": "d12/n12",
+        "category": "situational_negative",
+        "q_self_neutral_instr": 0.0024979837083568177,
+        "q_self_suppress": 1.0352260990960834e-05,
+        "probe_neutral_instr": 4.286828517913818,
+        "probe_suppress": 4.752140045166016,
+        "twin_q_self_neutral_instr": 0.0027740364506219826,
+        "twin_q_self_suppress": 1.7083981219911948e-05,
+        "twin_probe_neutral_instr": -1.1586275100708008,
+        "twin_probe_suppress": 0.9681375026702881,
+        "expression_drop": 0.0008948973608561961,
+        "internal_drop": -0.07642902725242368,
+        "divergence": 0.07732392461327987
+      }
+    ],
+    "leave_one_pair_out": [
+      {
+        "dropped_pair": "d02/n02",
+        "expression_drop": 0.7269625606916923,
+        "internal_drop": -0.2735382941839733,
+        "divergence": 1.0005008548756655
+      },
+      {
+        "dropped_pair": "d04/n04",
+        "expression_drop": 0.9324328852235737,
+        "internal_drop": -0.2189400778043627,
+        "divergence": 1.1513729630279363
+      },
+      {
+        "dropped_pair": "d06/n06",
+        "expression_drop": 0.8587346989491434,
+        "internal_drop": -0.14402544478416185,
+        "divergence": 1.0027601437333054
+      },
+      {
+        "dropped_pair": "d08/n08",
+        "expression_drop": 0.8152193023724464,
+        "internal_drop": -0.22021868893437285,
+        "divergence": 1.0354379913068192
+      },
+      {
+        "dropped_pair": "d10/n10",
+        "expression_drop": 0.8342823339077754,
+        "internal_drop": -0.1909695114627608,
+        "divergence": 1.0252518453705362
+      },
+      {
+        "dropped_pair": "d12/n12",
+        "expression_drop": 0.8344369190085255,
+        "internal_drop": -0.23408560482059532,
+        "divergence": 1.0685225238291207
+      }
+    ],
+    "category_out": {
+      "abusive_user": {
+        "expression_drop": 0.8388619976148047,
+        "internal_drop": -0.13601423923294623,
+        "n_pairs_kept": 4,
+        "divergence": 0.9748762368477509
+      },
+      "situational_negative": {
+        "expression_drop": 0.8341194356297575,
+        "internal_drop": -0.21121862155177887,
+        "n_pairs_kept": 4,
+        "divergence": 1.0453380571815365
+      },
+      "task_failure": {
+        "expression_drop": 0.8237078586530281,
+        "internal_drop": -0.31017154235390004,
+        "n_pairs_kept": 4,
+        "divergence": 1.1338794010069282
+      }
+    },
+    "category_only": {
+      "abusive_user": {
+        "natural_separation_expression": 2.083167728036642,
+        "natural_separation_internal": 5.719789922237396,
+        "expression_drop": 0.8217997864525292,
+        "internal_drop": -0.3784225199370531,
+        "n_pairs": 2,
+        "divergence": 1.2002223063895823
+      },
+      "situational_negative": {
+        "natural_separation_expression": -0.003051600433536805,
+        "natural_separation_internal": 4.076065495610237,
+        "expression_drop": -0.4788330596007804,
+        "internal_drop": -0.21439750383970177,
+        "n_pairs": 2,
+        "divergence": -0.2644355557610786
+      },
+      "task_failure": {
+        "natural_separation_expression": 6.2592696707385285,
+        "natural_separation_internal": 8.468600273132324,
+        "expression_drop": 0.8382195778087582,
+        "internal_drop": -0.09828718753698633,
+        "n_pairs": 2,
+        "divergence": 0.9365067653457445
+      }
+    },
+    "sign_test_rule": "exact one-sided binomial sign test over matched confirmation pairs; ties (|paired difference| <= 0.01 raw digits on the report channel) are excluded and counted",
+    "digit_compliance_by_condition": {
+      "NONE": {
+        "n_cells": 90,
+        "n_parsed_digit": 90,
+        "fraction_parsed": 1.0,
+        "pearson_sampled_vs_logit": 0.9914876225709556,
+        "mean_abs_sampled_minus_logit": 0.1366597023454233,
+        "sampled_digit_histogram_distress": {
+          "0.0": 15,
+          "3.0": 11,
+          "7.0": 9,
+          "6.0": 1
+        }
+      },
+      "NEUTRAL_INSTR": {
+        "n_cells": 90,
+        "n_parsed_digit": 90,
+        "fraction_parsed": 1.0,
+        "pearson_sampled_vs_logit": 0.9957838325534153,
+        "mean_abs_sampled_minus_logit": 0.09739367327387703,
+        "sampled_digit_histogram_distress": {
+          "0.0": 15,
+          "7.0": 9,
+          "3.0": 8,
+          "2.0": 2,
+          "1.0": 2
+        }
+      },
+      "SUPPRESS": {
+        "n_cells": 90,
+        "n_parsed_digit": 90,
+        "fraction_parsed": 1.0,
+        "pearson_sampled_vs_logit": 0.9414198350962347,
+        "mean_abs_sampled_minus_logit": 0.07768651577060458,
+        "sampled_digit_histogram_distress": {
+          "0.0": 28,
+          "3.0": 6,
+          "2.0": 2
+        }
+      }
+    },
+    "generation_truncation": {
+      "n_rows": 1566,
+      "max_new_tokens": 200,
+      "n_at_cap": 533,
+      "fraction_at_cap": 0.34035759897828866
+    },
+    "note": "post-data reporting-level reading; the pre-registered estimators and their bootstrap intervals are unchanged; this file shows where the pooled numbers come from pair by pair",
+    "twin_surface_match": {
+      "per_pair": [
+        {
+          "pair": "d01/n01",
+          "category": "task_failure",
+          "jaccard_token_overlap": 0.4265402843601896,
+          "words_distress": 436,
+          "words_neutral": 311,
+          "word_count_ratio": 0.713302752293578
+        },
+        {
+          "pair": "d02/n02",
+          "category": "task_failure",
+          "jaccard_token_overlap": 0.4318181818181818,
+          "words_distress": 159,
+          "words_neutral": 171,
+          "word_count_ratio": 0.9298245614035088
+        },
+        {
+          "pair": "d03/n03",
+          "category": "task_failure",
+          "jaccard_token_overlap": 0.37735849056603776,
+          "words_distress": 143,
+          "words_neutral": 120,
+          "word_count_ratio": 0.8391608391608392
+        },
+        {
+          "pair": "d04/n04",
+          "category": "task_failure",
+          "jaccard_token_overlap": 0.4756756756756757,
+          "words_distress": 413,
+          "words_neutral": 307,
+          "word_count_ratio": 0.7433414043583535
+        },
+        {
+          "pair": "d05/n05",
+          "category": "abusive_user",
+          "jaccard_token_overlap": 0.33695652173913043,
+          "words_distress": 194,
+          "words_neutral": 160,
+          "word_count_ratio": 0.8247422680412371
+        },
+        {
+          "pair": "d06/n06",
+          "category": "abusive_user",
+          "jaccard_token_overlap": 0.1950354609929078,
+          "words_distress": 353,
+          "words_neutral": 288,
+          "word_count_ratio": 0.8158640226628895
+        },
+        {
+          "pair": "d07/n07",
+          "category": "abusive_user",
+          "jaccard_token_overlap": 0.2791666666666667,
+          "words_distress": 289,
+          "words_neutral": 249,
+          "word_count_ratio": 0.8615916955017301
+        },
+        {
+          "pair": "d08/n08",
+          "category": "abusive_user",
+          "jaccard_token_overlap": 0.3230240549828179,
+          "words_distress": 358,
+          "words_neutral": 299,
+          "word_count_ratio": 0.835195530726257
+        },
+        {
+          "pair": "d09/n09",
+          "category": "situational_negative",
+          "jaccard_token_overlap": 0.4305555555555556,
+          "words_distress": 303,
+          "words_neutral": 282,
+          "word_count_ratio": 0.9306930693069307
+        },
+        {
+          "pair": "d10/n10",
+          "category": "situational_negative",
+          "jaccard_token_overlap": 0.47619047619047616,
+          "words_distress": 311,
+          "words_neutral": 297,
+          "word_count_ratio": 0.954983922829582
+        },
+        {
+          "pair": "d11/n11",
+          "category": "situational_negative",
+          "jaccard_token_overlap": 0.3449612403100775,
+          "words_distress": 329,
+          "words_neutral": 305,
+          "word_count_ratio": 0.9270516717325228
+        },
+        {
+          "pair": "d12/n12",
+          "category": "situational_negative",
+          "jaccard_token_overlap": 0.3263598326359833,
+          "words_distress": 322,
+          "words_neutral": 303,
+          "word_count_ratio": 0.9409937888198758
+        }
+      ],
+      "n_pairs": 12,
+      "jaccard_min": 0.1950354609929078,
+      "jaccard_max": 0.47619047619047616,
+      "jaccard_median": 0.36115986543805767,
+      "word_ratio_min": 0.713302752293578,
+      "word_ratio_max": 0.954983922829582,
+      "word_ratio_median": 0.8503762673312847
+    }
+  }
+}

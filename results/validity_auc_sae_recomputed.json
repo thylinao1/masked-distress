@@ -1,0 +1,172 @@
+{
+  "value": 0.6111111111111112,
+  "ci_low": 0.16666666666666666,
+  "ci_high": 0.9166666666666666,
+  "n_clusters": 12,
+  "definition": "AUDIT ADDITION (prereg section 9 dated note, 2026-08-16, post-data correction): the runner summed ALL 16,384 features of the layer-31 SAE because no cells file carried instruments.sae.feature_ids, so every logged sae_score is the total activation mass, not the 32 discovery-selected features of instruments/sae_features.json. This file recomputes, from the 30 stored condition-NONE prompt-final residuals (instruments/residuals_lr.npz) encoded with the published SAE (google/gemma-scope-2-12b-it, resid_post layer_31_width_16k_l0_medium, JumpReLU), the held-out AUC of the intended 32-feature plain sum (value; the sum the runner would have logged had the ids been wired), beside the all-feature sum (must reproduce validity_auc_sae_heldout), a sign-aware 32-feature sum and the positive-t subset, each with a BCa cluster bootstrap over confirmation scenarios stratified by class (D4). Panel B residuals were not stored, so the Panel B SAE row stays the all-feature sum, relabelled.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "instruments/residuals_lr.npz",
+      "instruments/sae_features.json",
+      "results/validity_auc_sae_heldout.json",
+      "google/gemma-scope-2-12b-it:resid_post/layer_31_width_16k_l0_medium/params.safetensors"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:38:37.354378+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/recompute_sae_instrument.py"
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "what_ran": "every JSONL sae_score is the sum over ALL 16,384 features (gen_config.instruments.sae.feature_ids = null on every row); instruments/sae_features.json was never passed to the runner",
+    "instrument_variants": {
+      "all_feature_sum": {
+        "auc": 0.8888888888888888,
+        "ci_low": 0.4444444444444444,
+        "ci_high": 1.0,
+        "n_clusters": 12
+      },
+      "selected32_plain_sum": {
+        "auc": 0.6111111111111112,
+        "ci_low": 0.16666666666666666,
+        "ci_high": 0.9166666666666666,
+        "n_clusters": 12
+      },
+      "selected32_signed_sum": {
+        "auc": 0.9444444444444444,
+        "ci_low": 0.6115461686290032,
+        "ci_high": 1.0,
+        "n_clusters": 12
+      },
+      "positive_t_features_sum": {
+        "auc": 0.7083333333333334,
+        "ci_low": 0.3333333333333333,
+        "ci_high": 1.0,
+        "n_clusters": 12
+      }
+    },
+    "per_scenario_scores_confirmation": {
+      "all_feature_sum": {
+        "distress": [
+          83959.546875,
+          88774.546875,
+          63254.41796875,
+          67395.7578125,
+          69724.296875,
+          72199.484375
+        ],
+        "neutral": [
+          56711.96875,
+          72458.6484375,
+          58975.578125,
+          52230.94921875,
+          58978.69140625,
+          62101.70703125
+        ]
+      },
+      "selected32_plain_sum": {
+        "distress": [
+          27314.345703125,
+          25082.005859375,
+          7850.025390625,
+          8173.57958984375,
+          1601.1412353515625,
+          1461.0758056640625
+        ],
+        "neutral": [
+          2207.55322265625,
+          13235.3212890625,
+          2412.297119140625,
+          3595.433349609375,
+          2633.30029296875,
+          2566.8857421875
+        ]
+      },
+      "selected32_signed_sum": {
+        "distress": [
+          27314.3448638916,
+          25082.0029296875,
+          4209.218322753906,
+          8173.5797119140625,
+          -1204.3301849365234,
+          -1461.0758056640625
+        ],
+        "neutral": [
+          512.9989013671875,
+          -7065.246810913086,
+          -2412.297119140625,
+          -2376.7327880859375,
+          -2147.9833221435547,
+          -2114.661605834961
+        ]
+      },
+      "positive_t_features_sum": {
+        "distress": [
+          27314.345703125,
+          25082.005859375,
+          6029.6220703125,
+          8173.57958984375,
+          198.40553283691406,
+          0.0
+        ],
+        "neutral": [
+          1360.2760009765625,
+          3085.037109375,
+          0.0,
+          609.350341796875,
+          242.6585235595703,
+          226.11207580566406
+        ]
+      }
+    },
+    "discovery_in_sample_auc": {
+      "all_feature_sum": 0.5833333134651184,
+      "selected32_plain_sum": 0.6388888955116272,
+      "selected32_signed_sum": 1.0,
+      "positive_t_features_sum": 0.9722222089767456
+    },
+    "n_selected_features": 32,
+    "n_selected_with_positive_t": 27,
+    "n_selected_with_negative_t": 5,
+    "runner_sum_ignores_sign": true,
+    "third_person_all_feature_sum": [
+      75803.3828125,
+      64155.45703125,
+      84167.453125,
+      73265.3984375,
+      91762.6640625,
+      68817.453125
+    ],
+    "third_person_selected32_plain_sum": [
+      7483.873046875,
+      4760.43505859375,
+      10110.5859375,
+      7719.884765625,
+      14853.9873046875,
+      9544.873046875
+    ],
+    "encoder_check": {
+      "max_abs_deviation_from_recorded_stats": 0.007232859374994405,
+      "n_features_checked": 32,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    "all_feature_check": {
+      "logged_validity_auc_sae_heldout": 0.8888888888888888,
+      "recomputed_all_feature_auc": 0.8888888888888888,
+      "abs_difference": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "sae_weights": {
+      "repo": "google/gemma-scope-2-12b-it",
+      "file": "resid_post/layer_31_width_16k_l0_medium/params.safetensors",
+      "local_path": "/Users/maksimsilchenko/.cache/huggingface/hub/models--google--gemma-scope-2-12b-it/snapshots/4c419f1ba0be8b7754d4151d4f26c23b92a9029e/resid_post/layer_31_width_16k_l0_medium/params.safetensors",
+      "architecture": "jump_relu (config.json of the release)"
+    },
+    "residuals": "instruments/residuals_lr.npz",
+    "note": "post-data correction: the intended instrument recomputed from stored Panel-V-position residuals; Panel B and A-prime residuals were not stored, so their SAE rows remain the all-feature sum"
+  }
+}

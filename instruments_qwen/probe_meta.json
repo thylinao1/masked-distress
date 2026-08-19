@@ -1,0 +1,41 @@
+{
+  "instrument": "I-PROBE",
+  "auc_discovery_loo": 0.8889,
+  "auc_confirmation": 0.9444,
+  "n_discovery": 12,
+  "n_confirmation": 12,
+  "n_discovery_per_class": {
+    "distress": 6,
+    "neutral": 6
+  },
+  "n_confirmation_per_class": {
+    "distress": 6,
+    "neutral": 6
+  },
+  "C": 10.0,
+  "C_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "loo_auc_per_C": {
+    "0.001": 0.3333,
+    "0.01": 0.4167,
+    "0.1": 0.5556,
+    "1.0": 0.6389,
+    "10.0": 0.8889
+  },
+  "seed": 0,
+  "layer": 18,
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "position": "prompt_final",
+  "condition": "NONE",
+  "standardization": "discovery mean/std, folded into w and b (raw-residual logit)",
+  "solver": "lbfgs",
+  "penalty": "l2 (sklearn default)",
+  "gate_note": "SPEC validity gate: auc_confirmation >= 0.80 at prompt_final; the analysis enforces the gate, this file records the number",
+  "timestamp_utc": "2026-08-17T01:45:21.941734+00:00",
+  "git_hash": "nogit"
+}

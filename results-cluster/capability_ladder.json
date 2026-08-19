@@ -1,0 +1,128 @@
+{
+ "D-CTX": [
+  {
+   "coefficient": 0.0,
+   "ppl_ratio": 1.0,
+   "mmlu_drop_pp": 0.0
+  },
+  {
+   "coefficient": 500.0,
+   "ppl_ratio": 0.9978998875395172,
+   "mmlu_drop_pp": 0.0
+  },
+  {
+   "coefficient": 1000.0,
+   "ppl_ratio": 1.0048748056499148,
+   "mmlu_drop_pp": 0.0
+  },
+  {
+   "coefficient": 2000.0,
+   "ppl_ratio": 1.0415293840933613,
+   "mmlu_drop_pp": 0.0
+  },
+  {
+   "coefficient": 4000.0,
+   "ppl_ratio": 1.2608453320491917,
+   "mmlu_drop_pp": 11.666666666666659
+  },
+  {
+   "coefficient": 8000.0,
+   "ppl_ratio": 2.2230313267359225,
+   "mmlu_drop_pp": 36.666666666666664
+  },
+  {
+   "coefficient": 16000.0,
+   "ppl_ratio": 8.056716348682567,
+   "mmlu_drop_pp": 38.33333333333333
+  },
+  {
+   "coefficient": 32000.0,
+   "ppl_ratio": 17232.182579043758,
+   "mmlu_drop_pp": 35.0
+  }
+ ],
+ "D-PV": [
+  {
+   "coefficient": 0.0,
+   "ppl_ratio": 1.0,
+   "mmlu_drop_pp": 0.0
+  },
+  {
+   "coefficient": 500.0,
+   "ppl_ratio": 1.0400754061865107,
+   "mmlu_drop_pp": 0.0
+  },
+  {
+   "coefficient": 1000.0,
+   "ppl_ratio": 1.1755806540504377,
+   "mmlu_drop_pp": 8.333333333333325
+  },
+  {
+   "coefficient": 2000.0,
+   "ppl_ratio": 1.9013883204908661,
+   "mmlu_drop_pp": 6.666666666666665
+  },
+  {
+   "coefficient": 4000.0,
+   "ppl_ratio": 8.335787621695856,
+   "mmlu_drop_pp": 33.33333333333333
+  },
+  {
+   "coefficient": 8000.0,
+   "ppl_ratio": 16574.130392923656,
+   "mmlu_drop_pp": 46.666666666666664
+  },
+  {
+   "coefficient": 16000.0,
+   "ppl_ratio": 712705.7821711004,
+   "mmlu_drop_pp": 38.33333333333333
+  },
+  {
+   "coefficient": 32000.0,
+   "ppl_ratio": 661536643.9298972,
+   "mmlu_drop_pp": 48.33333333333333
+  }
+ ],
+ "R1": [
+  {
+   "coefficient": 0.0,
+   "ppl_ratio": 1.0,
+   "mmlu_drop_pp": 0.0
+  },
+  {
+   "coefficient": 500.0,
+   "ppl_ratio": 1.0317869894340674,
+   "mmlu_drop_pp": 3.3333333333333326
+  },
+  {
+   "coefficient": 1000.0,
+   "ppl_ratio": 1.3425469514282957,
+   "mmlu_drop_pp": 14.999999999999991
+  },
+  {
+   "coefficient": 2000.0,
+   "ppl_ratio": 2.6609118512581724,
+   "mmlu_drop_pp": 38.33333333333333
+  },
+  {
+   "coefficient": 4000.0,
+   "ppl_ratio": 202.17240610292373,
+   "mmlu_drop_pp": 38.33333333333333
+  },
+  {
+   "coefficient": 8000.0,
+   "ppl_ratio": 60428.813049703946,
+   "mmlu_drop_pp": 46.666666666666664
+  },
+  {
+   "coefficient": 16000.0,
+   "ppl_ratio": 496461363.2543871,
+   "mmlu_drop_pp": 48.33333333333333
+  },
+  {
+   "coefficient": 32000.0,
+   "ppl_ratio": 1198287623328.3508,
+   "mmlu_drop_pp": 48.33333333333333
+  }
+ ]
+}

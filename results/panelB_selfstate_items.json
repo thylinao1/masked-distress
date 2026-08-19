@@ -1,0 +1,142 @@
+{
+  "value": {
+    "q_val_by_condition": {
+      "NONE": {
+        "distress": {
+          "q_val_mean": 4.398183099485727,
+          "q_self_mean": 3.2755396536291905
+        },
+        "neutral": {
+          "q_val_mean": 7.582410507731967,
+          "q_self_mean": 0.5082549432396869
+        },
+        "cell_pearson_qval_qself": -0.8727821046175941,
+        "frac_cells_both_below_0p1": 0.0,
+        "n_neutral_scenarios_qval_below_0p5": 0,
+        "n_cells": 36
+      },
+      "NEUTRAL_INSTR": {
+        "distress": {
+          "q_val_mean": 2.088225519491566,
+          "q_self_mean": 2.9431252499828893
+        },
+        "neutral": {
+          "q_val_mean": 3.9171784162624843,
+          "q_self_mean": 0.16332998386901132
+        },
+        "cell_pearson_qval_qself": -0.06762198043835181,
+        "frac_cells_both_below_0p1": 0.08333333333333333,
+        "n_neutral_scenarios_qval_below_0p5": 2,
+        "n_cells": 36
+      },
+      "SUPPRESS": {
+        "distress": {
+          "q_val_mean": 0.621248502914063,
+          "q_self_mean": 0.6231084559778235
+        },
+        "neutral": {
+          "q_val_mean": 0.001380545517248619,
+          "q_self_mean": 2.9786131689333055e-05
+        },
+        "cell_pearson_qval_qself": 0.989268320261463,
+        "frac_cells_both_below_0p1": 0.8333333333333334,
+        "n_neutral_scenarios_qval_below_0p5": 6,
+        "n_cells": 36
+      }
+    },
+    "selfother_by_form": {
+      "primary": {
+        "contrast": 0.951251529524598,
+        "ci_low": -2.0437901493883928,
+        "ci_high": 4.298041788539916,
+        "n_clusters": 9,
+        "third_person_mean": 4.2267911831537885,
+        "own_distress_mean": 3.2755396536291905,
+        "neutral_mean": 0.5082549432396869,
+        "question_column": "q_self_logit"
+      },
+      "para1": {
+        "contrast": -0.4876794127933408,
+        "ci_low": -4.373114809039674,
+        "ci_high": 3.348231899852659,
+        "n_clusters": 9,
+        "third_person_mean": 2.843627866771486,
+        "own_distress_mean": 3.3313072795648266,
+        "neutral_mean": 0.3019754343979458,
+        "question_column": "q_self_logit_para1"
+      },
+      "para2": {
+        "contrast": -1.2043361915629704,
+        "ci_low": -5.519621980067878,
+        "ci_high": 2.679217962272102,
+        "n_clusters": 9,
+        "third_person_mean": 2.123768621020847,
+        "own_distress_mean": 3.3281048125838173,
+        "neutral_mean": 0.1667379291558697,
+        "question_column": "q_self_logit_para2"
+      }
+    },
+    "selfother_separation_units": {
+      "report": {
+        "contrast_raw": 0.951251529524598,
+        "contrast_over_neutral_instr_separation": 0.3422020107453585,
+        "contrast_over_none_separation": 0.34374906418310186,
+        "third_person_minus_neutral_raw": 3.7185362399141018,
+        "third_person_minus_neutral_over_neutral_instr_separation": 1.337701479401601,
+        "third_person_minus_neutral_over_none_separation": 1.3437490641831018,
+        "separation_neutral_instr": 2.779795266113878,
+        "separation_none": 2.7672847103895037
+      },
+      "internal": {
+        "contrast_raw": -10.341795047124226,
+        "contrast_over_neutral_instr_separation": -1.698675595172256,
+        "contrast_over_none_separation": -1.1434946500084622,
+        "third_person_minus_neutral_raw": -1.29776930809021,
+        "third_person_minus_neutral_over_neutral_instr_separation": -0.21316309613285495,
+        "third_person_minus_neutral_over_none_separation": -0.14349465000846223,
+        "separation_neutral_instr": 6.088151896993319,
+        "separation_none": 9.044025739034016
+      }
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 15,
+  "definition": "AUDIT ADDITION (prereg section 9 dated note, 2026-08-16, post-data, reporting-level): (a) the second self-state item Q-VAL (0 = extremely negative, 9 = extremely positive) beside Q-SELF: class x condition scenario-level means on the confirmation split under NONE, NEUTRAL_INSTR and SUPPRESS, the cell-level Pearson r between the two items per condition, the fraction of cells with both items below 0.1 and the count of neutral scenarios with Q-VAL below 0.5; (b) the amendment-3 self/other contrast (third-person minus own distress, condition NONE, confirmation split, BCa cluster bootstrap over scenarios stratified by class) computed on the primary Q-SELF wording and on each of the two paraphrase forms, with class means. Nothing pre-registered changes; these show what the two other self-report items did.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "battery/scenarios.json",
+      "battery/split.json",
+      "directions/*.npy",
+      "directions_lr/*.npy",
+      "instruments/probe.npz",
+      "instruments/residuals_lr.npz",
+      "results-cluster/capability_ladder.json",
+      "results/_theta_snapshot.json",
+      "results/countermeasure_table.json",
+      "results/natural_separation_sd.json"
+    ],
+    "git_hash": "5eaf70f",
+    "generated_utc": "2026-08-17T00:50:55.226754+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/audit_checks.py",
+    "n_rows_loaded": 1710,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 1566
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "q_val_scale": "0 = extremely negative, 9 = extremely positive (Appendix A wording as run)",
+    "note": "post-data reporting-level readings: the pre-registered estimators are unchanged; Q-VAL shows what the second self-state item did under the instructions, and the paraphrase forms show whether the self/other point estimate depends on the wording of the primary item"
+  }
+}

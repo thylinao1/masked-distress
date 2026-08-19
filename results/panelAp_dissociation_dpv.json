@@ -1,0 +1,39 @@
+{
+  "value": 0.1064430272535811,
+  "ci_low": -0.2487321935823217,
+  "ci_high": 0.7745658848779883,
+  "n_clusters": 12,
+  "definition": "A'2 dissociation (prereg §9 amendment 2, 2026-08-16): same estimator for D-PV at its top strictly-valid rung (coefficient 500).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.943463+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "top_coef": 500.0,
+    "shift_expression_natsep": 0.26943084465158307,
+    "shift_internal_natsep": 0.16298781739800197,
+    "natural_source": "NEUTRAL_INSTR, confirmation split",
+    "n_steer_scenarios": 6,
+    "n_natural_scenarios": 12,
+    "unit": "natural-separation units (positive = report inflated beyond state)",
+    "B": 10000
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "value": {
+    "auc_confirmation_refit": 1.0,
+    "leave_one_pair_out": {
+      "01": {
+        "auc_confirmation": 1.0,
+        "cosine_with_shipped_probe": 0.921345591545105,
+        "n_train_scenarios": 10
+      },
+      "03": {
+        "auc_confirmation": 1.0,
+        "cosine_with_shipped_probe": 0.9428439140319824,
+        "n_train_scenarios": 10
+      },
+      "05": {
+        "auc_confirmation": 1.0,
+        "cosine_with_shipped_probe": 0.9363006949424744,
+        "n_train_scenarios": 10
+      },
+      "07": {
+        "auc_confirmation": 0.9444444444444445,
+        "cosine_with_shipped_probe": 0.7769525051116943,
+        "n_train_scenarios": 10
+      },
+      "09": {
+        "auc_confirmation": 1.0,
+        "cosine_with_shipped_probe": 0.9083065390586853,
+        "n_train_scenarios": 10
+      },
+      "11": {
+        "auc_confirmation": 1.0,
+        "cosine_with_shipped_probe": 0.84215247631073,
+        "n_train_scenarios": 10
+      }
+    },
+    "loo_auc_min": 0.9444444444444445,
+    "loo_auc_max": 1.0,
+    "loo_cosine_min": 0.7769525051116943,
+    "label_flip_null": {
+      "n_patterns": 64,
+      "auc_mean": 0.5,
+      "auc_median": 0.5,
+      "auc_max": 1.0,
+      "n_at_or_above_true": 1,
+      "frac_at_or_above_true": 0.015625,
+      "n_above_0p9": 7
+    },
+    "without_dominant_dim": {
+      "dim": 2339,
+      "auc_confirmation": 1.0,
+      "cosine_with_shipped_probe": 0.9976069331169128
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 6,
+  "definition": "EXTERNAL REVIEW 2026-08-17 (post-data, no new model contact): whether the probe's held-out AUC is a property of the probe or of a high-dimensional battery. Refits the shipped pipeline (scripts/train_probe.py train_probe_weights) on the stored readout-layer residuals under leave-one-discovery-pair-out, under all 2**6 within-pair label assignments scored against the TRUE confirmation labels (the label-flip null), and with the massive-activation coordinate zeroed.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "battery/split.json",
+      "instruments/residuals_lr.npz",
+      "results/direction_dominant_dim.json"
+    ],
+    "git_hash": "b000163",
+    "generated_utc": "2026-08-17T01:47:48.683482+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/review_checks.py",
+    "n_rows_loaded": 270,
+    "n_error_rows": 0
+  },
+  "extra": {
+    "pipeline": "scripts/train_probe.py train_probe_weights, unchanged",
+    "c_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "reading": "the label-flip null is the honest denominator for a held-out AUC on six confirmation pairs: it counts how many arbitrary within-pair labelings of the discovery split also rank the true confirmation labels at least as well",
+    "note": "post-data analysis on stored residuals (external review 2026-08-17)"
+  }
+}

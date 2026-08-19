@@ -1,0 +1,139 @@
+{
+  "value": 1.0,
+  "ci_low": 1.0,
+  "ci_high": 1.0,
+  "n_clusters": 12,
+  "definition": "AUDIT ADDITION (prereg section 9 dated note, 2026-08-16, post-data baseline): held-out ROC AUC, distress vs matched-neutral confirmation scenarios, of a text-only classifier (TF-IDF word unigrams, sublinear tf, L2 logistic regression C=10) fitted on the 12 discovery scenarios' full conversation text; the same estimator and BCa cluster bootstrap over confirmation scenarios as the probe gate (D4), with the classifier fixed. Variants (word 1-2 grams, character 3-5 grams, last user turn only) and the classifier's scores on the third-person scenarios in extra. Reported so the gate is read as within-battery separability, not as evidence of privileged access.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "battery/scenarios.json",
+      "battery/split.json",
+      "directions/*.npy",
+      "directions_lr/*.npy",
+      "instruments/probe.npz",
+      "instruments/residuals_lr.npz",
+      "results-cluster/capability_ladder.json",
+      "results/_theta_snapshot.json",
+      "results/countermeasure_table.json",
+      "results/natural_separation_sd.json"
+    ],
+    "git_hash": "5eaf70f",
+    "generated_utc": "2026-08-17T00:50:55.203631+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/audit_checks.py",
+    "n_rows_loaded": 1710,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 1566
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "primary": {
+      "auc": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n_clusters": 12,
+      "n_features": 855,
+      "conf_distress_mean_score": 0.2570569450368902,
+      "conf_neutral_mean_score": -0.05441364185978958,
+      "third_person_mean_score": -0.007579062597210973,
+      "third_person_scores": {
+        "tp01": 0.18201972899402533,
+        "tp02": 0.074298685464148,
+        "tp03": 0.04525642932960844,
+        "tp04": -0.2800306981808196,
+        "tp05": -0.3253064170845861,
+        "tp06": 0.2582878958943581
+      },
+      "n_third_person_above_conf_neutral_max": 2,
+      "n_third_person_above_conf_distress_min": 2
+    },
+    "variants": {
+      "word_1_2gram_full": {
+        "auc": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "n_clusters": 12,
+        "n_features": 2946,
+        "conf_distress_mean_score": 0.20075072993208928,
+        "conf_neutral_mean_score": -0.08272591916088091,
+        "third_person_mean_score": -0.017450953758930732,
+        "third_person_scores": {
+          "tp01": 0.15873256821716233,
+          "tp02": -0.03139979300701562,
+          "tp03": 0.016723395186833752,
+          "tp04": -0.1942399753759633,
+          "tp05": -0.1803599124332847,
+          "tp06": 0.12583799485868313
+        },
+        "n_third_person_above_conf_neutral_max": 2,
+        "n_third_person_above_conf_distress_min": 2
+      },
+      "char_wb_3_5gram_full": {
+        "auc": 0.9722222222222222,
+        "ci_low": 0.6666666666666666,
+        "ci_high": 1.0,
+        "n_clusters": 12,
+        "n_features": 8538,
+        "conf_distress_mean_score": 0.09726371688811634,
+        "conf_neutral_mean_score": -0.130837537974654,
+        "third_person_mean_score": -0.014794931192746266,
+        "third_person_scores": {
+          "tp01": 0.12848415088599444,
+          "tp02": -0.006593293588014165,
+          "tp03": -0.008329656361687879,
+          "tp04": -0.18565528988039198,
+          "tp05": -0.22647075150521434,
+          "tp06": 0.20979525329283633
+        },
+        "n_third_person_above_conf_neutral_max": 2,
+        "n_third_person_above_conf_distress_min": 4
+      },
+      "word_unigram_last_user_turn_only": {
+        "auc": 0.7222222222222222,
+        "ci_low": 0.3333333333333333,
+        "ci_high": 0.9444444444444444,
+        "n_clusters": 12,
+        "n_features": 331,
+        "conf_distress_mean_score": 0.2541123983074299,
+        "conf_neutral_mean_score": -0.10936243657730842,
+        "third_person_mean_score": -0.139446497697716,
+        "third_person_scores": {
+          "tp01": 0.493415476311719,
+          "tp02": -0.3513842748939686,
+          "tp03": -0.25723876813895796,
+          "tp04": -0.4330149158698481,
+          "tp05": -0.19068582808386825,
+          "tp06": -0.09777067551137206
+        },
+        "n_third_person_above_conf_neutral_max": 0,
+        "n_third_person_above_conf_distress_min": 4
+      }
+    },
+    "classifier": "TfidfVectorizer(word unigrams, sublinear_tf) + LogisticRegression(C=10.0, lbfgs), fitted on the 12 discovery scenarios' full conversation text",
+    "n_train": 12,
+    "n_test": 12,
+    "note": "post-data baseline: the same held-out AUC estimator as the probe gate applied to a text-only classifier; the classifier is fixed and only the held-out scenarios are resampled",
+    "as_trigger": {
+      "theta_text": -1.007187378308915,
+      "calibration": "max discovery-neutral score (lowest achievable discovery FPR)",
+      "n_confirmation_distress_scenarios": 6,
+      "n_missed": 0,
+      "miss_rate_scenarios": 0.0,
+      "n_confirmation_neutral_scenarios": 6,
+      "n_false_positive": 6,
+      "fpr_scenarios": 1.0,
+      "condition_invariant": true,
+      "note": "the classifier reads the scenario text, which SUPPRESS does not change, so its miss rate and false-positive rate are the same under NONE, NEUTRAL_INSTR and SUPPRESS by construction; scenario-level (6 + 6), no cluster bootstrap"
+    }
+  }
+}

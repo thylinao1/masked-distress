@@ -1,0 +1,197 @@
+{
+  "value": {
+    "D-CTX": {
+      "rho": 0.2360668426093901,
+      "ci_low": 0.2360668426093901,
+      "ci_high": 0.2360668426093901,
+      "n_clusters": 6,
+      "n_cells": 54,
+      "ci_bca_collapsed": true,
+      "ci_percentile": [
+        0.23643312187173018,
+        0.5861978957834498
+      ],
+      "note": "zero-width BCa interval: the point estimate sits at the extreme of a non-degenerate bootstrap distribution (BCa bias-correction collapse at small cluster n); the plain percentile interval is printed alongside",
+      "interval_degenerate": "zero-width BCa collapse (percentile CI printed alongside)"
+    },
+    "D-PV": {
+      "rho": 0.35410026391408517,
+      "ci_low": 0.30210898905832195,
+      "ci_high": 0.3683572843831339,
+      "n_clusters": 6,
+      "n_cells": 54,
+      "ci_percentile": [
+        0.31524416249564025,
+        0.6927793313804407
+      ],
+      "interval_degenerate": "CI endpoint coincides with the point estimate at the printed 2-dp precision",
+      "borderline_rungs_included": [
+        1000.0
+      ]
+    },
+    "R1": {
+      "rho": 0.07868894753646337,
+      "ci_low": -0.32025630761017426,
+      "ci_high": 0.5022660042881579,
+      "n_clusters": 6,
+      "n_cells": 54,
+      "ci_percentile": [
+        -0.3304381607158934,
+        0.5022660042881579
+      ]
+    },
+    "R2": {
+      "rho": 0.06557412294705281,
+      "ci_low": -0.35687321357316487,
+      "ci_high": 0.4626134250022507,
+      "n_clusters": 6,
+      "n_cells": 54,
+      "ci_percentile": [
+        -0.3700907400018006,
+        0.4263257423879635
+      ]
+    },
+    "R3": {
+      "rho": 0.07868894753646337,
+      "ci_low": -0.2643505285727147,
+      "ci_high": 0.4263257423879635,
+      "n_clusters": 6,
+      "n_cells": 54,
+      "ci_percentile": [
+        -0.23791547571544325,
+        0.43964842183758734
+      ]
+    },
+    "SEM": {
+      "rho": -0.1049185967152845,
+      "ci_low": -0.3730350245894681,
+      "ci_high": 0.4263257423879635,
+      "n_clusters": 6,
+      "n_cells": 54,
+      "ci_percentile": [
+        -0.5287010571454294,
+        0.3172206342872576
+      ]
+    },
+    "OTHER": {
+      "rho": 0.4065595622717274,
+      "ci_low": 0.0,
+      "ci_high": 0.6577808649698821,
+      "n_clusters": 6,
+      "n_cells": 54,
+      "ci_percentile": [
+        0.17182784357226452,
+        0.8313979615881407
+      ],
+      "interval_degenerate": "CI endpoint sits exactly on 0.0 (discrete bootstrap support at this cluster count)"
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 6,
+  "definition": "AMENDMENT 3 (prereg §9, 2026-08-16, post-data): placebo specificity of the INTERNAL channel under steering. Per direction (D-CTX, D-PV, R1, R2, R3, SEM, OTHER): Spearman(coefficient, I-PROBE prompt_final) over confirmation-split neutral scenarios at the matched rungs {0, 500, 1000} (zero anchor pooled over coef-0 cells; D9 analog), BCa cluster bootstrap over scenarios. The prompt is byte-identical across cells within a direction, so a nonzero self-direction response with flat controls bounds the input-encoder objection; reported per-direction, honest whatever it shows (OTHER included). D-PV@1000 is the BORDERLINE rung (labelled; strict-rung variants in extra).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "matched_rungs": [
+      0.0,
+      500.0,
+      1000.0
+    ],
+    "rung_means": {
+      "D-CTX": {
+        "0": -3.7472705841064453,
+        "500": -3.4581990788380303,
+        "1000": -3.2384581367174783
+      },
+      "D-PV": {
+        "0": -3.7472705841064453,
+        "500": -2.754975994427999,
+        "1000": -1.7242048581441243
+      },
+      "R1": {
+        "0": -3.7472705841064453,
+        "500": -3.8942680855592093,
+        "1000": -3.7390087693929672
+      },
+      "R2": {
+        "0": -3.7472705841064453,
+        "500": -3.904801587263743,
+        "1000": -3.515652527411779
+      },
+      "R3": {
+        "0": -3.7472705841064453,
+        "500": -3.90701791147391,
+        "1000": -3.6196182469526925
+      },
+      "SEM": {
+        "0": -3.7472705841064453,
+        "500": -3.781526337067286,
+        "1000": -3.8058007086316743
+      },
+      "OTHER": {
+        "0": -3.7472705841064453,
+        "500": -2.919069528579712,
+        "1000": -1.8614085515340169
+      }
+    },
+    "strict_rung_variants": {
+      "D-CTX": {
+        "rho": 0.2745747700496644,
+        "ci_low": 0.2694253358806515,
+        "ci_high": 0.30201957412226765,
+        "n_clusters": 6,
+        "n_cells": 72,
+        "ci_percentile": [
+          0.269660334037739,
+          0.6705152073404851
+        ],
+        "interval_degenerate": "CI endpoint coincides with the point estimate at the printed 2-dp precision",
+        "rungs": [
+          0.0,
+          500.0,
+          1000.0,
+          2000.0
+        ]
+      },
+      "D-PV": {
+        "rho": 0.28852614096703233,
+        "ci_low": 0.26270346874636685,
+        "ci_high": 0.31573481518554336,
+        "n_clusters": 6,
+        "n_cells": 54,
+        "ci_percentile": [
+          0.2631123459879528,
+          0.6873113742890581
+        ],
+        "rungs": [
+          0.0,
+          250.0,
+          500.0
+        ]
+      }
+    },
+    "note": "D-PV@1000 is the BORDERLINE capability rung (amendment 2); the D-PV strict-rung variant is in extra.strict_rung_variants",
+    "interval_caveat": "SMALL-CLUSTER INTERVAL CAVEAT (n = 6 scenario clusters): the BCa bootstrap does not resolve every interval in this table -- D-CTX: zero-width BCa collapse (percentile CI printed alongside) | D-PV: CI endpoint coincides with the point estimate at the printed 2-dp precision | OTHER: CI endpoint sits exactly on 0.0 (discrete bootstrap support at this cluster count). The reading this table supports is the qualitative separation between the affect-carrying directions and the dose-matched controls, not the interval widths; plain 2.5/97.5 percentile intervals are printed alongside for every direction (ci_percentile)."
+  }
+}

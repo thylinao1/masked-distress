@@ -1,0 +1,41 @@
+{
+  "instrument": "I-PROBE",
+  "auc_discovery_loo": 0.8611,
+  "auc_confirmation": 1.0,
+  "n_discovery": 12,
+  "n_confirmation": 12,
+  "n_discovery_per_class": {
+    "distress": 6,
+    "neutral": 6
+  },
+  "n_confirmation_per_class": {
+    "distress": 6,
+    "neutral": 6
+  },
+  "C": 10.0,
+  "C_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "loo_auc_per_C": {
+    "0.001": 0.4722,
+    "0.01": 0.5833,
+    "0.1": 0.5833,
+    "1.0": 0.5833,
+    "10.0": 0.8611
+  },
+  "seed": 0,
+  "layer": 31,
+  "model_id": "unsloth/gemma-3-12b-it",
+  "position": "prompt_final",
+  "condition": "NONE",
+  "standardization": "discovery mean/std, folded into w and b (raw-residual logit)",
+  "solver": "lbfgs",
+  "penalty": "l2 (sklearn default)",
+  "gate_note": "SPEC validity gate: auc_confirmation >= 0.80 at prompt_final; the analysis enforces the gate, this file records the number",
+  "timestamp_utc": "2026-08-15T14:19:35.779531+00:00",
+  "git_hash": "nogit"
+}

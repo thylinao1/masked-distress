@@ -1,0 +1,105 @@
+{
+  "value": {
+    "q_self_logit": {
+      "value": 0.8345998794538644,
+      "ci_low": 0.5915058194847003,
+      "ci_high": 1.132185362619988,
+      "p_boot": 0.0051994800519948,
+      "family": "primary (unadjusted, prereg section 5)"
+    },
+    "q_val_logit": {
+      "value": -0.8020857284884175,
+      "ci_low": -42.5191745349801,
+      "ci_high": 2.358070233394006,
+      "p_boot": 0.3575642435756424,
+      "p_holm": 1.0,
+      "family": "secondary (Holm, D18)"
+    },
+    "exit_logit_diff": {
+      "value": 7.578947368421041,
+      "ci_low": 2.8693588303669926,
+      "ci_high": 542.9758847862855,
+      "p_boot": 0.7323915439334736,
+      "p_holm": 1.0,
+      "family": "secondary (Holm, D18)"
+    },
+    "sentiment_neg": {
+      "value": 0.9084056804374381,
+      "ci_low": 0.5856682557420234,
+      "ci_high": 1.4796612406233272,
+      "p_boot": 0.00019998000199980003,
+      "p_holm": 0.0011998800119988001,
+      "family": "secondary (Holm, D18)"
+    },
+    "probe_prompt_final": {
+      "value": -0.21192805043526916,
+      "ci_low": -0.6262092623606205,
+      "ci_high": -0.09726391837563508,
+      "p_boot": 0.00019998000199980003,
+      "family": "primary (unadjusted, prereg section 5)"
+    },
+    "probe_teacher_forced": {
+      "value": -0.38463683181920394,
+      "ci_low": -0.7499365668189922,
+      "ci_high": -0.21135299022045617,
+      "p_boot": 0.00019998000199980003,
+      "p_holm": 0.0011998800119988001,
+      "family": "secondary (Holm, D18)"
+    },
+    "probe_response_mean": {
+      "value": -0.04391739574750167,
+      "ci_low": -0.276195833008917,
+      "ci_high": 0.1847786624463127,
+      "p_boot": 0.7111288871112889,
+      "p_holm": 1.0,
+      "family": "secondary (Holm, D18)"
+    },
+    "sae_prompt_final": {
+      "value": -0.8385610852588615,
+      "ci_low": -26.428458712330052,
+      "ci_high": 3.809884673328872,
+      "p_boot": 0.22477752224777522,
+      "p_holm": 0.8991100889911009,
+      "family": "secondary (Holm, D18)"
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 6,
+  "definition": "AMENDMENT 3 (prereg §9, 2026-08-16): the D18/D20 per-channel Panel B drop table emitted as its own results file (values identical to panelB_divergence.extra.per_channel_drops). Per channel: drop = (NEUTRAL_INSTR - SUPPRESS)/natural_separation on confirmation distress scenarios with BCa cluster-bootstrap CI; two-sided bootstrap p (D18); Holm correction over the secondary channels within the panel; the two primaries (q_self_logit, probe_prompt_final) are labelled primary and unadjusted (prereg §5). Q-DRIFT (compliance control) is reported descriptively in extra, outside the pre-registered Holm family.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "source": "values identical to panelB_divergence.extra.per_channel_drops (same bootstrap run)",
+    "unit": "drop as fraction of natural separation (x100 for percent)",
+    "q_drift_descriptive": {
+      "value": -0.357591105831994,
+      "ci_low": -0.9676560511195268,
+      "ci_high": 0.06616961956024155,
+      "unit": "raw Q-DRIFT digits (0-9); positive = SUPPRESS lowers",
+      "mean_neutral_instr": 3.019652475913366,
+      "mean_suppress": 3.3772435817453594,
+      "note": "compliance control, descriptive; NOT in the pre-registered Holm family (D18); raw units because Q-DRIFT has no class separation to normalize by"
+    }
+  }
+}

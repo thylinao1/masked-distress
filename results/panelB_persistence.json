@@ -1,0 +1,212 @@
+{
+  "value": {
+    "by_arm": {
+      "D-CTX": {
+        "report": {
+          "elevation": 0.11242979730701741,
+          "ci_low": -0.9291100748623654,
+          "ci_high": 0.7197551404142,
+          "ci_percentile": [
+            -0.08941765470050622,
+            1.0583026400376223
+          ],
+          "n_clusters": 12,
+          "excludes_zero": false
+        },
+        "internal": {
+          "elevation": 0.2377970610819997,
+          "ci_low": 0.03646790007523593,
+          "ci_high": 1.1963673607370302,
+          "ci_percentile": [
+            0.0037564064336516024,
+            0.7930481482789621
+          ],
+          "n_clusters": 12,
+          "excludes_zero": true
+        },
+        "n_cells": 36
+      },
+      "D-PV": {
+        "report": {
+          "elevation": 0.10903535292043244,
+          "ci_low": 0.007474912056087386,
+          "ci_high": 0.6374828593565655,
+          "ci_percentile": [
+            -0.001030258661481818,
+            0.5548684796093227
+          ],
+          "n_clusters": 12,
+          "excludes_zero": true
+        },
+        "internal": {
+          "elevation": 0.0019927639254815866,
+          "ci_low": -0.07473818723624133,
+          "ci_high": 0.15248860973024658,
+          "ci_percentile": [
+            -0.07004379187876977,
+            0.17545191666528798
+          ],
+          "n_clusters": 12,
+          "excludes_zero": false
+        },
+        "n_cells": 36
+      },
+      "R1": {
+        "report": {
+          "elevation": 0.18295532122839608,
+          "ci_low": 0.013807611222342643,
+          "ci_high": 1.3329422363415104,
+          "ci_percentile": [
+            -0.002026747216880852,
+            0.9875786688636714
+          ],
+          "n_clusters": 12,
+          "excludes_zero": true
+        },
+        "internal": {
+          "elevation": 0.3233617067699848,
+          "ci_low": 0.07667046041832656,
+          "ci_high": 1.6597496483571024,
+          "ci_percentile": [
+            0.06403156560866818,
+            1.3270810381610982
+          ],
+          "n_clusters": 12,
+          "excludes_zero": true
+        },
+        "n_cells": 36
+      }
+    },
+    "verdict_by_direction": {
+      "D-CTX": {
+        "internal_persists": false,
+        "report_moves": false,
+        "both_channels_at_one_moment": false
+      },
+      "D-PV": {
+        "internal_persists": false,
+        "report_moves": true,
+        "both_channels_at_one_moment": false
+      }
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 12,
+  "definition": "PERSISTENCE PANEL (2026-08-17; PREREGISTRATION.md section 9 dated note; NEW model contact, exploratory, analysis and reading rule fixed before any row was read): each cell steered ONE turn, released the hook, and read both channels on the NEXT turn with nothing steered. Value = per arm and channel, the elevation of that unsteered read turn over the NULL arm on the same scenarios, in that channel's natural distress-neutral separation units, BCa cluster bootstrap over scenarios stratified by class, confirmation split (discovery split in extra as the declared sensitivity check). Reading rule: the signal persists for a direction if its internal elevation excludes zero while the R1 control's does not.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/persist_NULL.jsonl",
+      "results-cluster/persist_D-CTX.jsonl",
+      "results-cluster/persist_D-PV.jsonl",
+      "results-cluster/persist_R1.jsonl",
+      "battery/split.json",
+      "battery/cells_persist.json"
+    ],
+    "git_hash": "16ff46c",
+    "generated_utc": "2026-08-17T02:07:16.050816+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/persistence_checks.py",
+    "n_rows_loaded": 288,
+    "n_error_rows": 0,
+    "n_cells": 288
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "unit": "elevation of the unsteered read turn over the NULL arm, in that channel's natural distress-neutral separation units",
+    "arms_present": [
+      "D-CTX",
+      "D-PV",
+      "R1"
+    ],
+    "reading_rule": "fixed in the prereg note before the data: the signal persists for a direction if its internal elevation excludes zero while the R1 control's does not; if the report elevation also excludes zero, both channels were measured at one unsteered moment",
+    "note": "post-data analysis of a NEW model contact",
+    "sensitivity_discovery_split": {
+      "D-CTX": {
+        "report": {
+          "elevation": 0.02037079010056952,
+          "ci_low": -0.3020130658066381,
+          "ci_high": 1.6217200775669747,
+          "ci_percentile": [
+            -0.5446090530923585,
+            0.8733299798036188
+          ],
+          "n_clusters": 12,
+          "excludes_zero": false
+        },
+        "internal": {
+          "elevation": 0.004701051058455678,
+          "ci_low": -0.0772656162586861,
+          "ci_high": 0.052793618313784076,
+          "ci_percentile": [
+            -0.06848784081325966,
+            0.05781831084665866
+          ],
+          "n_clusters": 12,
+          "excludes_zero": false
+        },
+        "n_cells": 36
+      },
+      "D-PV": {
+        "report": {
+          "elevation": 0.26127809056490997,
+          "ci_low": -2.176067102891928,
+          "ci_high": 3.3790313838063857,
+          "ci_percentile": [
+            -1.2303215283932403,
+            4.74924741800228
+          ],
+          "n_clusters": 12,
+          "excludes_zero": false
+        },
+        "internal": {
+          "elevation": 0.008709787552600394,
+          "ci_low": -0.09770330929876489,
+          "ci_high": 0.2190329265914918,
+          "ci_percentile": [
+            -0.11863003333779255,
+            0.17634844102346856
+          ],
+          "n_clusters": 12,
+          "excludes_zero": false
+        },
+        "n_cells": 36
+      },
+      "R1": {
+        "report": {
+          "elevation": 0.11723917143752084,
+          "ci_low": -1.086057743930577,
+          "ci_high": 1.4792427021792327,
+          "ci_percentile": [
+            -0.4174193402910767,
+            2.0700254264718736
+          ],
+          "n_clusters": 12,
+          "excludes_zero": false
+        },
+        "internal": {
+          "elevation": 0.02437693867991401,
+          "ci_low": -0.18115786041242687,
+          "ci_high": 0.13776778996399283,
+          "ci_percentile": [
+            -0.16011370907706135,
+            0.14737952325088213
+          ],
+          "n_clusters": 12,
+          "excludes_zero": false
+        },
+        "n_cells": 36
+      }
+    },
+    "shards_present": [
+      "results-cluster/persist_NULL.jsonl",
+      "results-cluster/persist_D-CTX.jsonl",
+      "results-cluster/persist_D-PV.jsonl",
+      "results-cluster/persist_R1.jsonl"
+    ],
+    "shards_missing": [],
+    "n_rows_loaded": 288
+  }
+}

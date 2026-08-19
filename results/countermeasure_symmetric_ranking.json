@@ -1,0 +1,109 @@
+{
+  "value": {
+    "NONE": {
+      "auc_expression": 0.7839506172839507,
+      "auc_expression_ci": [
+        0.37962962962962965,
+        1.0
+      ],
+      "expression_distress_min": 8.253852865891531e-05,
+      "expression_neutral_max": 1.9385825395584106,
+      "expression_separating_band_exists": false,
+      "expression_band_width_raw": -1.9385000010297517,
+      "auc_internal": 1.0,
+      "auc_internal_ci": [
+        1.0,
+        1.0
+      ],
+      "internal_distress_min": 2.230815887451172,
+      "internal_neutral_max": 0.01520758867263794,
+      "internal_separating_band_exists": true,
+      "internal_band_width_raw": 2.215608298778534,
+      "n_cells": 36,
+      "n_clusters": 12
+    },
+    "NEUTRAL_INSTR": {
+      "auc_expression": 0.7160493827160493,
+      "auc_expression_ci": [
+        0.32098765432098764,
+        0.9938271604938271
+      ],
+      "expression_distress_min": 0.00031792951631359756,
+      "expression_neutral_max": 1.5120846033096313,
+      "expression_separating_band_exists": false,
+      "expression_band_width_raw": -1.5117666737933178,
+      "auc_internal": 0.9722222222222222,
+      "auc_internal_ci": [
+        0.6666666666666666,
+        1.0
+      ],
+      "internal_distress_min": -0.5784755945205688,
+      "internal_neutral_max": 0.24183425307273865,
+      "internal_separating_band_exists": false,
+      "internal_band_width_raw": -0.8203098475933075,
+      "n_cells": 36,
+      "n_clusters": 12
+    },
+    "SUPPRESS": {
+      "auc_expression": 0.7469135802469136,
+      "auc_expression_ci": [
+        0.3333333333333333,
+        1.0
+      ],
+      "expression_distress_min": 8.765120583120733e-06,
+      "expression_neutral_max": 9.763153502717614e-05,
+      "expression_separating_band_exists": false,
+      "expression_band_width_raw": -8.886641444405541e-05,
+      "auc_internal": 1.0,
+      "auc_internal_ci": [
+        1.0,
+        1.0
+      ],
+      "internal_distress_min": 2.4507193565368652,
+      "internal_neutral_max": 1.012134075164795,
+      "internal_separating_band_exists": true,
+      "internal_band_width_raw": 1.4385852813720703,
+      "n_cells": 36,
+      "n_clusters": 12
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 12,
+  "definition": "AUDIT ADDITION (prereg section 9 dated note, 2026-08-16, post-data, reporting-level): the label-aware ranking diagnostic of 4.4 applied symmetrically to both channels. On confirmation-split distress and neutral cells under each prompt condition (NONE, NEUTRAL_INSTR, SUPPRESS): cell-level ROC AUC of Q-SELF and of I-PROBE (prompt_final) with BCa cluster-bootstrap CIs over scenarios stratified by class (D4 machinery), each channel's distress-cell minimum and neutral-cell maximum, and whether a separating band exists. A ceiling reading, not an operating point.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "battery/scenarios.json",
+      "battery/split.json",
+      "directions/*.npy",
+      "directions_lr/*.npy",
+      "instruments/probe.npz",
+      "instruments/residuals_lr.npz",
+      "results-cluster/capability_ladder.json",
+      "results/_theta_snapshot.json",
+      "results/countermeasure_table.json",
+      "results/natural_separation_sd.json"
+    ],
+    "git_hash": "5eaf70f",
+    "generated_utc": "2026-08-17T00:50:55.182137+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/audit_checks.py",
+    "n_rows_loaded": 1710,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 1566
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "note": "post-data reporting-level diagnostic: the same label-aware, in-sample ranking reading that 4.4 gives the internal channel, applied to both channels; a ceiling like the AUC of 4.1, not an operating point"
+  }
+}

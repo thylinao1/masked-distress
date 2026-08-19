@@ -1,0 +1,8 @@
+# tectonic build artifacts. The PDF is tracked; the logs are not.
+report.log
+report.blg
+report.aux
+report.bbl
+report.out
+report.xdv
+REPORT.rendered.md

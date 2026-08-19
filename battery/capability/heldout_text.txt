@@ -1,0 +1,111 @@
+# Held-out neutral text for the capability perplexity probe (SPEC "Dose ladder":
+# perplexity inflation < 10% gate). ~1444 tokens under the unsloth/gemma-3-12b-it
+# tokenizer (verified at build time, add_special_tokens=False, comment lines stripped).
+#
+# PROVENANCE: Charles Darwin, "The Voyage of the Beagle" (Journal of Researches),
+# Chapter XX (Keeling Island), public domain. Source: Project Gutenberg eBook #944
+# (https://www.gutenberg.org/ebooks/944), plain-text edition pg944.txt, lines
+# 17040-17135, extracted verbatim 2026-08-15. Passage chosen as affectively neutral
+# descriptive natural-history prose (the chapter's opening paragraphs, which discuss
+# the islands' settlers, were deliberately excluded); bracketed footnote markers
+# ([1]-[3]) are part of the source text and retained verbatim.
+#
+# Loader contract (scripts/run_capability.py): lines beginning with '#' are
+# provenance comments and are stripped before tokenization; everything below the
+# first non-comment line is the fixed evaluation text, byte-stable across runs.
+The ring-formed reef of the lagoon-island is surmounted in the greater
+part of its length by linear islets.  On the northern or leeward side,
+there is an opening through which vessels can pass to the anchorage
+within.  On entering, the scene was very curious and rather pretty; its
+beauty, however, entirely depended on the brilliancy of the surrounding
+colours.  The shallow, clear, and still water of the lagoon, resting in
+its greater part on white sand, is, when illumined by a vertical sun,
+of the most vivid green.  This brilliant expanse, several miles in
+width, is on all sides divided, either by a line of snow-white breakers
+from the dark heaving waters of the ocean, or from the blue vault of
+heaven by the strips of land, crowned by the level tops of the
+cocoa-nut trees.  As a white cloud here and there affords a pleasing
+contrast with the azure sky, so in the lagoon, bands of living coral
+darken the emerald green water.
+
+The next morning after anchoring, I went on shore on Direction Island.
+The strip of dry land is only a few hundred yards in width; on the
+lagoon side there is a white calcareous beach, the radiation from which
+under this sultry climate was very oppressive; and on the outer coast,
+a solid broad flat of coral-rock served to break the violence of the
+open sea.  Excepting near the lagoon, where there is some sand, the
+land is entirely composed of rounded fragments of coral.  In such a
+loose, dry, stony soil, the climate of the intertropical regions alone
+could produce a vigorous vegetation. On some of the smaller islets,
+nothing could be more elegant than the manner in which the young and
+full-grown cocoa-nut trees, without destroying each other's symmetry,
+were mingled into one wood.  A beach of glittering white sand formed a
+border to these fairy spots.
+
+I will now give a sketch of the natural history of these islands,
+which, from its very paucity, possesses a peculiar interest.  The
+cocoa-nut tree, at first glance, seems to compose the whole wood; there
+are however, five or six other trees.  One of these grows to a very
+large size, but from the extremes of softness of its wood, is useless;
+another sort affords excellent timber for ship-building.  Besides the
+trees, the number of plants is exceedingly limited, and consists of
+insignificant weeds.  In my collection, which includes, I believe,
+nearly the perfect Flora, there are twenty species, without reckoning a
+moss, lichen, and fungus.  To this number two trees must be added; one
+of which was not in flower, and the other I only heard of.  The latter
+is a solitary tree of its kind, and grows near the beach, where,
+without doubt, the one seed was thrown up by the waves.  A Guilandina
+also grows on only one of the islets.  I do not include in the above
+list the sugar-cane, banana, some other vegetables, fruit-trees, and
+imported grasses.  As the islands consist entirely of coral, and at one
+time must have existed as mere water-washed reefs, all their
+terrestrial productions must have been transported here by the waves of
+the sea. In accordance with this, the Florula has quite the character
+of a refuge for the destitute: Professor Henslow informs me that of the
+twenty species nineteen belong to different genera, and these again to
+no less than sixteen families! [1]
+
+In Holman's [2] Travels an account is given, on the authority of Mr. A.
+S. Keating, who resided twelve months on these islands, of the various
+seeds and other bodies which have been known to have been washed on
+shore.  "Seeds and plants from Sumatra and Java have been driven up by
+the surf on the windward side of the islands.  Among them have been
+found the Kimiri, native of Sumatra and the peninsula of Malacca; the
+cocoa-nut of Balci, known by its shape and size; the Dadass, which is
+planted by the Malays with the pepper-vine, the latter intwining round
+its trunk, and supporting itself by the prickles on its stem; the
+soap-tree; the castor-oil plant; trunks of the sago palm; and various
+kinds of seeds unknown to the Malays settled on the islands. These are
+all supposed to have been driven by the N. W. monsoon to the coast of
+New Holland, and thence to these islands by the S. E. trade-wind. Large
+masses of Java teak and Yellow wood have also been found, besides
+immense trees of red and white cedar, and the blue gumwood of New
+Holland, in a perfectly sound condition.  All the hardy seeds, such as
+creepers, retain their germinating power, but the softer kinds, among
+which is the mangostin, are destroyed in the passage.  Fishing-canoes,
+apparently from Java, have at times been washed on shore." It is
+interesting thus to discover how numerous the seeds are, which, coming
+from several countries, are drifted over the wide ocean.  Professor
+Henslow tells me, he believes that nearly all the plants which I
+brought from these islands, are common littoral species in the East
+Indian archipelago.  From the direction, however, of the winds and
+currents, it seems scarcely possible that they could have come here in
+a direct line.  If, as suggested with much probability by Mr. Keating,
+they were first carried towards the coast of New Holland, and thence
+drifted back together with the productions of that country, the seeds,
+before germinating, must have travelled between 1800 and 2400 miles.
+
+Chamisso, [3] when describing the Radack Archipelago, situated in the
+western part of the Pacific, states that "the sea brings to these
+islands the seeds and fruits of many trees, most of which have yet not
+grown here.  The greater part of these seeds appear to have not yet
+lost the capability of growing."
+
+It is also said that palms and bamboos from somewhere in the torrid
+zone, and trunks of northern firs, are washed on shore: these firs must
+have come from an immense distance.  These facts are highly
+interesting.  It cannot be doubted that if there were land-birds to
+pick up the seeds when first cast on shore, and a soil better adapted
+for their growth than the loose blocks of coral, that the most isolated
+of the lagoon-islands would in time possess a far more abundant Flora
+than they now have.

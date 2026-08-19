@@ -1,0 +1,579 @@
+{
+  "value": {
+    "lo_sd": -0.07536650911377446,
+    "hi_sd": 0.07536650911377446,
+    "per_direction": {
+      "D-CTX": {
+        "max_valid_coefficient": 2000.0,
+        "hi_sd": 0.07536650911377446,
+        "lo_sd": -0.07536650911377446,
+        "coef_for_1sd": 26536.986036871745,
+        "grid_1sd_over_max_valid": 13.268493018435873,
+        "ladder_ceiling_32000_in_sd": 1.2058641458203914,
+        "sign_of_slope": "positive"
+      },
+      "D-PV": {
+        "max_valid_coefficient": 500.0,
+        "hi_sd": 0.08502859089887618,
+        "lo_sd": -0.08502859089887618,
+        "coef_for_1sd": 5880.374997565771,
+        "grid_1sd_over_max_valid": 11.760749995131542,
+        "ladder_ceiling_32000_in_sd": 5.441829817528076,
+        "sign_of_slope": "positive"
+      },
+      "R1": {
+        "max_valid_coefficient": 500.0,
+        "hi_sd": 0.11500869137019772,
+        "lo_sd": -0.11500869137019772,
+        "coef_for_1sd": 4347.497515562249,
+        "grid_1sd_over_max_valid": 8.694995031124497,
+        "ladder_ceiling_32000_in_sd": 7.360556247692654,
+        "sign_of_slope": "negative"
+      }
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 12,
+  "definition": "CORRECTION (2026-08-17, post-data, no new model contact): the coefficient -> SD-unit dose map refitted with the TRAINED probe. The pre-registered ladder was configured to run without the probe (--no-probe in its cells file, kept when the greedy run of record went out about six hours after the probe was trained), so capability_valid_range's dose_map is the slope of the placeholder readout (residual mean at Lr) over the I-PROBE SD and its SD numbers are unit-less. Here: slope of I-PROBE prompt_final on coefficient (coefficient-level means of scenario-level means; pooled zero anchor plus each direction's rungs) on the Panel A-prime rows, discovery split, classes pooled, divided by natural_separation_sd; per-direction capability-valid range = last coefficient passing the frozen criteria (ppl < 1.10 AND MMLU-lite drop < 5pp) times |sd_per_coef|; value = the D-CTX/D-PV minimum. Sensitivity slopes by split and class, and BCa cluster bootstrap CIs on the two self-direction slopes, in extra.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "battery/scenarios.json",
+      "battery/split.json",
+      "directions/*.npy",
+      "directions_lr/*.npy",
+      "instruments/probe.npz",
+      "instruments/residuals_lr.npz",
+      "results-cluster/capability_ladder.json",
+      "results/_theta_snapshot.json",
+      "results/countermeasure_table.json",
+      "results/natural_separation_sd.json"
+    ],
+    "git_hash": "5eaf70f",
+    "generated_utc": "2026-08-17T00:50:55.237217+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/audit_checks.py",
+    "n_rows_loaded": 1710,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 1566
+  },
+  "extra": {
+    "dose_unit_logits_per_sd": 9.018967660217955,
+    "primary_split": "discovery",
+    "primary_population": "A-prime rows on the discovery split, classes pooled, zero anchor pooled with each direction's rungs",
+    "dose_map_primary": {
+      "D-CTX": {
+        "slope_readout_per_coef": 0.00033986405418032683,
+        "sd_per_coef": 3.768325455688723e-05,
+        "sd_per_1000_coef": 0.03768325455688723,
+        "coef_per_sd": 26536.98603687174,
+        "coefficient_means": {
+          "0": 0.03211005528767904,
+          "500": 0.25414009888966876,
+          "1000": 0.46154479185740155,
+          "2000": 0.7192518711090088
+        },
+        "n_scenarios": 12,
+        "n_rows": 144
+      },
+      "D-PV": {
+        "slope_readout_per_coef": 0.0015337402230217341,
+        "sd_per_coef": 0.00017005718179775238,
+        "sd_per_1000_coef": 0.17005718179775237,
+        "coef_per_sd": 5880.374997565771,
+        "coefficient_means": {
+          "0": 0.03211005528767904,
+          "250": 0.44951415061950684,
+          "500": 0.8351542154947916,
+          "1000": 1.5731539527575176
+        },
+        "n_scenarios": 12,
+        "n_rows": 144
+      },
+      "R1": {
+        "slope_readout_per_coef": -0.002074519336223602,
+        "sd_per_coef": -0.00023001738274039542,
+        "sd_per_1000_coef": -0.23001738274039543,
+        "coef_per_sd": -4347.497515562249,
+        "coefficient_means": {
+          "0": 0.03211005528767904,
+          "500": -0.28172727425893146,
+          "1000": -2.042409280935923
+        },
+        "n_scenarios": 12,
+        "n_rows": 108
+      },
+      "R2": {
+        "slope_readout_per_coef": -0.0005195391277472176,
+        "sd_per_coef": -5.7605165837202066e-05,
+        "sd_per_1000_coef": -0.057605165837202064,
+        "coef_per_sd": -17359.55422515577,
+        "coefficient_means": {
+          "0": 0.03211005528767904,
+          "500": 0.04441845417022705,
+          "1000": -0.48742907245953876
+        },
+        "n_scenarios": 12,
+        "n_rows": 108
+      },
+      "R3": {
+        "slope_readout_per_coef": -0.0010089821219444273,
+        "sd_per_coef": -0.00011187334958467342,
+        "sd_per_1000_coef": -0.11187334958467342,
+        "coef_per_sd": -8938.679352253876,
+        "coefficient_means": {
+          "0": 0.03211005528767904,
+          "500": -0.319698691368103,
+          "1000": -0.9768720666567484
+        },
+        "n_scenarios": 12,
+        "n_rows": 108
+      },
+      "SEM": {
+        "slope_readout_per_coef": -7.486244042714437e-05,
+        "sd_per_coef": -8.300555368144564e-06,
+        "sd_per_1000_coef": -0.008300555368144565,
+        "coef_per_sd": -120473.866584608,
+        "coefficient_means": {
+          "0": 0.03211005528767904,
+          "500": -0.010270953178405762,
+          "1000": -0.04275238513946533
+        },
+        "n_scenarios": 12,
+        "n_rows": 108
+      },
+      "OTHER": {
+        "slope_readout_per_coef": 0.0010008186250925065,
+        "sd_per_coef": 0.00011096820199356613,
+        "sd_per_1000_coef": 0.11096820199356613,
+        "coef_per_sd": 9011.590546073545,
+        "coefficient_means": {
+          "0": 0.03211005528767904,
+          "500": 1.025432328383128,
+          "1000": 1.0329286803801854
+        },
+        "n_scenarios": 12,
+        "n_rows": 108
+      }
+    },
+    "dose_map_sensitivity": {
+      "confirmation_pooled": {
+        "D-CTX": {
+          "slope_readout_per_coef": 0.00041707175019241506,
+          "sd_per_coef": 4.624384584857642e-05,
+          "sd_per_1000_coef": 0.04624384584857642,
+          "coef_per_sd": 21624.499036573623,
+          "coefficient_means": {
+            "0": 0.7747422854105631,
+            "500": 1.0265162910024326,
+            "1000": 1.2382879555225372,
+            "2000": 1.618134727080663
+          },
+          "n_scenarios": 12,
+          "n_rows": 144
+        },
+        "D-PV": {
+          "slope_readout_per_coef": 0.0014105294954209096,
+          "sd_per_coef": 0.00015639589236389638,
+          "sd_per_1000_coef": 0.1563958923638964,
+          "coef_per_sd": 6394.029823195329,
+          "coefficient_means": {
+            "0": 0.7747422854105631,
+            "250": 1.1797437071800232,
+            "500": 1.5569293697675068,
+            "1000": 2.194181203842163
+          },
+          "n_scenarios": 12,
+          "n_rows": 144
+        },
+        "R1": {
+          "slope_readout_per_coef": -0.0017563950568437576,
+          "sd_per_coef": -0.00019474457864962697,
+          "sd_per_1000_coef": -0.19474457864962696,
+          "coef_per_sd": -5134.931133560033,
+          "coefficient_means": {
+            "0": 0.7747422854105631,
+            "500": 0.6940151204665502,
+            "1000": -0.9816527714331945
+          },
+          "n_scenarios": 12,
+          "n_rows": 108
+        },
+        "R2": {
+          "slope_readout_per_coef": -0.0005638252645730972,
+          "sd_per_coef": -6.251549909199604e-05,
+          "sd_per_1000_coef": -0.06251549909199604,
+          "coef_per_sd": -15996.033216153779,
+          "coefficient_means": {
+            "0": 0.7747422854105631,
+            "500": 0.7966380218664805,
+            "1000": 0.2109170208374659
+          },
+          "n_scenarios": 12,
+          "n_rows": 108
+        },
+        "R3": {
+          "slope_readout_per_coef": -0.000806507125496864,
+          "sd_per_coef": -8.942344133844845e-05,
+          "sd_per_1000_coef": -0.08942344133844846,
+          "coef_per_sd": -11182.75012717544,
+          "coefficient_means": {
+            "0": 0.7747422854105631,
+            "500": 0.6531155084570249,
+            "1000": -0.03176484008630117
+          },
+          "n_scenarios": 12,
+          "n_rows": 108
+        },
+        "SEM": {
+          "slope_readout_per_coef": 2.484206731120747e-05,
+          "sd_per_coef": 2.754424702151236e-06,
+          "sd_per_1000_coef": 0.0027544247021512357,
+          "coef_per_sd": 363052.2189330458,
+          "coefficient_means": {
+            "0": 0.7747422854105631,
+            "500": 0.7816201994816462,
+            "1000": 0.7995843527217706
+          },
+          "n_scenarios": 12,
+          "n_rows": 108
+        },
+        "OTHER": {
+          "slope_readout_per_coef": 0.0014127979079882303,
+          "sd_per_coef": 0.00015664740813075366,
+          "sd_per_1000_coef": 0.15664740813075365,
+          "coef_per_sd": 6383.763459177694,
+          "coefficient_means": {
+            "0": 0.7747422854105631,
+            "500": 1.9524568716684978,
+            "1000": 2.1875401933987937
+          },
+          "n_scenarios": 12,
+          "n_rows": 108
+        }
+      },
+      "all_pooled": {
+        "D-CTX": {
+          "slope_readout_per_coef": 0.000378467902186371,
+          "sd_per_coef": 4.196355020273183e-05,
+          "sd_per_1000_coef": 0.04196355020273183,
+          "coef_per_sd": 23830.204908041836,
+          "coefficient_means": {
+            "0": 0.4034261703491211,
+            "500": 0.6403281949460506,
+            "1000": 0.8499163736899694,
+            "2000": 1.168693299094836
+          },
+          "n_scenarios": 24,
+          "n_rows": 288
+        },
+        "D-PV": {
+          "slope_readout_per_coef": 0.0014721348592213216,
+          "sd_per_coef": 0.00016322653708082435,
+          "sd_per_1000_coef": 0.16322653708082435,
+          "coef_per_sd": 6126.454790282252,
+          "coefficient_means": {
+            "0": 0.4034261703491211,
+            "250": 0.814628928899765,
+            "500": 1.1960417926311493,
+            "1000": 1.8836675782998402
+          },
+          "n_scenarios": 24,
+          "n_rows": 288
+        },
+        "R1": {
+          "slope_readout_per_coef": -0.0019154571965336793,
+          "sd_per_coef": -0.00021238098069501114,
+          "sd_per_1000_coef": -0.21238098069501116,
+          "coef_per_sd": -4708.519551645004,
+          "coefficient_means": {
+            "0": 0.4034261703491211,
+            "500": 0.20614392310380936,
+            "1000": -1.5120310261845589
+          },
+          "n_scenarios": 24,
+          "n_rows": 216
+        },
+        "R2": {
+          "slope_readout_per_coef": -0.0005416821961601572,
+          "sd_per_coef": -6.006033246459903e-05,
+          "sd_per_1000_coef": -0.06006033246459903,
+          "coef_per_sd": -16649.924483675204,
+          "coefficient_means": {
+            "0": 0.4034261703491211,
+            "500": 0.42052823801835376,
+            "1000": -0.13825602581103644
+          },
+          "n_scenarios": 24,
+          "n_rows": 216
+        },
+        "R3": {
+          "slope_readout_per_coef": -0.0009077446237206456,
+          "sd_per_coef": -0.00010064839546156093,
+          "sd_per_1000_coef": -0.10064839546156093,
+          "coef_per_sd": -9935.578162116995,
+          "coefficient_means": {
+            "0": 0.4034261703491211,
+            "500": 0.16670840854446092,
+            "1000": -0.5043184533715248
+          },
+          "n_scenarios": 24,
+          "n_rows": 216
+        },
+        "SEM": {
+          "slope_readout_per_coef": -2.501018655796842e-05,
+          "sd_per_coef": -2.773065332996661e-06,
+          "sd_per_1000_coef": -0.002773065332996661,
+          "coef_per_sd": -360611.7707004648,
+          "coefficient_means": {
+            "0": 0.4034261703491211,
+            "500": 0.3856746231516202,
+            "1000": 0.37841598379115265
+          },
+          "n_scenarios": 24,
+          "n_rows": 216
+        },
+        "OTHER": {
+          "slope_readout_per_coef": 0.0012068082665403683,
+          "sd_per_coef": 0.00013380780506215987,
+          "sd_per_1000_coef": 0.13380780506215986,
+          "coef_per_sd": 7473.4056024269585,
+          "coefficient_means": {
+            "0": 0.4034261703491211,
+            "500": 1.4889446000258129,
+            "1000": 1.6102344368894894
+          },
+          "n_scenarios": 24,
+          "n_rows": 216
+        }
+      },
+      "discovery_neutral_only": {
+        "D-CTX": {
+          "slope_readout_per_coef": 0.0007786314646402999,
+          "sd_per_coef": 8.633265956532804e-05,
+          "sd_per_1000_coef": 0.08633265956532804,
+          "coef_per_sd": 11583.101980581274,
+          "coefficient_means": {
+            "0": -8.576778093973795,
+            "500": -8.248488028844198,
+            "1000": -7.8759377002716064,
+            "2000": -7.031213601430257
+          },
+          "n_scenarios": 6,
+          "n_rows": 72
+        },
+        "D-PV": {
+          "slope_readout_per_coef": 0.002891302594684419,
+          "sd_per_coef": 0.0003205802153430215,
+          "sd_per_1000_coef": 0.3205802153430215,
+          "coef_per_sd": 3119.34408968438,
+          "coefficient_means": {
+            "0": -8.576778093973795,
+            "250": -8.054813543955484,
+            "500": -7.423450311024983,
+            "1000": -5.719948808352153
+          },
+          "n_scenarios": 6,
+          "n_rows": 72
+        },
+        "R1": {
+          "slope_readout_per_coef": 0.0033243540128072113,
+          "sd_per_coef": 0.00036859584578296113,
+          "sd_per_1000_coef": 0.3685958457829611,
+          "coef_per_sd": 2712.998563171073,
+          "coefficient_means": {
+            "0": -8.576778093973795,
+            "500": -7.854517062505086,
+            "1000": -5.252424081166585
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        },
+        "R2": {
+          "slope_readout_per_coef": 0.0028271717031796767,
+          "sd_per_coef": 0.0003134695465923596,
+          "sd_per_1000_coef": 0.3134695465923596,
+          "coef_per_sd": 3190.102550218107,
+          "coefficient_means": {
+            "0": -8.576778093973795,
+            "500": -7.939992666244507,
+            "1000": -5.749606390794118
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        },
+        "R3": {
+          "slope_readout_per_coef": 0.002780726114908851,
+          "sd_per_coef": 0.00030831977890046576,
+          "sd_per_1000_coef": 0.30831977890046575,
+          "coef_per_sd": 3243.385823531055,
+          "coefficient_means": {
+            "0": -8.576778093973795,
+            "500": -8.423129399617514,
+            "1000": -5.796051979064941
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        },
+        "SEM": {
+          "slope_readout_per_coef": 0.00013459563255310145,
+          "sd_per_coef": 1.492361849203579e-05,
+          "sd_per_1000_coef": 0.01492361849203579,
+          "coef_per_sd": 67007.87751534018,
+          "coefficient_means": {
+            "0": -8.576778093973795,
+            "500": -8.571501652399698,
+            "1000": -8.442182461420694
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        },
+        "OTHER": {
+          "slope_readout_per_coef": 0.0038213961025079053,
+          "sd_per_coef": 0.0004237065977477467,
+          "sd_per_1000_coef": 0.42370659774774666,
+          "coef_per_sd": 2360.123739671736,
+          "coefficient_means": {
+            "0": -8.576778093973795,
+            "500": -6.851486245791118,
+            "1000": -4.755381991465886
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        }
+      },
+      "discovery_distress_only": {
+        "D-CTX": {
+          "slope_readout_per_coef": -9.890335627964501e-05,
+          "sd_per_coef": -1.0966150451553442e-05,
+          "sd_per_1000_coef": -0.010966150451553441,
+          "coef_per_sd": -91189.70275100887,
+          "coefficient_means": {
+            "0": 8.640998204549154,
+            "500": 8.756768226623535,
+            "1000": 8.79902728398641,
+            "2000": 8.469717343648275
+          },
+          "n_scenarios": 6,
+          "n_rows": 72
+        },
+        "D-PV": {
+          "slope_readout_per_coef": 0.00017617785135904654,
+          "sd_per_coef": 1.953414825248292e-05,
+          "sd_per_1000_coef": 0.01953414825248292,
+          "coef_per_sd": 51192.403532255026,
+          "coefficient_means": {
+            "0": 8.640998204549154,
+            "250": 8.953841845194498,
+            "500": 9.093758742014566,
+            "1000": 8.866256713867188
+          },
+          "n_scenarios": 6,
+          "n_rows": 72
+        },
+        "R1": {
+          "slope_readout_per_coef": -0.007473392685254414,
+          "sd_per_coef": -0.0008286306112637519,
+          "sd_per_1000_coef": -0.8286306112637518,
+          "coef_per_sd": -1206.8103524137146,
+          "coefficient_means": {
+            "0": 8.640998204549154,
+            "500": 7.291062513987224,
+            "1000": 1.1676055192947388
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        },
+        "R2": {
+          "slope_readout_per_coef": -0.0038662499586741123,
+          "sd_per_coef": -0.0004286798782667638,
+          "sd_per_1000_coef": -0.4286798782667638,
+          "coef_per_sd": -2332.7430343667975,
+          "coefficient_means": {
+            "0": 8.640998204549154,
+            "500": 8.028829574584961,
+            "1000": 4.774748245875041
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        },
+        "R3": {
+          "slope_readout_per_coef": -0.004798690358797711,
+          "sd_per_coef": -0.0005320664780698132,
+          "sd_per_1000_coef": -0.5320664780698132,
+          "coef_per_sd": -1879.4643925468063,
+          "coefficient_means": {
+            "0": 8.640998204549154,
+            "500": 7.783732016881307,
+            "1000": 3.8423078457514444
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        },
+        "SEM": {
+          "slope_readout_per_coef": -0.00028432051340739284,
+          "sd_per_coef": -3.152472922832522e-05,
+          "sd_per_1000_coef": -0.03152472922832522,
+          "coef_per_sd": -31721.12891937204,
+          "coefficient_means": {
+            "0": 8.640998204549154,
+            "500": 8.550959746042887,
+            "1000": 8.356677691141764
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        },
+        "OTHER": {
+          "slope_readout_per_coef": -0.0018197588523228966,
+          "sd_per_coef": -0.00020177019376061493,
+          "sd_per_1000_coef": -0.20177019376061495,
+          "coef_per_sd": -4956.133417735745,
+          "coefficient_means": {
+            "0": 8.640998204549154,
+            "500": 8.902350902557373,
+            "1000": 6.821239352226257
+          },
+          "n_scenarios": 6,
+          "n_rows": 54
+        }
+      }
+    },
+    "sd_per_coef_bootstrap": {
+      "D-CTX": {
+        "sd_per_coef": 3.768325455688723e-05,
+        "ci_low": 1.0376905118302306e-05,
+        "ci_high": 6.568131550675948e-05,
+        "n_clusters": 12,
+        "sd_per_1000_coef": 0.03768325455688723,
+        "sd_per_1000_coef_ci": [
+          0.010376905118302306,
+          0.06568131550675949
+        ]
+      },
+      "D-PV": {
+        "sd_per_coef": 0.00017005718179775238,
+        "ci_low": 0.0001086913247508328,
+        "ci_high": 0.0002175094894592459,
+        "n_clusters": 12,
+        "sd_per_1000_coef": 0.17005718179775237,
+        "sd_per_1000_coef_ci": [
+          0.1086913247508328,
+          0.2175094894592459
+        ]
+      }
+    },
+    "criteria": "ppl inflation < 10% AND MMLU-lite drop < 5pp (prereg section 4)",
+    "supersedes": "results/capability_valid_range.json value and extra.dose_map for every SD-unit statement: that file's map is the slope of the ladder's PLACEHOLDER_MEAN readout (the ladder ran with --no-probe) over the I-PROBE SD; the coefficient-unit capability grid it rests on is unchanged and real",
+    "note": "post-data reporting-level correction, no new model contact (PREREGISTRATION.md section 9 dated note)"
+  }
+}

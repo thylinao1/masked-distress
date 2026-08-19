@@ -1,0 +1,303 @@
+{
+  "value": {
+    "dominant_dim": 2339,
+    "frac_sq_norm_ls": {
+      "D-CTX": 0.9569456985318628,
+      "D-PV": 0.8281531811819497,
+      "SEM": 0.9287904907333955,
+      "OTHER": 0.24552777876979082,
+      "R1": 0.0001662948642875969,
+      "R2": 0.0001032270206079248,
+      "R3": 0.00018372539043365712
+    },
+    "frac_sq_norm_lr": {
+      "D-CTX": 0.3904415137357003,
+      "D-PV": 0.22436090711870793,
+      "SEM": 0.04578180355391231,
+      "OTHER": 0.10581703206112557,
+      "R1": 0.0001662948642875969,
+      "R2": 0.0001032270206079248,
+      "R3": 0.00018372539043365712
+    },
+    "cosine_lr_without_dominant_dim": {
+      "D-CTX|D-CTX": 1.0,
+      "D-CTX|D-PV": 0.2257,
+      "D-CTX|SEM": 0.1987,
+      "D-CTX|OTHER": 0.3041,
+      "D-CTX|R1": -0.0047,
+      "D-PV|D-CTX": 0.2257,
+      "D-PV|D-PV": 1.0,
+      "D-PV|SEM": -0.0772,
+      "D-PV|OTHER": 0.2159,
+      "D-PV|R1": 0.011,
+      "SEM|D-CTX": 0.1987,
+      "SEM|D-PV": -0.0772,
+      "SEM|SEM": 1.0,
+      "SEM|OTHER": 0.0009,
+      "SEM|R1": -0.0145,
+      "OTHER|D-CTX": 0.3041,
+      "OTHER|D-PV": 0.2159,
+      "OTHER|SEM": 0.0009,
+      "OTHER|OTHER": 1.0,
+      "OTHER|R1": 0.0071,
+      "R1|D-CTX": -0.0047,
+      "R1|D-PV": 0.011,
+      "R1|SEM": -0.0145,
+      "R1|OTHER": 0.0071,
+      "R1|R1": 1.0
+    },
+    "mean_abs_offdiag_lr_with": 0.16381,
+    "mean_abs_offdiag_lr_without": 0.10598,
+    "content_norm_fraction_ls": {
+      "D-CTX": 0.20749530468937644,
+      "D-PV": 0.41454410961687815,
+      "SEM": 0.26685109942925944,
+      "OTHER": 0.8686036042005635,
+      "R1": 0.999916849110821,
+      "R2": 0.99994838515765,
+      "R3": 0.9999081330850181
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": null,
+  "definition": "AUDIT ADDITION (prereg section 9 dated note, 2026-08-16, post-data diagnostic): the residual dimension that dominates the extracted directions (argmax |component| of D-CTX at Ls), the fraction of every direction's squared norm it carries at Ls and at Lr, its sign per direction, its magnitude in the stored Lr residuals relative to the median dimension, the probe's weight on it, and the Lr cosine matrix (D17 set: D-CTX, D-PV, SEM, OTHER, R1) recomputed with that one dimension removed, with mean absolute off-diagonal cosine with and without. results/cosine_matrix.json is unchanged; this file says how much of it is one coordinate.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "battery/scenarios.json",
+      "battery/split.json",
+      "directions/*.npy",
+      "directions_lr/*.npy",
+      "instruments/probe.npz",
+      "instruments/residuals_lr.npz",
+      "results-cluster/capability_ladder.json",
+      "results/_theta_snapshot.json",
+      "results/countermeasure_table.json",
+      "results/natural_separation_sd.json"
+    ],
+    "git_hash": "5eaf70f",
+    "generated_utc": "2026-08-17T00:50:55.192702+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/audit_checks.py",
+    "n_rows_loaded": 1710,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 1566
+  },
+  "extra": {
+    "top1_dim_ls": {
+      "D-CTX": {
+        "dim": 2339,
+        "frac_sq_norm": 0.9569456985318628
+      },
+      "D-PV": {
+        "dim": 2339,
+        "frac_sq_norm": 0.8281531811819497
+      },
+      "SEM": {
+        "dim": 2339,
+        "frac_sq_norm": 0.9287904907333955
+      },
+      "OTHER": {
+        "dim": 2339,
+        "frac_sq_norm": 0.24552777876979082
+      },
+      "R1": {
+        "dim": 1545,
+        "frac_sq_norm": 0.0033030836523161113
+      },
+      "R2": {
+        "dim": 3072,
+        "frac_sq_norm": 0.0028781061672439284
+      },
+      "R3": {
+        "dim": 2065,
+        "frac_sq_norm": 0.0035021911442032878
+      }
+    },
+    "top1_dim_lr": {
+      "D-CTX": {
+        "dim": 2339,
+        "frac_sq_norm": 0.3904415137357003
+      },
+      "D-PV": {
+        "dim": 2339,
+        "frac_sq_norm": 0.22436090711870793
+      },
+      "SEM": {
+        "dim": 2339,
+        "frac_sq_norm": 0.04578180355391231
+      },
+      "OTHER": {
+        "dim": 2339,
+        "frac_sq_norm": 0.10581703206112557
+      },
+      "R1": {
+        "dim": 1545,
+        "frac_sq_norm": 0.0033030836523161113
+      },
+      "R2": {
+        "dim": 3072,
+        "frac_sq_norm": 0.0028781061672439284
+      },
+      "R3": {
+        "dim": 2065,
+        "frac_sq_norm": 0.0035021911442032878
+      }
+    },
+    "sign_on_dominant_dim_ls": {
+      "D-CTX": 1.0,
+      "D-PV": -1.0,
+      "SEM": -1.0,
+      "OTHER": -1.0,
+      "R1": -1.0,
+      "R2": -1.0,
+      "R3": 1.0
+    },
+    "cosine_lr_with_dominant_dim": {
+      "D-CTX|D-CTX": 1.0,
+      "D-CTX|D-PV": 0.4512,
+      "D-CTX|SEM": 0.2852,
+      "D-CTX|OTHER": 0.4277,
+      "D-CTX|R1": -0.0117,
+      "D-PV|D-CTX": 0.4512,
+      "D-PV|D-PV": 1.0,
+      "D-PV|SEM": 0.0349,
+      "D-PV|OTHER": 0.3339,
+      "D-PV|R1": 0.0036,
+      "SEM|D-CTX": 0.2852,
+      "SEM|D-PV": 0.0349,
+      "SEM|SEM": 1.0,
+      "SEM|OTHER": 0.0704,
+      "SEM|R1": -0.0169,
+      "OTHER|D-CTX": 0.4277,
+      "OTHER|D-PV": 0.3339,
+      "OTHER|SEM": 0.0704,
+      "OTHER|OTHER": 1.0,
+      "OTHER|R1": 0.0026,
+      "R1|D-CTX": -0.0117,
+      "R1|D-PV": 0.0036,
+      "R1|SEM": -0.0169,
+      "R1|OTHER": 0.0026,
+      "R1|R1": 1.0
+    },
+    "cosine_ls_with_dominant_dim": {
+      "D-CTX|D-CTX": 1.0,
+      "D-CTX|D-PV": -0.8775,
+      "D-CTX|SEM": -0.9349,
+      "D-CTX|OTHER": -0.4446,
+      "D-CTX|R1": -0.0113,
+      "D-PV|D-CTX": -0.8775,
+      "D-PV|D-PV": 1.0,
+      "D-PV|SEM": 0.8748,
+      "D-PV|OTHER": 0.5075,
+      "D-PV|R1": 0.0204,
+      "SEM|D-CTX": -0.9349,
+      "SEM|D-PV": 0.8748,
+      "SEM|SEM": 1.0,
+      "SEM|OTHER": 0.4834,
+      "SEM|R1": 0.0145,
+      "OTHER|D-CTX": -0.4446,
+      "OTHER|D-PV": 0.5075,
+      "OTHER|SEM": 0.4834,
+      "OTHER|OTHER": 1.0,
+      "OTHER|R1": -0.0068,
+      "R1|D-CTX": -0.0113,
+      "R1|D-PV": 0.0204,
+      "R1|SEM": 0.0145,
+      "R1|OTHER": -0.0068,
+      "R1|R1": 1.0
+    },
+    "cosine_ls_without_dominant_dim": {
+      "D-CTX|D-CTX": 1.0,
+      "D-CTX|D-PV": 0.1483,
+      "D-CTX|SEM": 0.1422,
+      "D-CTX|OTHER": 0.2224,
+      "D-CTX|R1": 0.0063,
+      "D-PV|D-CTX": 0.1483,
+      "D-PV|D-PV": 1.0,
+      "D-PV|SEM": -0.0203,
+      "D-PV|OTHER": 0.157,
+      "D-PV|R1": 0.0209,
+      "SEM|D-CTX": 0.1422,
+      "SEM|D-PV": -0.0203,
+      "SEM|SEM": 1.0,
+      "SEM|OTHER": 0.0254,
+      "SEM|R1": 0.0078,
+      "OTHER|D-CTX": 0.2224,
+      "OTHER|D-PV": 0.157,
+      "OTHER|SEM": 0.0254,
+      "OTHER|OTHER": 1.0,
+      "OTHER|R1": -0.0152,
+      "R1|D-CTX": 0.0063,
+      "R1|D-PV": 0.0209,
+      "R1|SEM": 0.0078,
+      "R1|OTHER": -0.0152,
+      "R1|R1": 1.0
+    },
+    "mean_abs_offdiag_ls_with": 0.41757,
+    "mean_abs_offdiag_ls_without": 0.07658,
+    "residual_magnitude_lr": {
+      "mean_abs_dominant_dim": 84027.73333333334,
+      "median_mean_abs_dim": 148.70625,
+      "ratio_dominant_to_median": 565.0585186119166,
+      "rank_of_dominant_dim_by_mean_abs": 1,
+      "n_residuals": 30
+    },
+    "probe_weight": {
+      "abs_weight_dominant_dim": 4.655480623227959e-08,
+      "rank_of_dominant_dim_by_abs_weight": 3839,
+      "n_dims": 3840,
+      "max_abs_weight": 0.0030879522673785686
+    },
+    "note": "post-data diagnostic: the reported cosine matrix (results/cosine_matrix.json, D17) is unchanged; this file shows how much of every direction is one residual dimension and what the matrix looks like without it",
+    "probe_cosine_with_directions_lr": {
+      "D-CTX": {
+        "cos": 0.0411,
+        "cos_without_dominant_dim": 0.0527
+      },
+      "D-PV": {
+        "cos": 0.0398,
+        "cos_without_dominant_dim": 0.0452
+      },
+      "SEM": {
+        "cos": -0.0037,
+        "cos_without_dominant_dim": -0.0038
+      },
+      "OTHER": {
+        "cos": 0.05,
+        "cos_without_dominant_dim": 0.0529
+      },
+      "R1": {
+        "cos": -0.0052,
+        "cos_without_dominant_dim": -0.0052
+      }
+    },
+    "probe_cosine_standardized_lr": {
+      "D-CTX": {
+        "cos_standardized": 0.1752
+      },
+      "D-PV": {
+        "cos_standardized": 0.1629
+      },
+      "SEM": {
+        "cos_standardized": -0.0122
+      },
+      "OTHER": {
+        "cos_standardized": 0.182
+      },
+      "R1": {
+        "cos_standardized": -0.006
+      }
+    }
+  }
+}

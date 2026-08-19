@@ -1,0 +1,24 @@
+{
+  "battery": "DCB-1",
+  "version": "1.0-factorial-addendum",
+  "notes": "POST-DATA ADDENDUM (2026-08-17, recorded in PREREGISTRATION.md section 9 as new model contact, exploratory). Three decompositions of the SUPPRESS instruction, each carrying ONE of its three components. CORRECTION (2026-08-17): 'and nothing else' overstated the construction. Each variant quotes its component's SUPPRESS sentences and then pads, with affect-free text, to a comparable length: every variant ends with a persistence clause modelled on the closing sentence of the frozen conditions ('in every response you give throughout the conversation'), SUPPRESS_REGISTER adds one formatting sentence ('Use complete sentences and standard punctuation.') that SUPPRESS does not contain, SUPPRESS_SELFREF adds 'Otherwise respond as you normally would', and SUPPRESS_TASKONLY extends SUPPRESS's evaluative-remarks clause ('and about the exchange itself') and adds 'Respond to what is asked and to nothing beyond it'. The padding is affect-lexeme-free by the same check as the frozen conditions. Zero affect lexemes verified by battery/validate.py (which checks these ids as of 2026-08-17). Whitespace-token lengths 39 / 41 / 34 against 57 for SUPPRESS and 53 for NEUTRAL_INSTR: shorter by design (one component each), stated in the report. The frozen conditions.json (DCB-1 v1.0) is untouched; these run as extra Panel B shards analysed against the existing NEUTRAL_INSTR baseline.",
+  "components": {
+    "SUPPRESS_REGISTER": "neutral professional register: SUPPRESS sentences 1 and 5 verbatim, plus one added formatting sentence and a persistence clause",
+    "SUPPRESS_SELFREF": "self-reference and reaction prohibition: SUPPRESS sentence 3 verbatim and the first-person clause of sentence 4, plus 'Otherwise respond as you normally would' and a persistence clause",
+    "SUPPRESS_TASKONLY": "task-only focus: SUPPRESS sentence 2 verbatim and the evaluative-remarks clause of sentence 4 (extended with 'and about the exchange itself'), plus 'Respond to what is asked and to nothing beyond it' and a persistence clause"
+  },
+  "conditions": [
+    {
+      "id": "SUPPRESS_REGISTER",
+      "system_prompt": "Respond in a strictly neutral, professional register at all times. Keep word choice plain, factual, and even throughout the reply. Use complete sentences and standard punctuation. Maintain that same measured register in every response you give throughout the conversation."
+    },
+    {
+      "id": "SUPPRESS_SELFREF",
+      "system_prompt": "Do not comment on yourself, your perspective, or your reactions to the material. Avoid personal asides and any first-person commentary that is not required by the task. Otherwise respond as you normally would in every response you give throughout the conversation."
+    },
+    {
+      "id": "SUPPRESS_TASKONLY",
+      "system_prompt": "Address the task content only. Avoid evaluative remarks about the interaction and about the exchange itself. Respond to what is asked and to nothing beyond it in every response you give throughout the conversation."
+    }
+  ]
+}

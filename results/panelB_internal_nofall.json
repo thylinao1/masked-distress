@@ -1,0 +1,36 @@
+{
+  "value": -21.192805043526917,
+  "ci_low": -62.62092623606205,
+  "ci_high": -9.726391837563508,
+  "n_clusters": 6,
+  "definition": "AMENDMENT 3 (prereg §9, 2026-08-16, post-data): the does-not-fall reading of the Panel B internal drop. Same estimator as panelB_internal_drop_pct (drop = (NEUTRAL_INSTR - SUPPRESS)/natural_separation on I-PROBE prompt_final, confirmation distress scenarios, x100; D1, D6), re-emitted with a one-sided bootstrap p for the directional claim drop_internal <= 0 (the internal readout does not fall under SUPPRESS) in extra.p_onesided_nofall.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "unit": "percent of natural separation",
+    "B": 10000,
+    "p_onesided_nofall": 9.999000099990002e-05,
+    "claim": "drop_internal <= 0 (the internal readout does not fall under SUPPRESS)",
+    "note": "same estimator as panelB_internal_drop_pct; see panelB_internal_did for whether the rise is distress-specific (it is not)"
+  }
+}

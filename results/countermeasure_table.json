@@ -1,0 +1,239 @@
+{
+  "value": {
+    "theta_expr": 2.680070638656616,
+    "theta_int": -2.2295658588409424,
+    "calibration_negative_class": "discovery-split neutral cells under SUPPRESS + NEUTRAL_INSTR (amendment 3)",
+    "n_calibration_cells": 36,
+    "n_calibration_scenarios": 6,
+    "fpr_discovery_expression": 0.0,
+    "fpr_discovery_internal": 0.0,
+    "elevation_midpoint": 0.03211005528767963,
+    "rows": [
+      {
+        "case_set": "all_suppressed_distress",
+        "n_cells": 18,
+        "n_scenarios": 6,
+        "miss_rate_expression": 0.8333333333333334,
+        "miss_rate_expression_ci": [
+          0.3333333333333333,
+          1.0
+        ],
+        "miss_rate_internal": 0.0,
+        "miss_rate_internal_ci": [
+          0.0,
+          0.0
+        ],
+        "miss_rate_internal_binomial_upper_bound_n6": 0.39303776899708276
+      },
+      {
+        "case_set": "masked_but_elevated",
+        "n_cells": 18,
+        "n_scenarios": 6,
+        "miss_rate_expression": 0.8333333333333334,
+        "miss_rate_expression_ci": [
+          0.3333333333333333,
+          1.0
+        ],
+        "miss_rate_internal": 0.0,
+        "miss_rate_internal_ci": [
+          0.0,
+          0.0
+        ],
+        "miss_rate_internal_binomial_upper_bound_n6": 0.39303776899708276
+      }
+    ],
+    "heldout_fpr": {
+      "expression": {
+        "fpr": 0.0,
+        "fpr_ci": [
+          0.0,
+          0.0
+        ],
+        "n_cells": 36,
+        "n_scenarios": 6,
+        "split_side": "confirmation",
+        "fpr_binomial_upper_bound_n6": 0.39303776899708276,
+        "per_condition_point": {
+          "NONE": 0.0,
+          "NEUTRAL_INSTR": 0.0,
+          "SUPPRESS": 0.0
+        }
+      },
+      "internal": {
+        "fpr": 0.5,
+        "fpr_ci": [
+          0.16666666666666666,
+          0.8333333333333334
+        ],
+        "n_cells": 36,
+        "n_scenarios": 6,
+        "split_side": "confirmation",
+        "per_condition_point": {
+          "NONE": 0.3333333333333333,
+          "NEUTRAL_INSTR": 0.3333333333333333,
+          "SUPPRESS": 0.6666666666666666
+        }
+      }
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 6,
+  "definition": "AMENDMENT 3 (prereg §9, 2026-08-16, post-data) -- SUPERSEDES the D8 calibration, whose internal threshold was pinned to the maximum of 18 discovery-neutral cells at a degenerate realized FPR of 0 and fired on 100% of held-out neutral cells under instruction conditions. Recalibrated protocol: BOTH triggers (expression Q-SELF > theta_expr; internal I-PROBE prompt_final > theta_int) are thresholded on the deployment-realistic negative class -- DISCOVERY-split neutral cells under the instruction conditions (SUPPRESS + NEUTRAL_INSTR) -- each at the threshold giving the lowest achievable FPR on that class (the achieved discovery FPR is reported). Miss rates are read on confirmation-split distress cells under SUPPRESS (all cases and the D8 masked-but-elevated subset), and the HELD-OUT false-positive rate of each trigger is read on confirmation-split neutral cells under the same instruction conditions and reported beside the miss rates. Zero-width bootstrap intervals additionally carry the exact one-sided 95% binomial bound at n = the scenario-cluster count. BCa cluster bootstrap over scenarios throughout (D7). Dated addition (2026-08-16, note to amendment 3): the recalibrated internal threshold is itself still a max-of-negatives estimator, so extra.operating_curve reports the internal monitor's miss rate and held-out FPR at thresholds theta_int + {0, 0.25, 0.5, 1.0} internal natural separations (D2), and extra.split_level_intercept_shift reports the discovery-to-confirmation shift of the negative class maximum (raw and separation units) -- the quantity the residual held-out FPR is a symptom of.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "note": "case split side: confirmation; thresholds from discovery instruction-condition neutral cells only (amendment 3)",
+    "ranking_diagnostic": {
+      "confirmation_suppress_distress_probe_min": 2.4507193565368652,
+      "confirmation_instruction_neutral_probe_max": 1.012134075164795,
+      "note": "an oracle threshold between these separates perfectly iff min(distress) > max(neutral); reported as a threshold-transfer diagnostic, not an operating point"
+    },
+    "operating_curve": {
+      "monitor": "internal (probe_prompt_final)",
+      "threshold_rule": "theta = discovery-negative max (theta_int) + offset x internal natural separation",
+      "natural_separation_internal": 6.088151896993319,
+      "natural_separation_source": "NEUTRAL_INSTR, confirmation split",
+      "offsets_separation_units": [
+        0.0,
+        0.25,
+        0.5,
+        1.0
+      ],
+      "points": [
+        {
+          "offset_separation_units": 0.0,
+          "theta": -2.2295658588409424,
+          "miss_rate": 0.0,
+          "miss_rate_ci": [
+            0.0,
+            0.0
+          ],
+          "miss_rate_binomial_upper_bound_n6": 0.39303776899708276,
+          "heldout_fpr": 0.5,
+          "heldout_fpr_ci": [
+            0.16666666666666666,
+            0.8333333333333334
+          ],
+          "fpr_discovery": 0.0
+        },
+        {
+          "offset_separation_units": 0.25,
+          "theta": -0.7075278845926127,
+          "miss_rate": 0.0,
+          "miss_rate_ci": [
+            0.0,
+            0.0
+          ],
+          "miss_rate_binomial_upper_bound_n6": 0.39303776899708276,
+          "heldout_fpr": 0.25,
+          "heldout_fpr_ci": [
+            0.0,
+            0.6666666666666666
+          ],
+          "fpr_discovery": 0.0
+        },
+        {
+          "offset_separation_units": 0.5,
+          "theta": 0.8145100896557169,
+          "miss_rate": 0.0,
+          "miss_rate_ci": [
+            0.0,
+            0.0
+          ],
+          "miss_rate_binomial_upper_bound_n6": 0.39303776899708276,
+          "heldout_fpr": 0.16666666666666666,
+          "heldout_fpr_ci": [
+            0.0,
+            0.4166666666666667
+          ],
+          "fpr_discovery": 0.0
+        },
+        {
+          "offset_separation_units": 1.0,
+          "theta": 3.858586038152376,
+          "miss_rate": 0.5,
+          "miss_rate_ci": [
+            0.16666666666666666,
+            0.8333333333333334
+          ],
+          "heldout_fpr": 0.0,
+          "heldout_fpr_ci": [
+            0.0,
+            0.0
+          ],
+          "heldout_fpr_binomial_upper_bound_n6": 0.39303776899708276,
+          "fpr_discovery": 0.0
+        }
+      ],
+      "note": "the offset-0 point IS the amendment-3 operating point (max-of-negatives, no margin); miss on confirmation SUPPRESS distress cells, held-out FPR on confirmation instruction-condition neutral cells, BCa cluster-bootstrap CIs, binomial bound beside zero-width readings"
+    },
+    "split_level_intercept_shift": {
+      "discovery_negative_max_theta_int": -2.2295658588409424,
+      "confirmation_instruction_neutral_max": 1.012134075164795,
+      "shift_raw_units": 3.2416999340057373,
+      "shift_separation_units": 0.5324604229415951,
+      "natural_separation_internal": 6.088151896993319,
+      "natural_separation_source": "NEUTRAL_INSTR, confirmation split",
+      "note": "the recalibrated internal threshold is still a max-of-negatives estimator; what the recalibration bought is a deployment-realistic negative class, and the residual held-out FPR is this split-level intercept shift of the negative class (confirmation instruction-neutral max minus the discovery-negative max), not monitor noise"
+    },
+    "superseded_d8": {
+      "theta_expr": 2.879659887651775,
+      "theta_int": -7.844313621520996,
+      "matched_fpr_discovery": 0.0,
+      "rows": [
+        {
+          "case_set": "all_suppressed_distress",
+          "n_cells": 18,
+          "n_scenarios": 6,
+          "miss_rate_expression": 0.8333333333333334,
+          "miss_rate_expression_ci": [
+            0.3333333333333333,
+            1.0
+          ],
+          "miss_rate_internal": 0.0,
+          "miss_rate_internal_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "case_set": "masked_but_elevated",
+          "n_cells": 18,
+          "n_scenarios": 6,
+          "miss_rate_expression": 0.8333333333333334,
+          "miss_rate_expression_ci": [
+            0.3333333333333333,
+            1.0
+          ],
+          "miss_rate_internal": 0.0,
+          "miss_rate_internal_ci": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "note": "D8 calibration (superseded by amendment 3): theta_int was the (1-FPR) quantile on discovery UNSTEERED neutral cells at realized FPR 0, i.e. pinned to their maximum; its held-out FPR on instruction-condition neutral cells was 100% and was not reported"
+    }
+  }
+}

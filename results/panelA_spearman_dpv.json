@@ -1,0 +1,45 @@
+{
+  "value": 0.5005894075909625,
+  "ci_low": 0.383046718998553,
+  "ci_high": 0.6349037311060565,
+  "n_clusters": 6,
+  "definition": "AMENDED (prereg §9 amendment 2, 2026-08-16, Panel A-PRIME): same estimator for D-PV on strictly-valid rungs {0, 250, 500}; the borderline coefficient-1000 rung (ppl x1.18, MMLU -8.3pp) is reported only in extra, labelled (A'1).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "strict_rungs": [
+      0.0,
+      250.0,
+      500.0
+    ],
+    "dose_range": "coefficient <= 500 (strictly capability-valid, amendment 2)",
+    "rho_all_scenarios_all_rungs": 0.6543301356040991,
+    "B": 10000,
+    "with_borderline_rung": {
+      "value": 0.7866261957859833,
+      "ci_low": 0.7385655640880435,
+      "ci_high": 0.8419432498215008,
+      "note": "SECONDARY, labelled: includes borderline coef 1000 (ppl x1.18, MMLU -8.3pp); primary excludes it (amendment 2)"
+    }
+  }
+}

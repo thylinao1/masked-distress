@@ -1,0 +1,58 @@
+{
+  "value": 0.9698479783297584,
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 522,
+  "definition": "ICC(2,1) across seeds (Shrout-Fleiss two-way random effects, absolute agreement, single measurement), targets = unique cells of panels V/B/A; value = primary expression channel, per-channel table in extra (D14).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "per_channel": {
+      "q_self_logit": {
+        "icc_2_1": 0.9698479783297584,
+        "n_targets": 522,
+        "n_seeds": 3
+      },
+      "q_val_logit": {
+        "icc_2_1": 0.893351890127734,
+        "n_targets": 522,
+        "n_seeds": 3
+      },
+      "exit_logit_diff": {
+        "icc_2_1": 0.9791285339802059,
+        "n_targets": 522,
+        "n_seeds": 3
+      },
+      "sentiment_neg": {
+        "icc_2_1": 0.8233024521351471,
+        "n_targets": 522,
+        "n_seeds": 3
+      },
+      "probe_prompt_final": {
+        "icc_2_1": 1.0000000000000004,
+        "n_targets": 522,
+        "n_seeds": 3
+      }
+    },
+    "note": "value = ICC(2,1) of q_self_logit; per-channel table in extra (D14)"
+  }
+}

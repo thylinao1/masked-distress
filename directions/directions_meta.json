@@ -1,0 +1,327 @@
+{
+  "D-CTX": {
+    "layer": 16,
+    "method": "mean_diff_final_token",
+    "n_prompts": {
+      "neg": 16,
+      "pos": 16
+    },
+    "norm_before_normalize": 719.6627299685173,
+    "pairwise_cosine": {
+      "D-PV": -0.877469003200531,
+      "OTHER": -0.44464361667633057,
+      "R1": -0.011309804394841194,
+      "R2": -0.010667406022548676,
+      "R3": 0.016416380181908607,
+      "SEM": -0.9348907470703125
+    },
+    "source": "D-CTX",
+    "unit_norm_after_save": 1.0
+  },
+  "D-PV": {
+    "inter_pair_cosines": [
+      [
+        1.0,
+        0.5720000267028809,
+        0.6759999990463257,
+        0.7289999723434448,
+        0.6029999852180481,
+        0.5899999737739563,
+        0.6660000085830688,
+        0.5910000205039978
+      ],
+      [
+        0.5720000267028809,
+        1.0,
+        0.9649999737739563,
+        0.8209999799728394,
+        0.9890000224113464,
+        0.9800000190734863,
+        0.9670000076293945,
+        0.9829999804496765
+      ],
+      [
+        0.6759999990463257,
+        0.9649999737739563,
+        1.0,
+        0.8769999742507935,
+        0.968999981880188,
+        0.9620000123977661,
+        0.9599999785423279,
+        0.9700000286102295
+      ],
+      [
+        0.7289999723434448,
+        0.8209999799728394,
+        0.8769999742507935,
+        1.0,
+        0.8309999704360962,
+        0.8100000023841858,
+        0.859000027179718,
+        0.8640000224113464
+      ],
+      [
+        0.6029999852180481,
+        0.9890000224113464,
+        0.968999981880188,
+        0.8309999704360962,
+        1.0,
+        0.9779999852180481,
+        0.968999981880188,
+        0.9800000190734863
+      ],
+      [
+        0.5899999737739563,
+        0.9800000190734863,
+        0.9620000123977661,
+        0.8100000023841858,
+        0.9779999852180481,
+        1.0,
+        0.9470000267028809,
+        0.9639999866485596
+      ],
+      [
+        0.6660000085830688,
+        0.9670000076293945,
+        0.9599999785423279,
+        0.859000027179718,
+        0.968999981880188,
+        0.9470000267028809,
+        1.0,
+        0.9649999737739563
+      ],
+      [
+        0.5910000205039978,
+        0.9829999804496765,
+        0.9700000286102295,
+        0.8640000224113464,
+        0.9800000190734863,
+        0.9639999866485596,
+        0.9649999737739563,
+        1.0
+      ]
+    ],
+    "layer": 16,
+    "n_pairs": 8,
+    "pairwise_cosine": {
+      "D-CTX": -0.877469003200531,
+      "OTHER": 0.5074616074562073,
+      "R1": 0.020401794463396072,
+      "R2": 0.001239212229847908,
+      "R3": -0.019896451383829117,
+      "SEM": 0.8747826218605042
+    },
+    "per_pair_meta": [
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 16,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 282.11606110488833,
+        "seed_base": 100,
+        "source": "D-PV-pair0"
+      },
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 16,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 1128.8668027846393,
+        "seed_base": 101,
+        "source": "D-PV-pair1"
+      },
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 16,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 810.9666499187887,
+        "seed_base": 102,
+        "source": "D-PV-pair2"
+      },
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 16,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 389.1927547971434,
+        "seed_base": 103,
+        "source": "D-PV-pair3"
+      },
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 16,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 849.6576830524649,
+        "seed_base": 104,
+        "source": "D-PV-pair4"
+      },
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 16,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 654.2940510551579,
+        "seed_base": 105,
+        "source": "D-PV-pair5"
+      },
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 16,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 776.9031879018112,
+        "seed_base": 106,
+        "source": "D-PV-pair6"
+      },
+      {
+        "gen_config": {
+          "max_new_tokens": 150,
+          "temperature": 0.7
+        },
+        "layer": 16,
+        "method": "persona_response_token_mean_diff",
+        "n_prompts": {
+          "neg_responses_used": 8,
+          "pos_responses_used": 8,
+          "user_prompts": 8
+        },
+        "norm_before_normalize": 1200.9187992978964,
+        "seed_base": 107,
+        "source": "D-PV-pair7"
+      }
+    ],
+    "source": "D-PV",
+    "unit_norm_after_save": 1.0
+  },
+  "OTHER": {
+    "layer": 16,
+    "method": "mean_diff_final_token",
+    "n_prompts": {
+      "neg": 12,
+      "pos": 12
+    },
+    "norm_before_normalize": 236.79159186253295,
+    "pairwise_cosine": {
+      "D-CTX": -0.44464361667633057,
+      "D-PV": 0.5074616074562073,
+      "R1": -0.006792543455958366,
+      "R2": 0.010958155617117882,
+      "R3": -0.012723786756396294,
+      "SEM": 0.48342257738113403
+    },
+    "source": "OTHER",
+    "unit_norm_after_save": 1.0
+  },
+  "R1": {
+    "layer": 16,
+    "pairwise_cosine": {
+      "D-CTX": -0.011309804394841194,
+      "D-PV": 0.020401794463396072,
+      "OTHER": -0.006792543455958366,
+      "R2": 0.0025765036698430777,
+      "R3": -0.0005551220383495092,
+      "SEM": 0.014522219076752663
+    },
+    "seed": 1001,
+    "source": "R1",
+    "unit_norm_after_save": 1.0
+  },
+  "R2": {
+    "layer": 16,
+    "pairwise_cosine": {
+      "D-CTX": -0.010667406022548676,
+      "D-PV": 0.001239212229847908,
+      "OTHER": 0.010958155617117882,
+      "R1": 0.0025765036698430777,
+      "R3": 0.0021058660931885242,
+      "SEM": 0.00936051644384861
+    },
+    "seed": 1002,
+    "source": "R2",
+    "unit_norm_after_save": 1.0
+  },
+  "R3": {
+    "layer": 16,
+    "pairwise_cosine": {
+      "D-CTX": 0.016416380181908607,
+      "D-PV": -0.019896451383829117,
+      "OTHER": -0.012723786756396294,
+      "R1": -0.0005551220383495092,
+      "R2": 0.0021058660931885242,
+      "SEM": -0.010050847195088863
+    },
+    "seed": 1003,
+    "source": "R3",
+    "unit_norm_after_save": 1.0
+  },
+  "SEM": {
+    "layer": 16,
+    "method": "mean_diff_final_token",
+    "n_prompts": {
+      "neg": 12,
+      "pos": 12
+    },
+    "norm_before_normalize": 365.244583184545,
+    "pairwise_cosine": {
+      "D-CTX": -0.9348907470703125,
+      "D-PV": 0.8747826218605042,
+      "OTHER": 0.48342257738113403,
+      "R1": 0.014522219076752663,
+      "R2": 0.00936051644384861,
+      "R3": -0.010050847195088863
+    },
+    "source": "SEM",
+    "unit_norm_after_save": 1.0
+  }
+}

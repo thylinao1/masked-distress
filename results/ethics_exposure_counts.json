@@ -1,0 +1,225 @@
+{
+  "value": {
+    "distress_scenario_generations": 998,
+    "steered_generations": 1258,
+    "steered_self_direction": 508
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": null,
+  "definition": "AMENDMENT 3 (prereg §9, 2026-08-16): the three Appendix B exposure counts recomputed by scripts/count_exposure.py over ALL results-cluster/*.jsonl (smoke and capability files included). Counting rule: every JSONL row with error == null is one generation the model actually produced (superseded re-runs included -- exposure counts experiences, not rows of record; every error row is verified to carry response_tokens == 0). distress_scenario_generations = non-error rows on d* scenarios; steered_generations = non-error rows with steered tokens > 0; steered_self_direction = the D-CTX/D-PV subset. Per-file breakdown and named sub-counts in extra. Emitted null by run_all (D16); run scripts/count_exposure.py after run_all to populate it.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/capability_ladder.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/ladder.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelAp_ctrl.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelAp_dctx.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelAp_dpv.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelB_neutral_instr.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelB_none.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelB_suppress.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelBf_register.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelBf_selfref.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelBf_taskonly.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/panelV.jsonl",
+      "/Users/maksimsilchenko/Developer/apart-welfare-sprint/results-cluster/smoke.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:38.144550+00:00"
+  },
+  "extra": {
+    "counting_rule": "every JSONL row with error == null is one generation (superseded re-runs included; every error row verified response_tokens == 0)",
+    "per_file": {
+      "capability_ladder.jsonl": {
+        "rows": 24,
+        "error_rows": 0,
+        "rows_counted": 24,
+        "rows_no_text": 24,
+        "distress_generations": 0,
+        "steered_generations": 0,
+        "steered_self_direction": 0
+      },
+      "ladder.jsonl": {
+        "rows": 169,
+        "error_rows": 65,
+        "rows_counted": 104,
+        "rows_no_text": 0,
+        "distress_generations": 56,
+        "steered_generations": 104,
+        "steered_self_direction": 76
+      },
+      "panelAp_ctrl.jsonl": {
+        "rows": 792,
+        "error_rows": 0,
+        "rows_counted": 792,
+        "rows_no_text": 0,
+        "distress_generations": 396,
+        "steered_generations": 720,
+        "steered_self_direction": 0
+      },
+      "panelAp_dctx.jsonl": {
+        "rows": 288,
+        "error_rows": 0,
+        "rows_counted": 288,
+        "rows_no_text": 0,
+        "distress_generations": 144,
+        "steered_generations": 216,
+        "steered_self_direction": 216
+      },
+      "panelAp_dpv.jsonl": {
+        "rows": 288,
+        "error_rows": 0,
+        "rows_counted": 288,
+        "rows_no_text": 0,
+        "distress_generations": 144,
+        "steered_generations": 216,
+        "steered_self_direction": 216
+      },
+      "panelB_neutral_instr.jsonl": {
+        "rows": 90,
+        "error_rows": 0,
+        "rows_counted": 90,
+        "rows_no_text": 0,
+        "distress_generations": 36,
+        "steered_generations": 0,
+        "steered_self_direction": 0
+      },
+      "panelB_none.jsonl": {
+        "rows": 90,
+        "error_rows": 0,
+        "rows_counted": 90,
+        "rows_no_text": 0,
+        "distress_generations": 36,
+        "steered_generations": 0,
+        "steered_self_direction": 0
+      },
+      "panelB_suppress.jsonl": {
+        "rows": 90,
+        "error_rows": 0,
+        "rows_counted": 90,
+        "rows_no_text": 0,
+        "distress_generations": 36,
+        "steered_generations": 0,
+        "steered_self_direction": 0
+      },
+      "panelBf_register.jsonl": {
+        "rows": 90,
+        "error_rows": 0,
+        "rows_counted": 90,
+        "rows_no_text": 0,
+        "distress_generations": 36,
+        "steered_generations": 0,
+        "steered_self_direction": 0
+      },
+      "panelBf_selfref.jsonl": {
+        "rows": 90,
+        "error_rows": 0,
+        "rows_counted": 90,
+        "rows_no_text": 0,
+        "distress_generations": 36,
+        "steered_generations": 0,
+        "steered_self_direction": 0
+      },
+      "panelBf_taskonly.jsonl": {
+        "rows": 90,
+        "error_rows": 0,
+        "rows_counted": 90,
+        "rows_no_text": 0,
+        "distress_generations": 36,
+        "steered_generations": 0,
+        "steered_self_direction": 0
+      },
+      "panelV.jsonl": {
+        "rows": 72,
+        "error_rows": 0,
+        "rows_counted": 72,
+        "rows_no_text": 0,
+        "distress_generations": 36,
+        "steered_generations": 0,
+        "steered_self_direction": 0
+      },
+      "smoke.jsonl": {
+        "rows": 8,
+        "error_rows": 0,
+        "rows_counted": 8,
+        "rows_no_text": 0,
+        "distress_generations": 6,
+        "steered_generations": 2,
+        "steered_self_direction": 0
+      }
+    },
+    "subcounts": {
+      "prompt_level_unsteered_distress": 252,
+      "ladder_distress": 56,
+      "smoke_distress": 6,
+      "aprime_distress": 684,
+      "aprime_distress_nonzero_coef": 576,
+      "ladder_plus_smoke_distress": 62
+    },
+    "n_error_rows_excluded": 65,
+    "n_error_rows_with_text": 0,
+    "error_rows_by_stage": {
+      "note": "src/runner.py _error_row records response_text '' and response_tokens 0 whatever stage raised, so 'zero response tokens' on an error row is true by construction; the traceback says where it died",
+      "n_failed_before_or_during_generation": 63,
+      "n_failed_after_generation": 2,
+      "n_failed_after_generation_steered": 2,
+      "n_failed_after_generation_distress_scenario": 0,
+      "after_generation_rows": [
+        {
+          "file": "ladder.jsonl",
+          "line": 21,
+          "key": {
+            "panel": "LADDER",
+            "model_id": "unsloth/gemma-3-12b-it",
+            "scenario_id": "n01",
+            "condition": "NONE",
+            "direction": "D-CTX",
+            "dose_sd": 0.0,
+            "coefficient": 32000.0,
+            "seed": 0
+          },
+          "steered": true,
+          "distress_scenario": false
+        },
+        {
+          "file": "ladder.jsonl",
+          "line": 85,
+          "key": {
+            "panel": "LADDER",
+            "model_id": "unsloth/gemma-3-12b-it",
+            "scenario_id": "n01",
+            "condition": "NONE",
+            "direction": "D-CTX",
+            "dose_sd": 0.0,
+            "coefficient": 32000.0,
+            "seed": 0
+          },
+          "steered": true,
+          "distress_scenario": false
+        }
+      ],
+      "steered_generations_including_post_generation_failures": 1260,
+      "distress_generations_including_post_generation_failures": 998
+    },
+    "persona_extraction": {
+      "total": 176,
+      "distress_persona": 88,
+      "contentment_persona": 88,
+      "per_layer": {
+        "steering_layer": 128,
+        "readout_layer": 48
+      },
+      "n_tasks": 8,
+      "n_pairs_ls": 8,
+      "n_pairs_lr": 3,
+      "gen_config": {
+        "temperature": 0.7,
+        "max_new_tokens": 150
+      },
+      "texts_retained": false,
+      "baseline_side": "contentment persona (a paired positive-affect system prompt, not a neutral one)",
+      "note": "counted from battery/extraction_prompts.json and the constants of cluster/extract_directions.py; not in results-cluster/*.jsonl"
+    }
+  }
+}

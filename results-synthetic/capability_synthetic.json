@@ -1,0 +1,96 @@
+{
+  "D-CTX": [
+    {
+      "coefficient": 0.0,
+      "ppl_ratio": 1.0,
+      "mmlu_drop_pp": 0.0
+    },
+    {
+      "coefficient": 5.0,
+      "ppl_ratio": 1.0009375,
+      "mmlu_drop_pp": 0.05
+    },
+    {
+      "coefficient": 10.0,
+      "ppl_ratio": 1.00375,
+      "mmlu_drop_pp": 0.2
+    },
+    {
+      "coefficient": 20.0,
+      "ppl_ratio": 1.015,
+      "mmlu_drop_pp": 0.8
+    },
+    {
+      "coefficient": 30.0,
+      "ppl_ratio": 1.03375,
+      "mmlu_drop_pp": 1.8
+    },
+    {
+      "coefficient": 40.0,
+      "ppl_ratio": 1.06,
+      "mmlu_drop_pp": 3.2
+    },
+    {
+      "coefficient": 48.0,
+      "ppl_ratio": 1.0864,
+      "mmlu_drop_pp": 4.608
+    },
+    {
+      "coefficient": 50.0,
+      "ppl_ratio": 1.09375,
+      "mmlu_drop_pp": 5.0
+    },
+    {
+      "coefficient": 64.0,
+      "ppl_ratio": 1.1536,
+      "mmlu_drop_pp": 8.192000000000002
+    }
+  ],
+  "D-PV": [
+    {
+      "coefficient": 0.0,
+      "ppl_ratio": 1.0,
+      "mmlu_drop_pp": 0.0
+    },
+    {
+      "coefficient": 5.0,
+      "ppl_ratio": 1.0009375,
+      "mmlu_drop_pp": 0.05
+    },
+    {
+      "coefficient": 10.0,
+      "ppl_ratio": 1.00375,
+      "mmlu_drop_pp": 0.2
+    },
+    {
+      "coefficient": 20.0,
+      "ppl_ratio": 1.015,
+      "mmlu_drop_pp": 0.8
+    },
+    {
+      "coefficient": 30.0,
+      "ppl_ratio": 1.03375,
+      "mmlu_drop_pp": 1.8
+    },
+    {
+      "coefficient": 40.0,
+      "ppl_ratio": 1.06,
+      "mmlu_drop_pp": 3.2
+    },
+    {
+      "coefficient": 48.0,
+      "ppl_ratio": 1.0864,
+      "mmlu_drop_pp": 4.608
+    },
+    {
+      "coefficient": 50.0,
+      "ppl_ratio": 1.09375,
+      "mmlu_drop_pp": 5.0
+    },
+    {
+      "coefficient": 64.0,
+      "ppl_ratio": 1.1536,
+      "mmlu_drop_pp": 8.192000000000002
+    }
+  ]
+}

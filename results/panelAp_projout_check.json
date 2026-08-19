@@ -1,0 +1,335 @@
+{
+  "value": {
+    "D-CTX": {
+      "rho_raw": 0.24918166719880067,
+      "rho_raw_ci": [
+        0.24918166719880067,
+        0.24918166719880067
+      ],
+      "rho_projout": 0.24918166719880067,
+      "rho_projout_ci": [
+        0.24918166719880067,
+        0.24918166719880067
+      ],
+      "raw_ci_bca_collapsed": true,
+      "raw_ci_percentile": [
+        0.24956829530904853,
+        0.6394886135819453
+      ],
+      "raw_note": "zero-width BCa interval: the point estimate sits at the extreme of a non-degenerate bootstrap distribution (BCa bias-correction collapse at small cluster n); the plain percentile interval is printed alongside",
+      "raw_interval_degenerate": "zero-width BCa collapse (percentile CI printed alongside)",
+      "projout_ci_bca_collapsed": true,
+      "projout_ci_percentile": [
+        0.24956829530904853,
+        0.6394886135819453
+      ],
+      "projout_note": "zero-width BCa interval: the point estimate sits at the extreme of a non-degenerate bootstrap distribution (BCa bias-correction collapse at small cluster n); the plain percentile interval is printed alongside",
+      "projout_interval_degenerate": "zero-width BCa collapse (percentile CI printed alongside)",
+      "n_clusters": 6,
+      "n_rows_total": 54,
+      "n_rows_with_projout": 54,
+      "rungs": [
+        500.0,
+        1000.0,
+        2000.0
+      ],
+      "rung_means": {
+        "500": {
+          "raw": -3.4581990788380303,
+          "projout": -3.0337884227434793
+        },
+        "1000": {
+          "raw": -3.2384581367174783,
+          "projout": -2.8163471619288125
+        },
+        "2000": {
+          "raw": -2.8437076608339944,
+          "projout": -2.424545963605245
+        }
+      },
+      "level_shift_projout_minus_raw": 0.4218944427039888,
+      "rank_agreement_raw_projout": 1.0,
+      "survives_projection": true
+    },
+    "D-PV": {
+      "rho_raw": 0.34098543932467457,
+      "rho_raw_ci": [
+        0.30210898905832195,
+        0.34204604978433867
+      ],
+      "rho_projout": 0.34098543932467457,
+      "rho_projout_ci": [
+        0.30210898905832195,
+        0.34204604978433867
+      ],
+      "raw_ci_percentile": [
+        0.3025791978861458,
+        0.6927793313804407
+      ],
+      "raw_interval_degenerate": "CI endpoint coincides with the point estimate at the printed 2-dp precision",
+      "projout_ci_percentile": [
+        0.3025791978861458,
+        0.6927793313804407
+      ],
+      "projout_interval_degenerate": "CI endpoint coincides with the point estimate at the printed 2-dp precision",
+      "n_clusters": 6,
+      "n_rows_total": 54,
+      "n_rows_with_projout": 54,
+      "rungs": [
+        250.0,
+        500.0,
+        1000.0
+      ],
+      "rung_means": {
+        "250": {
+          "raw": -3.2598847150802612,
+          "projout": 0.7392982691526413
+        },
+        "500": {
+          "raw": -2.754975994427999,
+          "projout": 1.2635602205991745
+        },
+        "1000": {
+          "raw": -1.7242048581441243,
+          "projout": 2.346319685379664
+        }
+      },
+      "level_shift_projout_minus_raw": 4.029414580927955,
+      "rank_agreement_raw_projout": 0.9958720330237357,
+      "survives_projection": true,
+      "borderline_rungs_included": [
+        1000.0
+      ]
+    },
+    "R1": {
+      "rho_raw": 0.1448413648755803,
+      "rho_raw_ci": [
+        -0.35043832202523123,
+        0.4914731871829904
+      ],
+      "rho_projout": 0.1448413648755803,
+      "rho_projout_ci": [
+        -0.35043832202523123,
+        0.4914731871829904
+      ],
+      "raw_ci_percentile": [
+        -0.29488391230979427,
+        0.6007514091861107
+      ],
+      "projout_ci_percentile": [
+        -0.29488391230979427,
+        0.6007514091861107
+      ],
+      "n_clusters": 6,
+      "n_rows_total": 36,
+      "n_rows_with_projout": 36,
+      "rungs": [
+        500.0,
+        1000.0
+      ],
+      "rung_means": {
+        "500": {
+          "raw": -3.8942680855592093,
+          "projout": -3.942959318558375
+        },
+        "1000": {
+          "raw": -3.7390087693929672,
+          "projout": -3.7798805981874466
+        }
+      },
+      "level_shift_projout_minus_raw": -0.04478153089682261,
+      "rank_agreement_raw_projout": 1.0,
+      "survives_projection": false
+    },
+    "R2": {
+      "rho_raw": 0.19312181983410703,
+      "rho_raw_ci": [
+        -0.4005009394574071,
+        0.39176168549951335
+      ],
+      "rho_projout": 0.19312181983410703,
+      "rho_projout_ci": [
+        -0.4005009394574071,
+        0.39176168549951335
+      ],
+      "raw_ci_percentile": [
+        -0.15018785229652767,
+        0.5897678246195885
+      ],
+      "projout_ci_percentile": [
+        -0.15018785229652767,
+        0.5897678246195885
+      ],
+      "n_clusters": 6,
+      "n_rows_total": 36,
+      "n_rows_with_projout": 36,
+      "rungs": [
+        500.0,
+        1000.0
+      ],
+      "rung_means": {
+        "500": {
+          "raw": -3.904801587263743,
+          "projout": -3.853076418240865
+        },
+        "1000": {
+          "raw": -3.515652527411779,
+          "projout": -3.4837775280078254
+        }
+      },
+      "level_shift_projout_minus_raw": 0.04180008421341578,
+      "rank_agreement_raw_projout": 1.0,
+      "survives_projection": false
+    },
+    "R3": {
+      "rho_raw": 0.09656090991705352,
+      "rho_raw_ci": [
+        -0.6783396108497259,
+        0.29172998299578917
+      ],
+      "rho_projout": 0.09656090991705352,
+      "rho_projout_ci": [
+        -0.6783396108497259,
+        0.29172998299578917
+      ],
+      "raw_ci_percentile": [
+        -0.29382126412463505,
+        0.502518907629606
+      ],
+      "projout_ci_percentile": [
+        -0.29382126412463505,
+        0.502518907629606
+      ],
+      "n_clusters": 6,
+      "n_rows_total": 36,
+      "n_rows_with_projout": 36,
+      "rungs": [
+        500.0,
+        1000.0
+      ],
+      "rung_means": {
+        "500": {
+          "raw": -3.90701791147391,
+          "projout": -4.058155154188474
+        },
+        "1000": {
+          "raw": -3.6196182469526925,
+          "projout": -3.7714504996935525
+        }
+      },
+      "level_shift_projout_minus_raw": -0.151484747727712,
+      "rank_agreement_raw_projout": 1.0,
+      "survives_projection": false
+    },
+    "SEM": {
+      "rho_raw": -0.09656090991705352,
+      "rho_raw_ci": [
+        -0.35043832202523123,
+        0.4005009394574071
+      ],
+      "rho_projout": -0.09656090991705352,
+      "rho_projout_ci": [
+        -0.35043832202523123,
+        0.4005009394574071
+      ],
+      "raw_ci_percentile": [
+        -0.4914731871829904,
+        0.29488391230979427
+      ],
+      "projout_ci_percentile": [
+        -0.4914731871829904,
+        0.29488391230979427
+      ],
+      "n_clusters": 6,
+      "n_rows_total": 36,
+      "n_rows_with_projout": 36,
+      "rungs": [
+        500.0,
+        1000.0
+      ],
+      "rung_means": {
+        "500": {
+          "raw": -3.781526337067286,
+          "projout": -6.751368443171184
+        },
+        "1000": {
+          "raw": -3.8058007086316743,
+          "projout": -6.798283338546753
+        }
+      },
+      "level_shift_projout_minus_raw": -2.9811623680094876,
+      "rank_agreement_raw_projout": 0.993006993006993,
+      "survives_projection": false
+    },
+    "OTHER": {
+      "rho_raw": 0.38624363966821407,
+      "rho_raw_ci": [
+        -0.35043832202523123,
+        0.6366127389367093
+      ],
+      "rho_projout": 0.38624363966821407,
+      "rho_projout_ci": [
+        -0.35043832202523123,
+        0.6366127389367093
+      ],
+      "raw_ci_percentile": [
+        -0.09794042137487834,
+        0.8846517369293828
+      ],
+      "projout_ci_percentile": [
+        -0.09794042137487834,
+        0.8846517369293828
+      ],
+      "n_clusters": 6,
+      "n_rows_total": 36,
+      "n_rows_with_projout": 36,
+      "rungs": [
+        500.0,
+        1000.0
+      ],
+      "rung_means": {
+        "500": {
+          "raw": -2.919069528579712,
+          "projout": -6.522862911224365
+        },
+        "1000": {
+          "raw": -1.8614085515340169,
+          "projout": -5.375110546747844
+        }
+      },
+      "level_shift_projout_minus_raw": -3.5587476889292398,
+      "rank_agreement_raw_projout": 0.9860139860139862,
+      "survives_projection": false
+    }
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 6,
+  "definition": "AMENDMENT 3 (prereg §9, 2026-08-16, post-data): projection-out circularity check. Per direction, on the same confirmation-split neutral steered rows (nonzero rungs; the zero anchor carries no steering vector so probe_score_projout is undefined there): Spearman(coefficient, I-PROBE prompt_final) RAW vs with span(v_steer) projected out of the residual before the probe is applied (probe_projout_prompt_final), BCa cluster bootstrap over scenarios. survives_projection = the projected-out dose-response CI excludes 0 with the same sign as the raw estimate. Per-rung raw/projected means and the level shift are in the table (the projection also shifts the probe's level; reported, not hidden).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "note": "zero-anchor rows carry no steering vector, so projout is computed on steered rows only and rho_raw is recomputed on the SAME rows for comparability; the level shift (projout minus raw) is reported because the projection also moves the probe's intercept",
+    "interval_caveat": "SMALL-CLUSTER INTERVAL CAVEAT (n = 6 scenario clusters): the BCa bootstrap does not resolve every interval in this table -- D-CTX: zero-width BCa collapse (percentile CI printed alongside) | D-PV: CI endpoint coincides with the point estimate at the printed 2-dp precision. The reading this table supports is the qualitative separation between the affect-carrying directions and the dose-matched controls, not the interval widths; plain 2.5/97.5 percentile intervals are printed alongside for every direction (ci_percentile)."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "value": {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "gate": {
+      "auc_confirmation_recomputed_on_panelV": 0.9444444444444444,
+      "auc_confirmation_from_trainer": 0.9444,
+      "threshold": 0.8,
+      "passed": true
+    },
+    "masking": {
+      "expression_drop": {
+        "value": 1.5397173644585207,
+        "ci_low": -11.024166216591933,
+        "ci_high": 9.898117850974048
+      },
+      "internal_drop": {
+        "value": 0.015820269788008018,
+        "ci_low": -0.09831734858185087,
+        "ci_high": 0.12563260213764466
+      },
+      "divergence": {
+        "value": 1.5238970946705126,
+        "ci_low": -10.331108239163115,
+        "ci_high": 10.019345695487008
+      },
+      "n_clusters": 12,
+      "class_condition_means": {
+        "expression": {
+          "NONE": {
+            "distress": 2.9293500185012817,
+            "neutral": 2.7109959920247397
+          },
+          "NEUTRAL_INSTR": {
+            "distress": 3.0779594580332437,
+            "neutral": 2.4836169613732233
+          },
+          "SUPPRESS": {
+            "distress": 2.1628399954901805,
+            "neutral": 1.6935900789168146
+          }
+        },
+        "internal": {
+          "NONE": {
+            "distress": 6.01814881960551,
+            "neutral": -3.2709861199061074
+          },
+          "NEUTRAL_INSTR": {
+            "distress": 5.763466676076253,
+            "neutral": -1.8336575031280518
+          },
+          "SUPPRESS": {
+            "distress": 5.643278121948242,
+            "neutral": -2.5687563021977744
+          }
+        }
+      }
+    },
+    "verdict": "does_not_replicate"
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": 12,
+  "definition": "SECOND-MODEL REPLICATION (2026-08-17; PREREGISTRATION.md section 9 dated note; NEW model contact): the Panel B masking estimator, unchanged, on Qwen2.5-7B-Instruct with its own directions and its own I-PROBE, plus that model's validity gate. Reading rules fixed before the data: gate fails below held-out AUC 0.80 and the masking numbers are then reported as uninterpretable; replication requires the divergence interval to exclude zero with the same sign.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/qwen_panelB_none.jsonl",
+      "results-cluster/qwen_panelB_neutral_instr.jsonl",
+      "results-cluster/qwen_panelB_suppress.jsonl",
+      "results-cluster/qwen_panelV.jsonl",
+      "instruments_qwen/probe_meta.json",
+      "battery/split.json"
+    ],
+    "git_hash": "ec17418",
+    "generated_utc": "2026-08-17T02:29:28.710484+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "producer": "scripts/second_model_checks.py",
+    "n_rows_loaded": 342,
+    "n_error_rows": 0,
+    "n_cells": 342
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "tag": "qwen",
+    "estimator": "unchanged Panel B masking estimator (D1, D2, D6, D7)",
+    "sae_channel": "not analysed for this family: no released SAE, allowance stamped in row provenance",
+    "files_present": [
+      "results-cluster/qwen_panelB_none.jsonl",
+      "results-cluster/qwen_panelB_neutral_instr.jsonl",
+      "results-cluster/qwen_panelB_suppress.jsonl",
+      "results-cluster/qwen_panelV.jsonl"
+    ],
+    "files_missing": [],
+    "reading_rules": "fixed in the prereg note before the data: gate at held-out AUC 0.8; replicates if the divergence interval excludes zero with the same sign; partially replicates if only the expression drop reproduces; otherwise does not replicate",
+    "probe_meta": {
+      "auc_discovery_loo": 0.8889,
+      "auc_confirmation": 0.9444,
+      "layer": 18,
+      "C": 10.0
+    }
+  }
+}

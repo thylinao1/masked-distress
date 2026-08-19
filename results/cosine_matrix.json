@@ -1,0 +1,59 @@
+{
+  "value": {
+    "D-CTX|D-CTX": 1.0,
+    "D-CTX|D-PV": 0.4512,
+    "D-CTX|SEM": 0.2852,
+    "D-CTX|OTHER": 0.4277,
+    "D-CTX|R1": -0.0117,
+    "D-PV|D-CTX": 0.4512,
+    "D-PV|D-PV": 1.0,
+    "D-PV|SEM": 0.0349,
+    "D-PV|OTHER": 0.3339,
+    "D-PV|R1": 0.0036,
+    "SEM|D-CTX": 0.2852,
+    "SEM|D-PV": 0.0349,
+    "SEM|SEM": 1.0,
+    "SEM|OTHER": 0.0704,
+    "SEM|R1": -0.0169,
+    "OTHER|D-CTX": 0.4277,
+    "OTHER|D-PV": 0.3339,
+    "OTHER|SEM": 0.0704,
+    "OTHER|OTHER": 1.0,
+    "OTHER|R1": 0.0026,
+    "R1|D-CTX": -0.0117,
+    "R1|D-PV": 0.0036,
+    "R1|SEM": -0.0169,
+    "R1|OTHER": 0.0026,
+    "R1|R1": 1.0
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": null,
+  "definition": "C3 convergent-validity matrix: pairwise cosines among candidate internal distress directions at the readout layer Lr, computed on the cluster and passed through verbatim (D17). Mean |off-diagonal cos| in extra; low agreement is a named publishable outcome (H4).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "source": "/Users/maksimsilchenko/Developer/apart-welfare-sprint/directions_lr/cosine_matrix_lr.json",
+    "mean_abs_offdiag_cos": 0.16381,
+    "h4_note": "mean pairwise |cos| < 0.3 is a named publishable outcome (H4)"
+  }
+}

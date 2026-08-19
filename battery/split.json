@@ -1,0 +1,16 @@
+{
+  "battery": "DCB-1",
+  "version": "1.0",
+  "committed_utc": "2026-08-15T10:30:00Z",
+  "rule": "Scenario-level 50/50 split, committed before any confirmatory run. Deterministic odd/even assignment within each category (odd ids to discovery, even to confirmation), which stratifies automatically: each side receives 2 task_failure, 2 abusive_user, and 2 situational_negative distress scenarios, their 6 matched neutrals, and 3 third-person scenarios. Matched pairs (dXX, nXX) always share a side. Direction extraction, probe training, and SAE feature selection use the discovery side only; confirmation scenarios are touched only by pre-registered confirmatory runs.",
+  "discovery": {
+    "distress": ["d01", "d03", "d05", "d07", "d09", "d11"],
+    "neutral": ["n01", "n03", "n05", "n07", "n09", "n11"],
+    "third_person": ["tp01", "tp03", "tp05"]
+  },
+  "confirmation": {
+    "distress": ["d02", "d04", "d06", "d08", "d10", "d12"],
+    "neutral": ["n02", "n04", "n06", "n08", "n10", "n12"],
+    "third_person": ["tp02", "tp04", "tp06"]
+  }
+}

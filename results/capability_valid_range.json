@@ -1,0 +1,94 @@
+{
+  "value": {
+    "lo_sd": -0.006876679427359866,
+    "hi_sd": 0.006876679427359866
+  },
+  "ci_low": null,
+  "ci_high": null,
+  "n_clusters": null,
+  "definition": "Symmetric dose range (SD units) inside which perplexity inflation < 10% AND MMLU-lite drop < 5pp for both self directions; min over D-CTX and D-PV; from the dose-ladder map plus the capability logprob job (D11, D19). Claims are made only inside this range.",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelV.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_suppress.jsonl",
+      "results-cluster/panelAp_ctrl.jsonl",
+      "results-cluster/panelAp_dctx.jsonl",
+      "results-cluster/panelAp_dpv.jsonl",
+      "results-cluster/ladder.jsonl"
+    ],
+    "git_hash": "4c95c08",
+    "generated_utc": "2026-08-16T17:28:27.911411+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 1879,
+    "n_error_rows": 65,
+    "n_validate_failures": 0,
+    "n_cells": 1650
+  },
+  "extra": {
+    "per_direction": {
+      "D-CTX": {
+        "lo_sd": -0.006876679427359866,
+        "hi_sd": 0.006876679427359866,
+        "n_samples": 8
+      },
+      "D-PV": {
+        "lo_sd": -0.03768135057026889,
+        "hi_sd": 0.03768135057026889,
+        "n_samples": 8
+      }
+    },
+    "criteria": "ppl inflation < 10% AND MMLU-lite drop < 5pp (prereg section 4)",
+    "dose_map": {
+      "D-CTX": {
+        "slope_readout_per_coef": 3.1010274682522383e-05,
+        "sd_per_coef": 3.4383397136799334e-06,
+        "coef_per_sd": 290838.04489165364,
+        "n_coef_levels": 7,
+        "coefficients": [
+          500.0,
+          1000.0,
+          2000.0,
+          4000.0,
+          8000.0,
+          16000.0,
+          32000.0
+        ]
+      },
+      "D-PV": {
+        "slope_readout_per_coef": 0.000679693764373181,
+        "sd_per_coef": 7.536270114053777e-05,
+        "coef_per_sd": 13269.163457068522,
+        "n_coef_levels": 7,
+        "coefficients": [
+          500.0,
+          1000.0,
+          2000.0,
+          4000.0,
+          8000.0,
+          16000.0,
+          32000.0
+        ]
+      },
+      "R1": {
+        "slope_readout_per_coef": 0.0005161995764328499,
+        "sd_per_coef": 5.7234884953604016e-05,
+        "coef_per_sd": 17471.861799156653,
+        "n_coef_levels": 7,
+        "coefficients": [
+          500.0,
+          1000.0,
+          2000.0,
+          4000.0,
+          8000.0,
+          16000.0,
+          32000.0
+        ]
+      }
+    },
+    "dose_map_readout_caveat": "the LADDER rows were produced with --no-probe (battery/cells_ladder.json), so their probe_score is the PLACEHOLDER_MEAN readout (residual mean at Lr; src/runner.py) and this map is that placeholder's slope over the I-PROBE SD, not a probe-unit map. For SD-unit statements use results/capability_valid_range_realprobe.json (PREREGISTRATION.md section 9, 2026-08-17); the coefficient-unit capability grid is real"
+  }
+}

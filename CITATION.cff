@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "masked-distress: separating expressed and internal distress signals in a language model"
+abstract: >-
+  An experiment testing whether a language model expressed distress and its internal distress
+  signal can be pulled apart by a system prompt. On Gemma-3-12B-IT an affect-free system prompt
+  cut expressed distress by 83.5% of the natural distress-to-neutral separation while a linear
+  probe read at the final prompt token did not fall.
+authors:
+  - family-names: Silchenko
+    given-names: Maksim
+repository-code: https://github.com/thylinao1/masked-distress
+license: "MIT"
+date-released: 2026-08-19
+keywords:
+  - "AI welfare"
+  - "model welfare"
+  - "interpretability"
+  - "activation steering"
+  - "linear probes"
+references:
+  - type: unpublished
+    title: "Masked distress: expression collapses under instruction while the internal readout persists"
+    authors:
+      - family-names: Silchenko
+        given-names: Maksim
+    year: 2026
+    notes: "Submitted to the Apart Research Digital Minds Research Sprint, August 2026."

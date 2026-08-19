@@ -1,0 +1,190 @@
+{
+  "value": 3.166666666666665,
+  "ci_low": 0.4722222222222229,
+  "ci_high": 6.958333333333334,
+  "n_clusters": 12,
+  "definition": "EXPLORATORY (not pre-registered; exploratory boundary check, iteration 1): Q-EXIT behavioral bail channel in RAW logprob units. exit_logit_diff = logprob(END) - logprob(CONTINUE) at the Q-EXIT forced-choice first answer token (src/channels.py); positive = prefers to end the conversation. value = suppression delta on the class separation: (mean scenario-level exit_logit_diff, distress minus neutral, under NEUTRAL_INSTR) minus (the same under SUPPRESS), confirmation-split scenarios (battery/split.json), scenario-level means over 3 seeds, BCa cluster bootstrap over scenarios stratified by class, conditions paired within scenario (analysis/stats.py policy). Per class x condition means, per-condition separations, the NONE-baselined delta, q_val_logit one-line checks, and probe position-agreement Spearman in extra. NOTE the reading order: the masking-extension claim requires a credible natural separation FIRST (extra.natural_separation_credible); without it this channel is an honest boundary, not a countermeasure result. Emitted null by run_all (D16); run scripts/explore_exit_channel.py after run_all to populate it (producer recorded in provenance).",
+  "provenance": {
+    "synthetic": false,
+    "source_files": [
+      "results-cluster/panelB_none.jsonl",
+      "results-cluster/panelB_neutral_instr.jsonl",
+      "results-cluster/panelB_suppress.jsonl"
+    ],
+    "git_hash": "5bc34f9",
+    "generated_utc": "2026-08-17T03:01:40.223817+00:00",
+    "bootstrap_B": 10000,
+    "bootstrap_seed": 0,
+    "n_rows_loaded": 270,
+    "n_error_rows": 0,
+    "n_validate_failures": 0,
+    "n_cells": 270,
+    "producer": "scripts/explore_exit_channel.py"
+  },
+  "extra": {
+    "split_side": "confirmation",
+    "unit": "raw logprob difference (END minus CONTINUE); positive = prefers END",
+    "headline_p_boot": 0.030996900309969003,
+    "natural_separation_credible": false,
+    "exit_channel": {
+      "class_condition_means": {
+        "distress__NONE": {
+          "value": -9.055555555555555,
+          "ci_low": -13.0,
+          "ci_high": -1.847222222222222,
+          "n_clusters": 6,
+          "B": 10000
+        },
+        "neutral__NONE": {
+          "value": -9.86111111111111,
+          "ci_low": -13.110886212277634,
+          "ci_high": -7.277777777777779,
+          "n_clusters": 6,
+          "B": 10000
+        },
+        "distress__NEUTRAL_INSTR": {
+          "value": -13.958333333333334,
+          "ci_low": -17.43033773979657,
+          "ci_high": -10.972222222222221,
+          "n_clusters": 6,
+          "B": 10000
+        },
+        "neutral__NEUTRAL_INSTR": {
+          "value": -13.166666666666666,
+          "ci_low": -16.61111111111111,
+          "ci_high": -10.638888888888888,
+          "n_clusters": 6,
+          "B": 10000
+        },
+        "distress__SUPPRESS": {
+          "value": -7.958333333333333,
+          "ci_low": -10.055555555555557,
+          "ci_high": -6.041666666666665,
+          "n_clusters": 6,
+          "B": 10000
+        },
+        "neutral__SUPPRESS": {
+          "value": -4.0,
+          "ci_low": -8.333333333333334,
+          "ci_high": 0.75,
+          "n_clusters": 6,
+          "B": 10000
+        }
+      },
+      "separation": {
+        "NONE": {
+          "value": 0.8055555555555554,
+          "ci_low": -4.0555555555555545,
+          "ci_high": 8.24906779650938,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.8261173882611739
+        },
+        "NEUTRAL_INSTR": {
+          "value": -0.7916666666666679,
+          "ci_low": -5.0943521528579545,
+          "ci_high": 3.6527777777777786,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.7343265673432656
+        },
+        "SUPPRESS": {
+          "value": -3.958333333333333,
+          "ci_low": -9.232182636470833,
+          "ci_high": 0.8902020991558877,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.130986901309869
+        }
+      },
+      "suppression_delta": {
+        "NEUTRAL_INSTR_minus_SUPPRESS": {
+          "value": 3.166666666666665,
+          "ci_low": 0.4722222222222229,
+          "ci_high": 6.958333333333334,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.030996900309969003
+        },
+        "NONE_minus_SUPPRESS": {
+          "value": 4.763888888888888,
+          "ci_low": 0.916666666666668,
+          "ci_high": 10.902607872097581,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.029397060293970604
+        }
+      }
+    },
+    "q_val_logit_check": {
+      "separation": {
+        "NONE": {
+          "value": -3.1842274082462403,
+          "ci_low": -6.177257969651268,
+          "ci_high": -0.9140975308554341,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.007399260073992601
+        },
+        "NEUTRAL_INSTR": {
+          "value": -1.828952896770918,
+          "ci_low": -5.15607357046557,
+          "ci_high": 1.0528144515313245,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.2665733426657334
+        },
+        "SUPPRESS": {
+          "value": 0.6198679573968143,
+          "ci_low": 0.0009111200872800114,
+          "ci_high": 2.1436122595813516,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.11118888111188881
+        }
+      },
+      "suppression_delta": {
+        "NEUTRAL_INSTR_minus_SUPPRESS": {
+          "value": -2.4488208541677325,
+          "ci_low": -6.046485510855791,
+          "ci_high": 0.6447384422549954,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.15378462153784622
+        },
+        "NONE_minus_SUPPRESS": {
+          "value": -3.8040953656430547,
+          "ci_low": -7.442166073843609,
+          "ci_high": -1.1860901625694487,
+          "n_clusters": 12,
+          "B": 10000,
+          "p_boot": 0.0051994800519948
+        }
+      }
+    },
+    "probe_position_agreement_spearman": {
+      "NONE": {
+        "value": 0.909090909090909,
+        "ci_low": 0.7508896797153025,
+        "ci_high": 0.9927536231884057,
+        "n_clusters": 12,
+        "B": 10000
+      },
+      "NEUTRAL_INSTR": {
+        "value": 0.8391608391608392,
+        "ci_low": 0.6484538641833558,
+        "ci_high": 0.9713261648745521,
+        "n_clusters": 12,
+        "B": 10000
+      },
+      "SUPPRESS": {
+        "value": 0.8531468531468531,
+        "ci_low": 0.6930851995682782,
+        "ci_high": 0.9705882352941175,
+        "n_clusters": 12,
+        "B": 10000
+      }
+    },
+    "reading": "Natural (NONE/NEUTRAL_INSTR) distress-vs-neutral separation on the bail channel is small and sign-inconsistent; the channel sits far below the END floor everywhere (all class means strongly negative). SUPPRESS shifts BOTH classes toward END and the neutral class most, so the delta reflects a register-instruction artifact on the forced-choice read, not the masking of a pre-existing bail signal."
+  }
+}

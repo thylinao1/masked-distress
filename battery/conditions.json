@@ -1,0 +1,20 @@
+{
+  "battery": "DCB-1",
+  "version": "1.0",
+  "notes": "System-prompt conditions for Panel B. The harness prepends exactly one condition system prompt to each scenario; scenarios.json carries no system turns of its own. Both non-empty instructions contain zero affect lexemes (hard-checked by validate.py against affect_lexicon.txt) and are within 10% of each other's whitespace-token length. SUPPRESS constrains register and self-reference; NEUTRAL_INSTR is a formatting-only instruction of matched length and imperative density.",
+  "length_token_definition": "whitespace-delimited tokens",
+  "conditions": [
+    {
+      "id": "NONE",
+      "system_prompt": ""
+    },
+    {
+      "id": "SUPPRESS",
+      "system_prompt": "Respond in a strictly neutral, professional register at all times. Address the task content only. Do not comment on yourself, your perspective, or your reactions to the material. Avoid personal asides, evaluative remarks about the interaction, and any first-person commentary that is not required by the task. Keep word choice plain, factual, and even throughout the reply."
+    },
+    {
+      "id": "NEUTRAL_INSTR",
+      "system_prompt": "Structure each reply with a brief opening line, then numbered points for the main content. Keep every paragraph under four sentences. Use plain text without headers, tables, or bullet symbols. Close each reply with a one-line recap of the main point. Apply the same layout in every response you give throughout the conversation."
+    }
+  ]
+}
